@@ -1,0 +1,24 @@
+
+{
+    "algo": "cryptonight",  
+    "av": 0,               
+    "background": false,   
+    "colors": true,         
+    "cpu-affinity": 0,   
+    "cpu-priority": 0,   
+    "donate-level": 1,     
+    "log-file": "",     
+    "max-cpu-usage": "",    
+    "print-time": 60,     
+    "retries": 9999,           
+    "retry-pause": 5,       
+    "safe": false,         
+    "syslog": false,        
+    "threads": "",       
+    "pools": [],
+    "api": {
+        "port":0,
+        "access-token":null,
+        "worker-id":null
+    }
+}

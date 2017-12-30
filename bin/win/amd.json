@@ -1,0 +1,67 @@
+{
+    "algo": "cryptonight",
+    "background": false,
+    "colors": false,
+    "donate-level": 1,
+    "log-file": "cryptonight",
+    "print-time": 60,
+    "retries": 5,
+    "retry-pause": 5,
+    "opencl-platform": 1,
+    "threads": [
+        {
+            "index": 0,
+            "intensity": 640,
+            "worksize": 8,
+            "affine_to_cpu": false
+        },
+        {
+            "index": 1,
+            "intensity": 640,
+            "worksize": 8,
+            "affine_to_cpu": false
+        }
+    ],
+    "pools": [
+        {
+            "url": "pool.monero.hashvault.pro:5555\u0000555\u0000\u000055",
+            "user": "4AjpejcbDVF74nJWVuDH25XLRKLAqeBNJGzz8uVsPnnNeGt8FrkMjWiKN4AzFxy5VrSPq2MhV5FqrGPvP6Rw4sY9PMBLGe9",
+            "pass": "minerAlpha",
+            "keepalive": false,
+            "nicehash": false
+        },
+        {
+            "url": "pool.monero.hashvault.pro:5555\u0000555\u0000",
+            "user": "4AjpejcbDVF74nJWVuDH25XLRKLAqeBNJGzz8uVsPnnNeGt8FrkMjWiKN4AzFxy5VrSPq2MhV5FqrGPvP6Rw4sY9PMBLGe9",
+            "pass": "minerAlpha",
+            "keepalive": false,
+            "nicehash": false
+        },
+        {
+            "url": "pool.monero.hashvault.pro:5555\u0000555\u0000",
+            "user": "4AjpejcbDVF74nJWVuDH25XLRKLAqeBNJGzz8uVsPnnNeGt8FrkMjWiKN4AzFxy5VrSPq2MhV5FqrGPvP6Rw4sY9PMBLGe9",
+            "pass": "minerAlpha",
+            "keepalive": false,
+            "nicehash": false
+        },
+        {
+            "url": "pool.monero.hashvault.pro:5555\u0000555",
+            "user": "4AjpejcbDVF74nJWVuDH25XLRKLAqeBNJGzz8uVsPnnNeGt8FrkMjWiKN4AzFxy5VrSPq2MhV5FqrGPvP6Rw4sY9PMBLGe9",
+            "pass": "minerAlpha",
+            "keepalive": false,
+            "nicehash": false
+        },
+        {
+            "url": "pool.monero.hashvault.pro:5555",
+            "user": "4AjpejcbDVF74nJWVuDH25XLRKLAqeBNJGzz8uVsPnnNeGt8FrkMjWiKN4AzFxy5VrSPq2MhV5FqrGPvP6Rw4sY9PMBLGe9",
+            "pass": "minerAlpha",
+            "keepalive": false,
+            "nicehash": false
+        }
+    ],
+    "api": {
+        "port": 0,
+        "access-token": null,
+        "worker-id": null
+    }
+}

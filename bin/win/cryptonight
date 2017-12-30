@@ -1,0 +1,1379 @@
+[2017-12-24 02:44:32]  * VERSIONS:     XMRig/2.4.2 libuv/1.14.1 CUDA/9.0 MSVC/2015
+[2017-12-24 02:44:32]  * CPU:                 Intel(R) Core(TM) i7-4820K CPU @ 3.70GHz (1) x64 AES-NI
+[2017-12-24 02:44:32]  * GPU #0:       GeForce GTX 670 @ 1084/3104 MHz 0x21 6x25 arch:30 SMX:7
+[2017-12-24 02:44:32]  * POOL #2:      pool.monero.hashvault.pro:5555
+[2017-12-24 02:44:32]  * POOL #1:      pool.monero.hashvault.pro:5555
+[2017-12-24 02:44:32]  * ALGO:         cryptonight, donate=1%
+[2017-12-24 02:44:32]  * POOL #3:      pool.monero.hashvault.pro:5555
+[2017-12-24 02:44:32]  * POOL #4:      pool.monero.hashvault.pro:5555
+[2017-12-24 02:44:32]  * POOL #5:      pool.monero.hashvault.pro:5555
+[2017-12-24 02:44:32]  * COMMANDS:     'h' hashrate, 'e' health, 'p' pause, 'r' resume
+[2017-12-24 02:44:33] use pool pool.monero.hashvault.pro:5555 45.63.56.168
+[2017-12-24 02:44:33] new job from pool.monero.hashvault.pro:5555 diff 5000
+[2017-12-24 02:44:43]  * VERSIONS:     XMRig/2.4.2 libuv/1.14.1 CUDA/9.0 MSVC/2015
+[2017-12-24 02:44:43]  * CPU:                 Intel(R) Core(TM) i7-4820K CPU @ 3.70GHz (1) x64 AES-NI
+[2017-12-24 02:44:43]  * GPU #0:       GeForce GTX 670 @ 1084/3104 MHz 0x21 6x25 arch:30 SMX:7
+[2017-12-24 02:44:43]  * ALGO:         cryptonight, donate=1%
+[2017-12-24 02:44:43]  * POOL #1:      pool.monero.hashvault.pro:5555
+[2017-12-24 02:44:43]  * POOL #2:      pool.monero.hashvault.pro:5555
+[2017-12-24 02:44:43]  * POOL #3:      pool.monero.hashvault.pro:5555
+[2017-12-24 02:44:43]  * POOL #4:      pool.monero.hashvault.pro:5555
+[2017-12-24 02:44:43]  * POOL #5:      pool.monero.hashvault.pro:5555
+[2017-12-24 02:44:43]  * COMMANDS:     'h' hashrate, 'e' health, 'p' pause, 'r' resume
+[2017-12-24 02:44:43] use pool pool.monero.hashvault.pro:5555 45.63.56.168
+[2017-12-24 02:44:43] new job from pool.monero.hashvault.pro:5555 diff 5000
+[2017-12-24 05:45:26]  * VERSIONS:     XMRig/2.4.2 libuv/1.14.1 CUDA/9.0 MSVC/2015
+[2017-12-24 05:45:26]  * CPU:                 Intel(R) Core(TM) i7-4820K CPU @ 3.70GHz (1) x64 AES-NI
+[2017-12-24 05:45:26]  * ALGO:         cryptonight, donate=1%
+[2017-12-24 05:45:26]  * POOL #1:      pool.monero.hashvault.pro:5555
+[2017-12-24 05:45:26]  * POOL #3:      pool.monero.hashvault.pro:5555
+[2017-12-24 05:45:26]  * POOL #5:      pool.monero.hashvault.pro:5555
+[2017-12-24 05:45:26]  * POOL #4:      pool.monero.hashvault.pro:5555
+[2017-12-24 05:45:26]  * GPU #0:       GeForce GTX 670 @ 1084/3104 MHz 44x21 6x25 arch:30 SMX:7
+[2017-12-24 05:45:26]  * COMMANDS:     'h' hashrate, 'e' health, 'p' pause, 'r' resume
+[2017-12-24 05:45:26]  * POOL #2:      pool.monero.hashvault.pro:5555
+[2017-12-24 05:45:26] new job from pool.monero.hashvault.pro:5555 diff 5000
+[2017-12-24 05:45:26] use pool pool.monero.hashvault.pro:5555 45.63.56.168
+[2017-12-24 05:45:32] accepted (1/0) diff 5000 (115 ms)
+[2017-12-24 05:45:34] new job from pool.monero.hashvault.pro:5555 diff 5000
+[2017-12-24 05:45:35] accepted (2/0) diff 5000 (110 ms)
+[2017-12-24 05:45:51] new job from pool.monero.hashvault.pro:5555 diff 5000
+[2017-12-24 05:45:56] accepted (3/0) diff 5000 (110 ms)
+[2017-12-24 05:45:56] accepted (4/0) diff 5000 (381 ms)
+[2017-12-24 05:46:04] accepted (5/0) diff 5000 (135 ms)
+[2017-12-24 05:46:06] new job from pool.monero.hashvault.pro:5555 diff 5000
+[2017-12-24 05:46:18] new job from pool.monero.hashvault.pro:5555 diff 14400
+[2017-12-24 05:46:30] speed 10s/60s/15m 350.2 349.9 n/a H/s max: 350.2 H/s
+[2017-12-24 05:46:30]  * GPU #0: 82C FAN 58%
+[2017-12-24 05:46:56] accepted (6/0) diff 14400 (119 ms)
+[2017-12-24 05:47:18] new job from pool.monero.hashvault.pro:5555 diff 10530
+[2017-12-24 05:47:28] accepted (7/0) diff 10530 (119 ms)
+[2017-12-24 05:47:30] speed 10s/60s/15m 350.1 350.2 n/a H/s max: 350.2 H/s
+[2017-12-24 05:47:30]  * GPU #0: 81C FAN 58%
+[2017-12-24 05:47:36] accepted (8/0) diff 10530 (124 ms)
+[2017-12-24 05:47:52] accepted (9/0) diff 10530 (122 ms)
+[2017-12-24 05:48:06] new job from pool.monero.hashvault.pro:5555 diff 10530
+[2017-12-24 05:48:16] accepted (10/0) diff 10530 (93 ms)
+[2017-12-24 05:48:18] new job from pool.monero.hashvault.pro:5555 diff 14190
+[2017-12-24 05:48:30] speed 10s/60s/15m 350.2 350.2 n/a H/s max: 350.2 H/s
+[2017-12-24 05:48:30]  * GPU #0: 81C FAN 59%
+[2017-12-24 05:48:51] new job from pool.monero.hashvault.pro:5555 diff 14190
+[2017-12-24 05:49:01] accepted (11/0) diff 14190 (127 ms)
+[2017-12-24 05:49:18] new job from pool.monero.hashvault.pro:5555 diff 12360
+[2017-12-24 05:49:19] accepted (12/0) diff 14190 (131 ms)
+[2017-12-24 05:49:19] accepted (13/0) diff 14190 (402 ms)
+[2017-12-24 05:49:30] speed 10s/60s/15m 349.5 349.5 n/a H/s max: 350.2 H/s
+[2017-12-24 05:49:30]  * GPU #0: 81C FAN 58%
+[2017-12-24 05:49:32] accepted (14/0) diff 12360 (119 ms)
+[2017-12-24 05:49:34] new job from pool.monero.hashvault.pro:5555 diff 12360
+[2017-12-24 05:50:12] accepted (15/0) diff 12360 (154 ms)
+[2017-12-24 05:50:19] new job from pool.monero.hashvault.pro:5555 diff 15270
+[2017-12-24 05:50:30] speed 10s/60s/15m 349.5 349.5 n/a H/s max: 350.2 H/s
+[2017-12-24 05:50:30]  * GPU #0: 80C FAN 59%
+[2017-12-24 05:50:36] accepted (16/0) diff 15270 (100 ms)
+[2017-12-24 05:51:06] new job from pool.monero.hashvault.pro:5555 diff 15270
+[2017-12-24 05:51:07] accepted (17/0) diff 15270 (128 ms)
+[2017-12-24 05:51:29] accepted (18/0) diff 15270 (119 ms)
+[2017-12-24 05:51:30] speed 10s/60s/15m 349.5 349.5 n/a H/s max: 350.2 H/s
+[2017-12-24 05:51:30]  * GPU #0: 81C FAN 58%
+[2017-12-24 05:51:34] new job from pool.monero.hashvault.pro:5555 diff 15270
+[2017-12-24 05:51:51] new job from pool.monero.hashvault.pro:5555 diff 15270
+[2017-12-24 05:52:16] accepted (19/0) diff 15270 (125 ms)
+[2017-12-24 05:52:30] speed 10s/60s/15m 349.4 349.5 n/a H/s max: 350.2 H/s
+[2017-12-24 05:52:30]  * GPU #0: 81C FAN 58%
+[2017-12-24 05:53:17] accepted (20/0) diff 15270 (103 ms)
+[2017-12-24 05:53:19] new job from pool.monero.hashvault.pro:5555 diff 14310
+[2017-12-24 05:53:30] speed 10s/60s/15m 349.5 349.5 n/a H/s max: 350.2 H/s
+[2017-12-24 05:53:30]  * GPU #0: 82C FAN 58%
+[2017-12-24 05:53:46] accepted (21/0) diff 14310 (135 ms)
+[2017-12-24 05:54:19] new job from pool.monero.hashvault.pro:5555 diff 13500
+[2017-12-24 05:54:28] accepted (22/0) diff 13500 (124 ms)
+[2017-12-24 05:54:30] speed 10s/60s/15m 349.5 349.5 n/a H/s max: 350.2 H/s
+[2017-12-24 05:54:30]  * GPU #0: 81C FAN 58%
+[2017-12-24 05:55:03] accepted (23/0) diff 13500 (120 ms)
+[2017-12-24 05:55:21] accepted (24/0) diff 13500 (145 ms)
+[2017-12-24 05:55:30] speed 10s/60s/15m 349.4 349.5 n/a H/s max: 350.2 H/s
+[2017-12-24 05:55:30]  * GPU #0: 81C FAN 58%
+[2017-12-24 05:55:32] accepted (25/0) diff 13500 (130 ms)
+[2017-12-24 05:55:34] new job from pool.monero.hashvault.pro:5555 diff 13500
+[2017-12-24 05:56:30] accepted (26/0) diff 13500 (148 ms)
+[2017-12-24 05:56:30] speed 10s/60s/15m 349.5 349.5 n/a H/s max: 350.2 H/s
+[2017-12-24 05:56:30]  * GPU #0: 81C FAN 60%
+[2017-12-24 05:56:43] accepted (27/0) diff 13500 (107 ms)
+[2017-12-24 05:57:02] accepted (28/0) diff 13500 (122 ms)
+[2017-12-24 05:57:10] accepted (29/0) diff 13500 (125 ms)
+[2017-12-24 05:57:19] new job from pool.monero.hashvault.pro:5555 diff 14640
+[2017-12-24 05:57:30] speed 10s/60s/15m 349.5 349.5 n/a H/s max: 350.2 H/s
+[2017-12-24 05:57:30]  * GPU #0: 81C FAN 58%
+[2017-12-24 05:58:19] new job from pool.monero.hashvault.pro:5555 diff 13500
+[2017-12-24 05:58:30] speed 10s/60s/15m 349.5 349.5 n/a H/s max: 350.2 H/s
+[2017-12-24 05:58:30]  * GPU #0: 80C FAN 59%
+[2017-12-24 05:59:03] accepted (30/0) diff 13500 (125 ms)
+[2017-12-24 05:59:19] new job from pool.monero.hashvault.pro:5555 diff 12990
+[2017-12-24 05:59:30] speed 10s/60s/15m 349.6 349.5 n/a H/s max: 350.2 H/s
+[2017-12-24 05:59:30]  * GPU #0: 80C FAN 57%
+[2017-12-24 06:00:17] accepted (31/0) diff 12990 (121 ms)
+[2017-12-24 06:00:19] new job from pool.monero.hashvault.pro:5555 diff 12570
+[2017-12-24 06:00:25] accepted (32/0) diff 12570 (163 ms)
+[2017-12-24 06:00:30] speed 10s/60s/15m 349.5 349.5 349.6 H/s max: 350.2 H/s
+[2017-12-24 06:00:30]  * GPU #0: 81C FAN 59%
+[2017-12-24 06:01:00] accepted (33/0) diff 12570 (59 ms)
+[2017-12-24 06:01:30] speed 10s/60s/15m 349.5 349.5 349.6 H/s max: 350.2 H/s
+[2017-12-24 06:01:30]  * GPU #0: 81C FAN 57%
+[2017-12-24 06:02:14] accepted (34/0) diff 12570 (120 ms)
+[2017-12-24 06:02:16] accepted (35/0) diff 12570 (128 ms)
+[2017-12-24 06:02:30] speed 10s/60s/15m 349.5 349.5 349.5 H/s max: 350.2 H/s
+[2017-12-24 06:02:30]  * GPU #0: 81C FAN 58%
+[2017-12-24 06:02:35] new job from pool.monero.hashvault.pro:5555 diff 12570
+[2017-12-24 06:02:51] accepted (36/0) diff 12570 (121 ms)
+[2017-12-24 06:03:19] new job from pool.monero.hashvault.pro:5555 diff 12210
+[2017-12-24 06:03:25] accepted (37/0) diff 12210 (119 ms)
+[2017-12-24 06:03:30] speed 10s/60s/15m 349.5 349.5 349.5 H/s max: 350.2 H/s
+[2017-12-24 06:03:30]  * GPU #0: 81C FAN 57%
+[2017-12-24 06:03:34] new job from pool.monero.hashvault.pro:5555 diff 12210
+[2017-12-24 06:03:51] accepted (38/0) diff 12210 (122 ms)
+[2017-12-24 06:03:59] accepted (39/0) diff 12210 (66 ms)
+[2017-12-24 06:04:19] new job from pool.monero.hashvault.pro:5555 diff 12540
+[2017-12-24 06:04:19] new job from pool.monero.hashvault.pro:5555 diff 12540
+[2017-12-24 06:04:19] [pool.monero.hashvault.pro:5555] duplicate job received, reconnect
+[2017-12-24 06:04:19] no active pools, stop mining
+[2017-12-24 06:04:25] use pool pool.monero.hashvault.pro:5555 45.63.56.168
+[2017-12-24 06:04:25] new job from pool.monero.hashvault.pro:5555 diff 5000
+[2017-12-24 06:04:30] speed 10s/60s/15m 129.8 320.9 347.7 H/s max: 350.2 H/s
+[2017-12-24 06:04:30]  * GPU #0: 81C FAN 58%
+[2017-12-24 06:04:30] accepted (40/0) diff 5000 (132 ms)
+[2017-12-24 06:04:33] accepted (41/0) diff 5000 (119 ms)
+[2017-12-24 06:04:36] accepted (42/0) diff 5000 (119 ms)
+[2017-12-24 06:04:49] accepted (43/0) diff 5000 (120 ms)
+[2017-12-24 06:04:49] accepted (44/0) diff 5000 (469 ms)
+[2017-12-24 06:04:57] accepted (45/0) diff 5000 (99 ms)
+[2017-12-24 06:05:07] new job from pool.monero.hashvault.pro:5555 diff 21930
+[2017-12-24 06:05:19] new job from pool.monero.hashvault.pro:5555 diff 21930
+[2017-12-24 06:05:30] speed 10s/60s/15m 349.5 349.8 347.8 H/s max: 350.3 H/s
+[2017-12-24 06:05:30]  * GPU #0: 81C FAN 57%
+[2017-12-24 06:06:07] new job from pool.monero.hashvault.pro:5555 diff 8910
+[2017-12-24 06:06:30] speed 10s/60s/15m 349.5 349.5 347.8 H/s max: 350.3 H/s
+[2017-12-24 06:06:30]  * GPU #0: 81C FAN 58%
+[2017-12-24 06:06:48] accepted (46/0) diff 8910 (96 ms)
+[2017-12-24 06:07:07] new job from pool.monero.hashvault.pro:5555 diff 7200
+[2017-12-24 06:07:30] speed 10s/60s/15m 349.5 349.5 347.8 H/s max: 350.3 H/s
+[2017-12-24 06:07:30]  * GPU #0: 81C FAN 59%
+[2017-12-24 06:07:33] accepted (47/0) diff 7200 (125 ms)
+[2017-12-24 06:07:56] accepted (48/0) diff 7200 (117 ms)
+[2017-12-24 06:08:07] new job from pool.monero.hashvault.pro:5555 diff 7200
+[2017-12-24 06:08:07] [pool.monero.hashvault.pro:5555] duplicate job received, reconnect
+[2017-12-24 06:08:07] no active pools, stop mining
+[2017-12-24 06:08:13] use pool pool.monero.hashvault.pro:5555 45.63.56.168
+[2017-12-24 06:08:13] new job from pool.monero.hashvault.pro:5555 diff 5000
+[2017-12-24 06:08:19] new job from pool.monero.hashvault.pro:5555 diff 8333
+[2017-12-24 06:08:30] speed 10s/60s/15m 350.1 327.0 346.4 H/s max: 350.3 H/s
+[2017-12-24 06:08:30]  * GPU #0: 81C FAN 59%
+[2017-12-24 06:08:34] accepted (49/0) diff 8333 (123 ms)
+[2017-12-24 06:08:40] accepted (50/0) diff 8333 (130 ms)
+[2017-12-24 06:08:40] accepted (51/0) diff 8333 (396 ms)
+[2017-12-24 06:09:19] new job from pool.monero.hashvault.pro:5555 diff 11340
+[2017-12-24 06:09:25] accepted (52/0) diff 11340 (122 ms)
+[2017-12-24 06:09:30] speed 10s/60s/15m 350.1 350.2 346.4 H/s max: 350.3 H/s
+[2017-12-24 06:09:30]  * GPU #0: 82C FAN 59%
+[2017-12-24 06:10:07] accepted (53/0) diff 11340 (132 ms)
+[2017-12-24 06:10:12] accepted (54/0) diff 11340 (158 ms)
+[2017-12-24 06:10:19] new job from pool.monero.hashvault.pro:5555 diff 14040
+[2017-12-24 06:10:30] speed 10s/60s/15m 350.2 350.2 346.4 H/s max: 350.3 H/s
+[2017-12-24 06:10:30]  * GPU #0: 81C FAN 60%
+[2017-12-24 06:11:19] new job from pool.monero.hashvault.pro:5555 diff 9510
+[2017-12-24 06:11:30] speed 10s/60s/15m 350.2 350.2 346.5 H/s max: 350.3 H/s
+[2017-12-24 06:11:30]  * GPU #0: 81C FAN 59%
+[2017-12-24 06:11:58] accepted (55/0) diff 9510 (127 ms)
+[2017-12-24 06:12:08] accepted (56/0) diff 9510 (123 ms)
+[2017-12-24 06:12:14] accepted (57/0) diff 9510 (104 ms)
+[2017-12-24 06:12:14] accepted (58/0) diff 9510 (378 ms)
+[2017-12-24 06:12:19] new job from pool.monero.hashvault.pro:5555 diff 11820
+[2017-12-24 06:12:30] speed 10s/60s/15m 350.2 350.2 346.5 H/s max: 350.3 H/s
+[2017-12-24 06:12:30]  * GPU #0: 81C FAN 59%
+[2017-12-24 06:12:35] new job from pool.monero.hashvault.pro:5555 diff 11820
+[2017-12-24 06:12:53] accepted (59/0) diff 11820 (124 ms)
+[2017-12-24 06:13:20] new job from pool.monero.hashvault.pro:5555 diff 10650
+[2017-12-24 06:13:30] speed 10s/60s/15m 350.2 350.2 346.6 H/s max: 350.3 H/s
+[2017-12-24 06:13:30]  * GPU #0: 81C FAN 59%
+[2017-12-24 06:14:12] accepted (60/0) diff 10650 (119 ms)
+[2017-12-24 06:14:20] new job from pool.monero.hashvault.pro:5555 diff 9780
+[2017-12-24 06:14:25] accepted (61/0) diff 9780 (126 ms)
+[2017-12-24 06:14:26] accepted (62/0) diff 9780 (396 ms)
+[2017-12-24 06:14:30] speed 10s/60s/15m 350.1 350.2 346.6 H/s max: 350.3 H/s
+[2017-12-24 06:14:30]  * GPU #0: 81C FAN 60%
+[2017-12-24 06:14:35] new job from pool.monero.hashvault.pro:5555 diff 9780
+[2017-12-24 06:14:52] new job from pool.monero.hashvault.pro:5555 diff 9780
+[2017-12-24 06:14:54] accepted (63/0) diff 9780 (133 ms)
+[2017-12-24 06:14:57] accepted (64/0) diff 9780 (116 ms)
+[2017-12-24 06:15:16] accepted (65/0) diff 9780 (136 ms)
+[2017-12-24 06:15:20] new job from pool.monero.hashvault.pro:5555 diff 11850
+[2017-12-24 06:15:30] speed 10s/60s/15m 350.2 350.1 346.7 H/s max: 350.3 H/s
+[2017-12-24 06:15:30]  * GPU #0: 81C FAN 58%
+[2017-12-24 06:15:34] accepted (66/0) diff 11850 (126 ms)
+[2017-12-24 06:15:47] accepted (67/0) diff 11850 (165 ms)
+[2017-12-24 06:15:52] new job from pool.monero.hashvault.pro:5555 diff 11850
+[2017-12-24 06:15:59]  * VERSIONS:     XMRig/2.4.3-beta2 libuv/1.14.1 OpenCL/2.0 MSVC/2017
+[2017-12-24 06:15:59]  * CPU:                 Intel(R) Core(TM) i7-4820K CPU @ 3.70GHz (1) x64 AES-NI
+[2017-12-24 06:15:59]  * ALGO:         cryptonight, donate=1%
+[2017-12-24 06:15:59]  * POOL #1:      pool.monero.hashvault.pro:5555
+[2017-12-24 06:15:59]  * POOL #5:      pool.monero.hashvault.pro:5555
+[2017-12-24 06:15:59]  * POOL #3:      pool.monero.hashvault.pro:5555
+[2017-12-24 06:15:59]  * POOL #2:      pool.monero.hashvault.pro:5555
+[2017-12-24 06:15:59]  * COMMANDS:     'h' hashrate, 'p' pause, 'r' resume
+[2017-12-24 06:15:59] compiling code and initializing GPUs. This will take a while...
+[2017-12-24 06:15:59]  * POOL #4:      pool.monero.hashvault.pro:5555
+[2017-12-24 06:15:59] #0, GPU #0 (Radeon RX 550 Series), intensity: 640 (8/256), cu: 8
+[2017-12-24 06:16:09] #1, GPU #1 (Radeon RX 550 Series), intensity: 640 (8/256), cu: 8
+[2017-12-24 06:16:18] new job from pool.monero.hashvault.pro:5555 diff 5000
+[2017-12-24 06:16:18] use pool pool.monero.hashvault.pro:5555 45.63.56.168
+[2017-12-24 06:16:28] accepted (1/0) diff 5000 (122 ms)
+[2017-12-24 06:16:30] speed 10s/60s/15m 350.2 350.2 346.7 H/s max: 350.3 H/s
+[2017-12-24 06:16:30]  * GPU #0: 81C FAN 58%
+[2017-12-24 06:16:33] accepted (2/0) diff 5000 (113 ms)
+[2017-12-24 06:16:35] accepted (68/0) diff 11850 (127 ms)
+[2017-12-24 06:16:48] accepted (69/0) diff 11850 (141 ms)
+[2017-12-24 06:16:51] accepted (70/0) diff 11850 (118 ms)
+[2017-12-24 06:16:51] accepted (3/0) diff 5000 (121 ms)
+[2017-12-24 06:17:03] speed 10s/60s/15m 557.3 n/a n/a H/s max: 557.9 H/s
+[2017-12-24 06:17:05] accepted (4/0) diff 5000 (123 ms)
+[2017-12-24 06:17:07] new job from pool.monero.hashvault.pro:5555 diff 12240
+[2017-12-24 06:17:09] accepted (5/0) diff 5000 (123 ms)
+[2017-12-24 06:17:12] accepted (6/0) diff 12240 (122 ms)
+[2017-12-24 06:17:20] new job from pool.monero.hashvault.pro:5555 diff 12480
+[2017-12-24 06:17:22] accepted (71/0) diff 11850 (138 ms)
+[2017-12-24 06:17:30] speed 10s/60s/15m 350.1 350.2 346.8 H/s max: 350.3 H/s
+[2017-12-24 06:17:30]  * GPU #0: 82C FAN 59%
+[2017-12-24 06:17:51] accepted (7/0) diff 12240 (127 ms)
+[2017-12-24 06:18:03] speed 10s/60s/15m 557.3 556.8 n/a H/s max: 557.9 H/s
+[2017-12-24 06:18:07] accepted (8/0) diff 12240 (107 ms)
+[2017-12-24 06:18:08] new job from pool.monero.hashvault.pro:5555 diff 16980
+[2017-12-24 06:18:20] new job from pool.monero.hashvault.pro:5555 diff 11850
+[2017-12-24 06:18:21] accepted (9/0) diff 16980 (125 ms)
+[2017-12-24 06:18:30] speed 10s/60s/15m 350.2 350.2 346.8 H/s max: 350.3 H/s
+[2017-12-24 06:18:30]  * GPU #0: 80C FAN 59%
+[2017-12-24 06:19:03] speed 10s/60s/15m 558.0 557.7 n/a H/s max: 558.6 H/s
+[2017-12-24 06:19:04] accepted (10/0) diff 16980 (111 ms)
+[2017-12-24 06:19:06] accepted (11/0) diff 16980 (106 ms)
+[2017-12-24 06:19:08] new job from pool.monero.hashvault.pro:5555 diff 19980
+[2017-12-24 06:19:08] accepted (72/0) diff 11850 (116 ms)
+[2017-12-24 06:19:20] new job from pool.monero.hashvault.pro:5555 diff 11310
+[2017-12-24 06:19:24] accepted (73/0) diff 11310 (130 ms)
+[2017-12-24 06:19:25] accepted (12/0) diff 19980 (92 ms)
+[2017-12-24 06:19:30] accepted (13/0) diff 19980 (123 ms)
+[2017-12-24 06:19:30] speed 10s/60s/15m 350.2 350.2 348.6 H/s max: 350.3 H/s
+[2017-12-24 06:19:30]  * GPU #0: 81C FAN 58%
+[2017-12-24 06:19:32] accepted (14/0) diff 19980 (123 ms)
+[2017-12-24 06:20:03] speed 10s/60s/15m 557.9 557.6 n/a H/s max: 558.6 H/s
+[2017-12-24 06:20:03] accepted (74/0) diff 11310 (104 ms)
+[2017-12-24 06:20:08] new job from pool.monero.hashvault.pro:5555 diff 22590
+[2017-12-24 06:20:30] speed 10s/60s/15m 350.2 350.2 348.6 H/s max: 350.3 H/s
+[2017-12-24 06:20:30]  * GPU #0: 81C FAN 58%
+[2017-12-24 06:20:53] accepted (75/0) diff 11310 (127 ms)
+[2017-12-24 06:21:03] speed 10s/60s/15m 561.9 558.1 n/a H/s max: 560.0 H/s
+[2017-12-24 06:21:08] new job from pool.monero.hashvault.pro:5555 diff 17910
+[2017-12-24 06:21:20] new job from pool.monero.hashvault.pro:5555 diff 10860
+[2017-12-24 06:21:30] speed 10s/60s/15m 350.1 350.1 348.7 H/s max: 350.3 H/s
+[2017-12-24 06:21:30]  * GPU #0: 82C FAN 60%
+[2017-12-24 06:21:31] accepted (15/0) diff 17910 (121 ms)
+[2017-12-24 06:21:33] accepted (76/0) diff 10860 (130 ms)
+[2017-12-24 06:21:38] accepted (16/0) diff 17910 (111 ms)
+[2017-12-24 06:21:43] accepted (77/0) diff 10860 (138 ms)
+[2017-12-24 06:21:51] accepted (17/0) diff 17910 (152 ms)
+[2017-12-24 06:21:52] new job from pool.monero.hashvault.pro:5555 diff 10860
+[2017-12-24 06:21:52] new job from pool.monero.hashvault.pro:5555 diff 17910
+[2017-12-24 06:22:03] speed 10s/60s/15m 564.2 564.2 n/a H/s max: 564.5 H/s
+[2017-12-24 06:22:08] new job from pool.monero.hashvault.pro:5555 diff 19440
+[2017-12-24 06:22:20] new job from pool.monero.hashvault.pro:5555 diff 10860
+[2017-12-24 06:22:20] new job from pool.monero.hashvault.pro:5555 diff 19440
+[2017-12-24 06:22:20] [pool.monero.hashvault.pro:5555] duplicate job received, reconnect
+[2017-12-24 06:22:20] no active pools, stop mining
+[2017-12-24 06:22:26] use pool pool.monero.hashvault.pro:5555 45.63.56.168
+[2017-12-24 06:22:26] new job from pool.monero.hashvault.pro:5555 diff 5000
+[2017-12-24 06:22:31] speed 10s/60s/15m 162.0 331.0 347.5 H/s max: 350.3 H/s
+[2017-12-24 06:22:31]  * GPU #0: 80C FAN 58%
+[2017-12-24 06:22:31] accepted (78/0) diff 5000 (126 ms)
+[2017-12-24 06:22:39] accepted (79/0) diff 5000 (121 ms)
+[2017-12-24 06:22:42] accepted (80/0) diff 5000 (123 ms)
+[2017-12-24 06:22:52] new job from pool.monero.hashvault.pro:5555 diff 17280
+[2017-12-24 06:23:03] speed 10s/60s/15m 564.2 564.2 n/a H/s max: 564.5 H/s
+[2017-12-24 06:23:03] accepted (81/0) diff 17280 (122 ms)
+[2017-12-24 06:23:08] new job from pool.monero.hashvault.pro:5555 diff 16590
+[2017-12-24 06:23:31] speed 10s/60s/15m 350.2 350.2 349.0 H/s max: 350.3 H/s
+[2017-12-24 06:23:31]  * GPU #0: 81C FAN 58%
+[2017-12-24 06:23:31] accepted (18/0) diff 16590 (125 ms)
+[2017-12-24 06:23:36] new job from pool.monero.hashvault.pro:5555 diff 16590
+[2017-12-24 06:23:36] new job from pool.monero.hashvault.pro:5555 diff 17280
+[2017-12-24 06:23:43] accepted (82/0) diff 17280 (121 ms)
+[2017-12-24 06:23:52] new job from pool.monero.hashvault.pro:5555 diff 17280
+[2017-12-24 06:23:52] new job from pool.monero.hashvault.pro:5555 diff 16590
+[2017-12-24 06:23:53] [pool.monero.hashvault.pro:5555] duplicate job received, reconnect
+[2017-12-24 06:23:53] no active pools, stop mining
+[2017-12-24 06:23:58] use pool pool.monero.hashvault.pro:5555 45.63.56.168
+[2017-12-24 06:23:58] new job from pool.monero.hashvault.pro:5555 diff 5000
+[2017-12-24 06:24:03] speed 10s/60s/15m 564.0 564.1 n/a H/s max: 564.5 H/s
+[2017-12-24 06:24:08] new job from pool.monero.hashvault.pro:5555 diff 15510
+[2017-12-24 06:24:12] accepted (19/0) diff 15510 (116 ms)
+[2017-12-24 06:24:14] accepted (83/0) diff 5000 (170 ms)
+[2017-12-24 06:24:19] accepted (84/0) diff 5000 (127 ms)
+[2017-12-24 06:24:20] accepted (85/0) diff 5000 (388 ms)
+[2017-12-24 06:24:30] accepted (20/0) diff 15510 (128 ms)
+[2017-12-24 06:24:30] accepted (86/0) diff 5000 (128 ms)
+[2017-12-24 06:24:31] speed 10s/60s/15m 350.2 319.4 347.0 H/s max: 350.3 H/s
+[2017-12-24 06:24:31]  * GPU #0: 80C FAN 57%
+[2017-12-24 06:24:38] accepted (87/0) diff 5000 (118 ms)
+[2017-12-24 06:24:48] accepted (21/0) diff 15510 (120 ms)
+[2017-12-24 06:24:52] new job from pool.monero.hashvault.pro:5555 diff 13860
+[2017-12-24 06:25:03] speed 10s/60s/15m 564.1 564.1 n/a H/s max: 564.5 H/s
+[2017-12-24 06:25:08] new job from pool.monero.hashvault.pro:5555 diff 16410
+[2017-12-24 06:25:23] accepted (88/0) diff 13860 (98 ms)
+[2017-12-24 06:25:31] speed 10s/60s/15m 350.1 350.2 347.0 H/s max: 350.3 H/s
+[2017-12-24 06:25:31]  * GPU #0: 81C FAN 57%
+[2017-12-24 06:25:31] accepted (89/0) diff 13860 (129 ms)
+[2017-12-24 06:25:31] accepted (22/0) diff 16410 (125 ms)
+[2017-12-24 06:25:36] new job from pool.monero.hashvault.pro:5555 diff 16410
+[2017-12-24 06:25:36] new job from pool.monero.hashvault.pro:5555 diff 13860
+[2017-12-24 06:25:38] accepted (23/0) diff 16410 (164 ms)
+[2017-12-24 06:26:03] speed 10s/60s/15m 564.2 564.2 n/a H/s max: 564.5 H/s
+[2017-12-24 06:26:18] accepted (90/0) diff 13860 (118 ms)
+[2017-12-24 06:26:21] accepted (24/0) diff 16410 (122 ms)
+[2017-12-24 06:26:26] accepted (91/0) diff 13860 (125 ms)
+[2017-12-24 06:26:29] accepted (92/0) diff 13860 (120 ms)
+[2017-12-24 06:26:31] speed 10s/60s/15m 349.5 349.9 347.0 H/s max: 350.3 H/s
+[2017-12-24 06:26:31]  * GPU #0: 81C FAN 57%
+[2017-12-24 06:26:53] new job from pool.monero.hashvault.pro:5555 diff 16230
+[2017-12-24 06:27:03] speed 10s/60s/15m 564.2 563.8 n/a H/s max: 564.5 H/s
+[2017-12-24 06:27:08] new job from pool.monero.hashvault.pro:5555 diff 15630
+[2017-12-24 06:27:16] accepted (25/0) diff 15630 (116 ms)
+[2017-12-24 06:27:29] accepted (26/0) diff 15630 (121 ms)
+[2017-12-24 06:27:31] speed 10s/60s/15m 349.5 349.5 346.9 H/s max: 350.3 H/s
+[2017-12-24 06:27:31]  * GPU #0: 81C FAN 58%
+[2017-12-24 06:27:32] accepted (27/0) diff 15630 (124 ms)
+[2017-12-24 06:27:36] new job from pool.monero.hashvault.pro:5555 diff 15630
+[2017-12-24 06:27:36] new job from pool.monero.hashvault.pro:5555 diff 16230
+[2017-12-24 06:27:53] new job from pool.monero.hashvault.pro:5555 diff 12060
+[2017-12-24 06:27:56] accepted (93/0) diff 12060 (97 ms)
+[2017-12-24 06:28:01] accepted (28/0) diff 15630 (102 ms)
+[2017-12-24 06:28:03] speed 10s/60s/15m 564.2 564.2 n/a H/s max: 564.5 H/s
+[2017-12-24 06:28:08] new job from pool.monero.hashvault.pro:5555 diff 16950
+[2017-12-24 06:28:08] new job from pool.monero.hashvault.pro:5555 diff 12060
+[2017-12-24 06:28:08] new job from pool.monero.hashvault.pro:5555 diff 16950
+[2017-12-24 06:28:08] [pool.monero.hashvault.pro:5555] duplicate job received, reconnect
+[2017-12-24 06:28:08] no active pools, stop mining
+[2017-12-24 06:28:14] use pool pool.monero.hashvault.pro:5555 45.63.56.168
+[2017-12-24 06:28:14] new job from pool.monero.hashvault.pro:5555 diff 5000
+[2017-12-24 06:28:21] accepted (29/0) diff 5000 (122 ms)
+[2017-12-24 06:28:26] accepted (30/0) diff 5000 (122 ms)
+[2017-12-24 06:28:26] accepted (31/0) diff 5000 (386 ms)
+[2017-12-24 06:28:31] speed 10s/60s/15m 349.5 349.5 346.9 H/s max: 350.3 H/s
+[2017-12-24 06:28:31]  * GPU #0: 81C FAN 60%
+[2017-12-24 06:28:33] accepted (32/0) diff 5000 (119 ms)
+[2017-12-24 06:28:33] accepted (33/0) diff 5000 (283 ms)
+[2017-12-24 06:28:33] accepted (94/0) diff 12060 (120 ms)
+[2017-12-24 06:28:46] accepted (34/0) diff 5000 (121 ms)
+[2017-12-24 06:28:47] accepted (35/0) diff 5000 (392 ms)
+[2017-12-24 06:28:53] new job from pool.monero.hashvault.pro:5555 diff 27630
+[2017-12-24 06:29:03] speed 10s/60s/15m 558.1 518.1 n/a H/s max: 564.5 H/s
+[2017-12-24 06:29:31] speed 10s/60s/15m 349.5 349.5 346.8 H/s max: 350.3 H/s
+[2017-12-24 06:29:31]  * GPU #0: 81C FAN 58%
+[2017-12-24 06:29:53] new job from pool.monero.hashvault.pro:5555 diff 10020
+[2017-12-24 06:29:53] new job from pool.monero.hashvault.pro:5555 diff 10710
+[2017-12-24 06:29:55] accepted (36/0) diff 27630 (126 ms)
+[2017-12-24 06:29:58] accepted (95/0) diff 10020 (120 ms)
+[2017-12-24 06:30:03] speed 10s/60s/15m 564.1 563.8 n/a H/s max: 564.5 H/s
+[2017-12-24 06:30:08] accepted (96/0) diff 10020 (124 ms)
+[2017-12-24 06:30:19] accepted (97/0) diff 10020 (97 ms)
+[2017-12-24 06:30:31] speed 10s/60s/15m 349.5 349.5 346.8 H/s max: 350.3 H/s
+[2017-12-24 06:30:31]  * GPU #0: 81C FAN 59%
+[2017-12-24 06:30:38] accepted (37/0) diff 10710 (118 ms)
+[2017-12-24 06:30:53] new job from pool.monero.hashvault.pro:5555 diff 10740
+[2017-12-24 06:30:53] new job from pool.monero.hashvault.pro:5555 diff 13920
+[2017-12-24 06:30:56] accepted (98/0) diff 10740 (115 ms)
+[2017-12-24 06:31:03] speed 10s/60s/15m 564.2 564.0 n/a H/s max: 564.5 H/s
+[2017-12-24 06:31:07] accepted (38/0) diff 13920 (101 ms)
+[2017-12-24 06:31:14] accepted (39/0) diff 13920 (107 ms)
+[2017-12-24 06:31:27] accepted (99/0) diff 10740 (114 ms)
+[2017-12-24 06:31:28] accepted (40/0) diff 13920 (118 ms)
+[2017-12-24 06:31:31] speed 10s/60s/15m 349.5 349.5 346.7 H/s max: 350.3 H/s
+[2017-12-24 06:31:31]  * GPU #0: 81C FAN 58%
+[2017-12-24 06:31:53] new job from pool.monero.hashvault.pro:5555 diff 15810
+[2017-12-24 06:32:00] accepted (41/0) diff 15810 (118 ms)
+[2017-12-24 06:32:02] accepted (100/0) diff 10740 (121 ms)
+[2017-12-24 06:32:03] speed 10s/60s/15m 564.0 564.1 559.3 H/s max: 564.5 H/s
+[2017-12-24 06:32:04] accepted (42/0) diff 15810 (123 ms)
+[2017-12-24 06:32:12] accepted (101/0) diff 10740 (116 ms)
+[2017-12-24 06:32:31] speed 10s/60s/15m 349.5 349.5 346.7 H/s max: 350.3 H/s
+[2017-12-24 06:32:31]  * GPU #0: 80C FAN 59%
+[2017-12-24 06:32:31] accepted (102/0) diff 10740 (118 ms)
+[2017-12-24 06:32:36] new job from pool.monero.hashvault.pro:5555 diff 10740
+[2017-12-24 06:32:36] new job from pool.monero.hashvault.pro:5555 diff 15810
+[2017-12-24 06:32:39] accepted (103/0) diff 10740 (120 ms)
+[2017-12-24 06:32:49] accepted (104/0) diff 10740 (117 ms)
+[2017-12-24 06:32:53] new job from pool.monero.hashvault.pro:5555 diff 12540
+[2017-12-24 06:32:55] accepted (105/0) diff 10740 (136 ms)
+[2017-12-24 06:33:03] speed 10s/60s/15m 564.2 564.2 559.8 H/s max: 564.5 H/s
+[2017-12-24 06:33:05] accepted (106/0) diff 12540 (121 ms)
+[2017-12-24 06:33:09] new job from pool.monero.hashvault.pro:5555 diff 12540
+[2017-12-24 06:33:09] new job from pool.monero.hashvault.pro:5555 diff 15810
+[2017-12-24 06:33:28] accepted (43/0) diff 15810 (95 ms)
+[2017-12-24 06:33:31] speed 10s/60s/15m 349.5 349.5 346.7 H/s max: 350.3 H/s
+[2017-12-24 06:33:31]  * GPU #0: 81C FAN 57%
+[2017-12-24 06:33:32] accepted (107/0) diff 12540 (121 ms)
+[2017-12-24 06:33:37] accepted (44/0) diff 15810 (115 ms)
+[2017-12-24 06:33:39] accepted (45/0) diff 15810 (129 ms)
+[2017-12-24 06:33:40] accepted (46/0) diff 15810 (278 ms)
+[2017-12-24 06:33:53] new job from pool.monero.hashvault.pro:5555 diff 13080
+[2017-12-24 06:33:53] new job from pool.monero.hashvault.pro:5555 diff 18630
+[2017-12-24 06:33:53] accepted (108/0) diff 12540 (334 ms)
+[2017-12-24 06:33:53] accepted (109/0) diff 12540 (334 ms)
+[2017-12-24 06:33:53] accepted (110/0) diff 12540 (334 ms)
+[2017-12-24 06:34:03] speed 10s/60s/15m 564.2 564.1 560.2 H/s max: 564.5 H/s
+[2017-12-24 06:34:31] speed 10s/60s/15m 350.2 350.2 346.7 H/s max: 350.3 H/s
+[2017-12-24 06:34:31]  * GPU #0: 81C FAN 58%
+[2017-12-24 06:34:53] new job from pool.monero.hashvault.pro:5555 diff 13620
+[2017-12-24 06:34:53] new job from pool.monero.hashvault.pro:5555 diff 15810
+[2017-12-24 06:35:01] accepted (47/0) diff 15810 (131 ms)
+[2017-12-24 06:35:03] speed 10s/60s/15m 564.1 564.2 560.7 H/s max: 564.5 H/s
+[2017-12-24 06:35:04] accepted (111/0) diff 13620 (120 ms)
+[2017-12-24 06:35:17] accepted (48/0) diff 15810 (89 ms)
+[2017-12-24 06:35:19] accepted (49/0) diff 15810 (107 ms)
+[2017-12-24 06:35:31] speed 10s/60s/15m 350.2 350.2 346.6 H/s max: 350.3 H/s
+[2017-12-24 06:35:31]  * GPU #0: 82C FAN 60%
+[2017-12-24 06:35:36] new job from pool.monero.hashvault.pro:5555 diff 13620
+[2017-12-24 06:35:36] new job from pool.monero.hashvault.pro:5555 diff 15810
+[2017-12-24 06:35:38] accepted (112/0) diff 13620 (121 ms)
+[2017-12-24 06:35:44] accepted (113/0) diff 13620 (108 ms)
+[2017-12-24 06:35:53] new job from pool.monero.hashvault.pro:5555 diff 14190
+[2017-12-24 06:35:53] new job from pool.monero.hashvault.pro:5555 diff 16830
+[2017-12-24 06:35:54] accepted (114/0) diff 13620 (150 ms)
+[2017-12-24 06:36:02] accepted (115/0) diff 14190 (60 ms)
+[2017-12-24 06:36:03] speed 10s/60s/15m 564.2 564.2 561.1 H/s max: 564.5 H/s
+[2017-12-24 06:36:07] accepted (116/0) diff 14190 (126 ms)
+[2017-12-24 06:36:08] accepted (117/0) diff 14190 (451 ms)
+[2017-12-24 06:36:09] new job from pool.monero.hashvault.pro:5555 diff 14190
+[2017-12-24 06:36:09] new job from pool.monero.hashvault.pro:5555 diff 16830
+[2017-12-24 06:36:20] accepted (50/0) diff 16830 (101 ms)
+[2017-12-24 06:36:31] speed 10s/60s/15m 350.2 350.2 346.6 H/s max: 350.3 H/s
+[2017-12-24 06:36:31]  * GPU #0: 81C FAN 59%
+[2017-12-24 06:36:53] new job from pool.monero.hashvault.pro:5555 diff 15270
+[2017-12-24 06:36:53] new job from pool.monero.hashvault.pro:5555 diff 15870
+[2017-12-24 06:37:03] speed 10s/60s/15m 557.9 560.0 560.8 H/s max: 564.5 H/s
+[2017-12-24 06:37:08] accepted (118/0) diff 15270 (117 ms)
+[2017-12-24 06:37:18] accepted (51/0) diff 15870 (116 ms)
+[2017-12-24 06:37:31] speed 10s/60s/15m 350.2 350.2 347.9 H/s max: 350.3 H/s
+[2017-12-24 06:37:31]  * GPU #0: 81C FAN 59%
+[2017-12-24 06:37:48] accepted (119/0) diff 15270 (63 ms)
+[2017-12-24 06:37:53] new job from pool.monero.hashvault.pro:5555 diff 15030
+[2017-12-24 06:37:56] accepted (52/0) diff 15030 (107 ms)
+[2017-12-24 06:38:01] accepted (120/0) diff 15270 (120 ms)
+[2017-12-24 06:38:03] speed 10s/60s/15m 564.1 563.1 560.7 H/s max: 564.5 H/s
+[2017-12-24 06:38:06] accepted (121/0) diff 15270 (110 ms)
+[2017-12-24 06:38:17] accepted (122/0) diff 15270 (158 ms)
+[2017-12-24 06:38:25] accepted (123/0) diff 15270 (120 ms)
+[2017-12-24 06:38:31] speed 10s/60s/15m 350.2 350.2 347.9 H/s max: 350.3 H/s
+[2017-12-24 06:38:31]  * GPU #0: 81C FAN 58%
+[2017-12-24 06:38:43] accepted (124/0) diff 15270 (95 ms)
+[2017-12-24 06:38:53] new job from pool.monero.hashvault.pro:5555 diff 16770
+[2017-12-24 06:38:53] new job from pool.monero.hashvault.pro:5555 diff 14340
+[2017-12-24 06:39:03] speed 10s/60s/15m 564.3 564.2 560.7 H/s max: 564.5 H/s
+[2017-12-24 06:39:25] accepted (53/0) diff 14340 (99 ms)
+[2017-12-24 06:39:28] accepted (125/0) diff 16770 (112 ms)
+[2017-12-24 06:39:31] speed 10s/60s/15m 350.2 350.2 349.8 H/s max: 350.3 H/s
+[2017-12-24 06:39:31]  * GPU #0: 82C FAN 59%
+[2017-12-24 06:39:33] accepted (126/0) diff 16770 (122 ms)
+[2017-12-24 06:39:43] accepted (54/0) diff 14340 (128 ms)
+[2017-12-24 06:40:03] speed 10s/60s/15m 564.2 564.2 560.7 H/s max: 564.5 H/s
+[2017-12-24 06:40:08] accepted (55/0) diff 14340 (113 ms)
+[2017-12-24 06:40:15] accepted (56/0) diff 14340 (123 ms)
+[2017-12-24 06:40:19] accepted (57/0) diff 14340 (103 ms)
+[2017-12-24 06:40:31] speed 10s/60s/15m 350.1 350.2 349.8 H/s max: 350.3 H/s
+[2017-12-24 06:40:31]  * GPU #0: 81C FAN 57%
+[2017-12-24 06:40:36] new job from pool.monero.hashvault.pro:5555 diff 16770
+[2017-12-24 06:40:36] new job from pool.monero.hashvault.pro:5555 diff 14340
+[2017-12-24 06:40:42] accepted (127/0) diff 16770 (63 ms)
+[2017-12-24 06:40:47] accepted (58/0) diff 14340 (132 ms)
+[2017-12-24 06:40:49] accepted (59/0) diff 14340 (111 ms)
+[2017-12-24 06:40:52] accepted (128/0) diff 16770 (144 ms)
+[2017-12-24 06:40:53] new job from pool.monero.hashvault.pro:5555 diff 16020
+[2017-12-24 06:41:03] speed 10s/60s/15m 564.2 564.2 560.7 H/s max: 564.5 H/s
+[2017-12-24 06:41:16] accepted (129/0) diff 16770 (106 ms)
+[2017-12-24 06:41:21] new job from pool.monero.hashvault.pro:5555 diff 16770
+[2017-12-24 06:41:21] new job from pool.monero.hashvault.pro:5555 diff 16020
+[2017-12-24 06:41:21] accepted (130/0) diff 16770 (103 ms)
+[2017-12-24 06:41:31] speed 10s/60s/15m 350.1 350.2 349.9 H/s max: 350.3 H/s
+[2017-12-24 06:41:31]  * GPU #0: 81C FAN 58%
+[2017-12-24 06:41:43] accepted (131/0) diff 16770 (106 ms)
+[2017-12-24 06:41:52] accepted (60/0) diff 16020 (134 ms)
+[2017-12-24 06:41:53] new job from pool.monero.hashvault.pro:5555 diff 17250
+[2017-12-24 06:41:53] new job from pool.monero.hashvault.pro:5555 diff 15420
+[2017-12-24 06:41:56] accepted (132/0) diff 16770 (122 ms)
+[2017-12-24 06:42:03] speed 10s/60s/15m 564.2 564.2 560.7 H/s max: 564.5 H/s
+[2017-12-24 06:42:09] accepted (133/0) diff 17250 (125 ms)
+[2017-12-24 06:42:15] accepted (61/0) diff 15420 (134 ms)
+[2017-12-24 06:42:24] accepted (62/0) diff 15420 (119 ms)
+[2017-12-24 06:42:30] accepted (134/0) diff 17250 (121 ms)
+[2017-12-24 06:42:31] speed 10s/60s/15m 350.2 350.2 349.9 H/s max: 350.3 H/s
+[2017-12-24 06:42:31]  * GPU #0: 81C FAN 59%
+[2017-12-24 06:42:53] new job from pool.monero.hashvault.pro:5555 diff 17700
+[2017-12-24 06:43:03] speed 10s/60s/15m 564.2 564.2 560.7 H/s max: 564.5 H/s
+[2017-12-24 06:43:31] speed 10s/60s/15m 350.2 350.2 350.0 H/s max: 350.3 H/s
+[2017-12-24 06:43:31]  * GPU #0: 83C FAN 59%
+[2017-12-24 06:43:53] new job from pool.monero.hashvault.pro:5555 diff 16800
+[2017-12-24 06:43:53] new job from pool.monero.hashvault.pro:5555 diff 14430
+[2017-12-24 06:43:55] accepted (63/0) diff 15420 (126 ms)
+[2017-12-24 06:43:59] accepted (64/0) diff 14430 (121 ms)
+[2017-12-24 06:44:03] speed 10s/60s/15m 564.2 564.2 563.8 H/s max: 564.5 H/s
+[2017-12-24 06:44:13] accepted (65/0) diff 14430 (59 ms)
+[2017-12-24 06:44:31] speed 10s/60s/15m 350.2 350.2 350.0 H/s max: 350.3 H/s
+[2017-12-24 06:44:31]  * GPU #0: 81C FAN 58%
+[2017-12-24 06:44:53] new job from pool.monero.hashvault.pro:5555 diff 15990
+[2017-12-24 06:44:53] new job from pool.monero.hashvault.pro:5555 diff 14910
+[2017-12-24 06:45:03] speed 10s/60s/15m 557.0 561.0 563.6 H/s max: 564.5 H/s
+[2017-12-24 06:45:31] speed 10s/60s/15m 350.2 350.2 350.0 H/s max: 350.3 H/s
+[2017-12-24 06:45:31]  * GPU #0: 81C FAN 59%
+[2017-12-24 06:45:37] accepted (66/0) diff 14910 (114 ms)
+[2017-12-24 06:45:53] new job from pool.monero.hashvault.pro:5555 diff 15270
+[2017-12-24 06:45:53] new job from pool.monero.hashvault.pro:5555 diff 14490
+[2017-12-24 06:46:03] speed 10s/60s/15m 564.1 562.3 563.5 H/s max: 564.5 H/s
+[2017-12-24 06:46:25] accepted (135/0) diff 15270 (106 ms)
+[2017-12-24 06:46:28] accepted (136/0) diff 15270 (120 ms)
+[2017-12-24 06:46:31] speed 10s/60s/15m 350.2 350.2 350.1 H/s max: 350.3 H/s
+[2017-12-24 06:46:31]  * GPU #0: 81C FAN 58%
+[2017-12-24 06:46:43] accepted (137/0) diff 15270 (126 ms)
+[2017-12-24 06:46:44] accepted (138/0) diff 15270 (387 ms)
+[2017-12-24 06:46:53] new job from pool.monero.hashvault.pro:5555 diff 15930
+[2017-12-24 06:46:53] new job from pool.monero.hashvault.pro:5555 diff 13710
+[2017-12-24 06:46:55] accepted (67/0) diff 14490 (119 ms)
+[2017-12-24 06:47:03] speed 10s/60s/15m 564.1 564.1 563.5 H/s max: 564.5 H/s
+[2017-12-24 06:47:04] accepted (68/0) diff 13710 (120 ms)
+[2017-12-24 06:47:26] accepted (69/0) diff 13710 (113 ms)
+[2017-12-24 06:47:31] speed 10s/60s/15m 350.1 350.2 350.1 H/s max: 350.3 H/s
+[2017-12-24 06:47:31]  * GPU #0: 82C FAN 58%
+[2017-12-24 06:47:38] accepted (70/0) diff 13710 (119 ms)
+[2017-12-24 06:47:53] new job from pool.monero.hashvault.pro:5555 diff 15270
+[2017-12-24 06:47:53] new job from pool.monero.hashvault.pro:5555 diff 14430
+[2017-12-24 06:47:55] accepted (139/0) diff 15930 (118 ms)
+[2017-12-24 06:47:57] accepted (140/0) diff 15270 (119 ms)
+[2017-12-24 06:48:03] speed 10s/60s/15m 563.8 564.1 563.5 H/s max: 564.5 H/s
+[2017-12-24 06:48:05] accepted (71/0) diff 14430 (113 ms)
+[2017-12-24 06:48:21] accepted (72/0) diff 14430 (120 ms)
+[2017-12-24 06:48:21] accepted (73/0) diff 14430 (383 ms)
+[2017-12-24 06:48:31] speed 10s/60s/15m 350.2 350.2 350.2 H/s max: 350.3 H/s
+[2017-12-24 06:48:31]  * GPU #0: 81C FAN 58%
+[2017-12-24 06:48:53] accepted (74/0) diff 14430 (110 ms)
+[2017-12-24 06:48:53] accepted (75/0) diff 14430 (124 ms)
+[2017-12-24 06:48:54] new job from pool.monero.hashvault.pro:5555 diff 15450
+[2017-12-24 06:49:03] accepted (141/0) diff 15270 (59 ms)
+[2017-12-24 06:49:03] speed 10s/60s/15m 564.0 564.2 563.5 H/s max: 564.5 H/s
+[2017-12-24 06:49:09] new job from pool.monero.hashvault.pro:5555 diff 15270
+[2017-12-24 06:49:09] new job from pool.monero.hashvault.pro:5555 diff 15450
+[2017-12-24 06:49:11] accepted (142/0) diff 15270 (116 ms)
+[2017-12-24 06:49:24] accepted (76/0) diff 15450 (122 ms)
+[2017-12-24 06:49:31] speed 10s/60s/15m 350.2 350.2 350.2 H/s max: 350.3 H/s
+[2017-12-24 06:49:31]  * GPU #0: 81C FAN 59%
+[2017-12-24 06:49:54] new job from pool.monero.hashvault.pro:5555 diff 15120
+[2017-12-24 06:49:59] accepted (143/0) diff 15270 (60 ms)
+[2017-12-24 06:50:01] accepted (77/0) diff 15120 (118 ms)
+[2017-12-24 06:50:03] speed 10s/60s/15m 564.1 564.1 563.5 H/s max: 564.5 H/s
+[2017-12-24 06:50:12] accepted (78/0) diff 15120 (60 ms)
+[2017-12-24 06:50:17] accepted (79/0) diff 15120 (116 ms)
+[2017-12-24 06:50:31] speed 10s/60s/15m 350.2 350.2 350.2 H/s max: 350.3 H/s
+[2017-12-24 06:50:31]  * GPU #0: 81C FAN 59%
+[2017-12-24 06:50:37] accepted (80/0) diff 15120 (117 ms)
+[2017-12-24 06:50:49] accepted (144/0) diff 15270 (64 ms)
+[2017-12-24 06:50:54] new job from pool.monero.hashvault.pro:5555 diff 15780
+[2017-12-24 06:50:54] new job from pool.monero.hashvault.pro:5555 diff 15270
+[2017-12-24 06:50:54] new job from pool.monero.hashvault.pro:5555 diff 15780
+[2017-12-24 06:50:54] [pool.monero.hashvault.pro:5555] duplicate job received, reconnect
+[2017-12-24 06:50:54] no active pools, stop mining
+[2017-12-24 06:50:54] [pool.monero.hashvault.pro:5555] duplicate job received, reconnect
+[2017-12-24 06:50:54] no active pools, stop mining
+[2017-12-24 06:50:59] new job from pool.monero.hashvault.pro:5555 diff 5000
+[2017-12-24 06:50:59] use pool pool.monero.hashvault.pro:5555 45.63.56.168
+[2017-12-24 06:51:02]  * VERSIONS:     XMRig/2.4.2 libuv/1.14.1 CUDA/9.0 MSVC/2015
+[2017-12-24 06:51:02]  * CPU:                 Intel(R) Core(TM) i7-4820K CPU @ 3.70GHz (1) x64 AES-NI
+[2017-12-24 06:51:02]  * GPU #0:       GeForce GTX 670 @ 1084/3104 MHz 44x21 6x25 arch:30 SMX:7
+[2017-12-24 06:51:02]  * POOL #1:      pool.monero.hashvault.pro:5555
+[2017-12-24 06:51:02]  * POOL #2:      pool.monero.hashvault.pro:5555
+[2017-12-24 06:51:02]  * ALGO:         cryptonight, donate=1%
+[2017-12-24 06:51:02]  * POOL #3:      pool.monero.hashvault.pro:5555
+[2017-12-24 06:51:02]  * POOL #5:      pool.monero.hashvault.pro:5555
+[2017-12-24 06:51:02]  * POOL #4:      pool.monero.hashvault.pro:5555
+[2017-12-24 06:51:02]  * COMMANDS:     'h' hashrate, 'e' health, 'p' pause, 'r' resume
+[2017-12-24 06:51:02] use pool pool.monero.hashvault.pro:5555 45.63.56.168
+[2017-12-24 06:51:02] new job from pool.monero.hashvault.pro:5555 diff 5000
+[2017-12-24 06:51:03] speed 10s/60s/15m 199.3 522.5 560.8 H/s max: 564.5 H/s
+[2017-12-24 06:51:08] accepted (1/0) diff 5000 (107 ms)
+[2017-12-24 06:51:15] accepted (81/0) diff 5000 (134 ms)
+[2017-12-24 06:51:18] accepted (2/0) diff 5000 (115 ms)
+[2017-12-24 06:51:20] accepted (82/0) diff 5000 (105 ms)
+[2017-12-24 06:51:22] new job from pool.monero.hashvault.pro:5555 diff 13620
+[2017-12-24 06:51:22] new job from pool.monero.hashvault.pro:5555 diff 15780
+[2017-12-24 06:51:22] new job from pool.monero.hashvault.pro:5555 diff 15780
+[2017-12-24 06:51:22] new job from pool.monero.hashvault.pro:5555 diff 13620
+[2017-12-24 06:51:22] [pool.monero.hashvault.pro:5555] duplicate job received, reconnect
+[2017-12-24 06:51:22] [pool.monero.hashvault.pro:5555] duplicate job received, reconnect
+[2017-12-24 06:51:22] no active pools, stop mining
+[2017-12-24 06:51:22] no active pools, stop mining
+[2017-12-24 06:51:27] use pool pool.monero.hashvault.pro:5555 45.63.56.168
+[2017-12-24 06:51:27] new job from pool.monero.hashvault.pro:5555 diff 5000
+[2017-12-24 06:51:27] new job from pool.monero.hashvault.pro:5555 diff 5000
+[2017-12-24 06:51:27] use pool pool.monero.hashvault.pro:5555 45.63.56.168
+[2017-12-24 06:51:33] accepted (3/0) diff 5000 (126 ms)
+[2017-12-24 06:51:35] accepted (83/0) diff 5000 (214 ms)
+[2017-12-24 06:51:36] accepted (4/0) diff 5000 (105 ms)
+[2017-12-24 06:51:41] accepted (84/0) diff 5000 (130 ms)
+[2017-12-24 06:51:48] accepted (85/0) diff 5000 (218 ms)
+[2017-12-24 06:51:49] accepted (5/0) diff 5000 (92 ms)
+[2017-12-24 06:51:54] new job from pool.monero.hashvault.pro:5555 diff 5000
+[2017-12-24 06:51:54] new job from pool.monero.hashvault.pro:5555 diff 5000
+[2017-12-24 06:52:03] speed 10s/60s/15m 564.2 530.6 559.0 H/s max: 564.5 H/s
+[2017-12-24 06:52:04] accepted (86/0) diff 5000 (112 ms)
+[2017-12-24 06:52:06] speed 10s/60s/15m 350.2 323.9 n/a H/s max: 350.2 H/s
+[2017-12-24 06:52:06]  * GPU #0: 80C FAN 58%
+[2017-12-24 06:52:09] new job from pool.monero.hashvault.pro:5555 diff 14610
+[2017-12-24 06:52:10] accepted (6/0) diff 5000 (123 ms)
+[2017-12-24 06:52:22] new job from pool.monero.hashvault.pro:5555 diff 11100
+[2017-12-24 06:52:24] accepted (87/0) diff 14610 (124 ms)
+[2017-12-24 06:52:55] accepted (7/0) diff 11100 (117 ms)
+[2017-12-24 06:52:56] accepted (88/0) diff 14610 (120 ms)
+[2017-12-24 06:53:00] accepted (8/0) diff 11100 (114 ms)
+[2017-12-24 06:53:03] speed 10s/60s/15m 559.9 563.1 559.0 H/s max: 564.5 H/s
+[2017-12-24 06:53:06] speed 10s/60s/15m 349.5 349.7 n/a H/s max: 350.2 H/s
+[2017-12-24 06:53:06]  * GPU #0: 81C FAN 57%
+[2017-12-24 06:53:21] accepted (89/0) diff 14610 (153 ms)
+[2017-12-24 06:53:37] new job from pool.monero.hashvault.pro:5555 diff 11100
+[2017-12-24 06:53:37] new job from pool.monero.hashvault.pro:5555 diff 14610
+[2017-12-24 06:53:54] new job from pool.monero.hashvault.pro:5555 diff 11100
+[2017-12-24 06:53:54] new job from pool.monero.hashvault.pro:5555 diff 14610
+[2017-12-24 06:54:01] accepted (9/0) diff 11100 (92 ms)
+[2017-12-24 06:54:03] speed 10s/60s/15m 561.1 559.7 558.7 H/s max: 564.5 H/s
+[2017-12-24 06:54:04] accepted (10/0) diff 11100 (112 ms)
+[2017-12-24 06:54:06] speed 10s/60s/15m 350.1 350.0 n/a H/s max: 350.2 H/s
+[2017-12-24 06:54:06]  * GPU #0: 80C FAN 58%
+[2017-12-24 06:54:09] new job from pool.monero.hashvault.pro:5555 diff 11880
+[2017-12-24 06:54:09] new job from pool.monero.hashvault.pro:5555 diff 11100
+[2017-12-24 06:54:10] [pool.monero.hashvault.pro:5555] duplicate job received, reconnect
+[2017-12-24 06:54:10] new job from pool.monero.hashvault.pro:5555 diff 11880
+[2017-12-24 06:54:10] no active pools, stop mining
+[2017-12-24 06:54:16] use pool pool.monero.hashvault.pro:5555 45.63.56.168
+[2017-12-24 06:54:16] new job from pool.monero.hashvault.pro:5555 diff 5000
+[2017-12-24 06:54:17] accepted (11/0) diff 11100 (115 ms)
+[2017-12-24 06:54:22] new job from pool.monero.hashvault.pro:5555 diff 12990
+[2017-12-24 06:54:23] accepted (90/0) diff 5000 (92 ms)
+[2017-12-24 06:54:28] accepted (91/0) diff 5000 (117 ms)
+[2017-12-24 06:54:41] accepted (12/0) diff 12990 (118 ms)
+[2017-12-24 06:54:48] accepted (92/0) diff 5000 (112 ms)
+[2017-12-24 06:54:48] accepted (93/0) diff 5000 (381 ms)
+[2017-12-24 06:54:50] accepted (94/0) diff 5000 (126 ms)
+[2017-12-24 06:54:54] accepted (13/0) diff 12990 (100 ms)
+[2017-12-24 06:54:59] accepted (95/0) diff 5000 (136 ms)
+[2017-12-24 06:55:03] speed 10s/60s/15m 562.2 518.5 555.8 H/s max: 564.5 H/s
+[2017-12-24 06:55:06] speed 10s/60s/15m 350.2 350.2 n/a H/s max: 350.3 H/s
+[2017-12-24 06:55:06]  * GPU #0: 80C FAN 58%
+[2017-12-24 06:55:09] new job from pool.monero.hashvault.pro:5555 diff 16980
+[2017-12-24 06:55:15] accepted (96/0) diff 16980 (123 ms)
+[2017-12-24 06:55:25] accepted (14/0) diff 12990 (126 ms)
+[2017-12-24 06:55:36] accepted (97/0) diff 16980 (98 ms)
+[2017-12-24 06:56:01] accepted (98/0) diff 16980 (122 ms)
+[2017-12-24 06:56:03] speed 10s/60s/15m 562.0 562.3 555.6 H/s max: 564.5 H/s
+[2017-12-24 06:56:06] speed 10s/60s/15m 350.2 350.2 n/a H/s max: 350.3 H/s
+[2017-12-24 06:56:06]  * GPU #0: 81C FAN 58%
+[2017-12-24 06:56:10] new job from pool.monero.hashvault.pro:5555 diff 21480
+[2017-12-24 06:56:13] accepted (99/0) diff 21480 (101 ms)
+[2017-12-24 06:56:22] new job from pool.monero.hashvault.pro:5555 diff 11670
+[2017-12-24 06:57:03] speed 10s/60s/15m 562.3 562.1 555.5 H/s max: 564.5 H/s
+[2017-12-24 06:57:06] speed 10s/60s/15m 350.2 350.2 n/a H/s max: 350.3 H/s
+[2017-12-24 06:57:06]  * GPU #0: 81C FAN 58%
+[2017-12-24 06:57:10] new job from pool.monero.hashvault.pro:5555 diff 17760
+[2017-12-24 06:57:22] new job from pool.monero.hashvault.pro:5555 diff 9690
+[2017-12-24 06:57:52] accepted (100/0) diff 17760 (129 ms)
+[2017-12-24 06:58:01] accepted (101/0) diff 17760 (130 ms)
+[2017-12-24 06:58:03] speed 10s/60s/15m 562.1 562.3 555.4 H/s max: 564.5 H/s
+[2017-12-24 06:58:06] speed 10s/60s/15m 350.2 350.2 n/a H/s max: 350.3 H/s
+[2017-12-24 06:58:06]  * GPU #0: 81C FAN 58%
+[2017-12-24 06:58:12] accepted (15/0) diff 9690 (102 ms)
+[2017-12-24 06:58:20] accepted (16/0) diff 9690 (95 ms)
+[2017-12-24 06:58:46] accepted (17/0) diff 9690 (118 ms)
+[2017-12-24 06:58:51] accepted (18/0) diff 9690 (117 ms)
+[2017-12-24 06:59:02] accepted (19/0) diff 9690 (120 ms)
+[2017-12-24 06:59:03] speed 10s/60s/15m 562.2 562.2 555.2 H/s max: 564.5 H/s
+[2017-12-24 06:59:06] speed 10s/60s/15m 350.2 350.2 n/a H/s max: 350.3 H/s
+[2017-12-24 06:59:06]  * GPU #0: 81C FAN 59%
+[2017-12-24 06:59:10] new job from pool.monero.hashvault.pro:5555 diff 14100
+[2017-12-24 06:59:22] new job from pool.monero.hashvault.pro:5555 diff 10290
+[2017-12-24 06:59:22] new job from pool.monero.hashvault.pro:5555 diff 14100
+[2017-12-24 06:59:22] new job from pool.monero.hashvault.pro:5555 diff 10290
+[2017-12-24 06:59:22] [pool.monero.hashvault.pro:5555] duplicate job received, reconnect
+[2017-12-24 06:59:22] no active pools, stop mining
+[2017-12-24 06:59:28] use pool pool.monero.hashvault.pro:5555 45.63.56.168
+[2017-12-24 06:59:28] new job from pool.monero.hashvault.pro:5555 diff 5000
+[2017-12-24 06:59:37] new job from pool.monero.hashvault.pro:5555 diff 7692
+[2017-12-24 06:59:54] new job from pool.monero.hashvault.pro:5555 diff 7692
+[2017-12-24 06:59:54] new job from pool.monero.hashvault.pro:5555 diff 14100
+[2017-12-24 06:59:59] accepted (102/0) diff 14100 (117 ms)
+[2017-12-24 07:00:03] speed 10s/60s/15m 562.2 562.1 555.3 H/s max: 564.5 H/s
+[2017-12-24 07:00:05] accepted (20/0) diff 7692 (119 ms)
+[2017-12-24 07:00:06] speed 10s/60s/15m 350.2 317.1 n/a H/s max: 350.3 H/s
+[2017-12-24 07:00:06]  * GPU #0: 81C FAN 59%
+[2017-12-24 07:00:10] new job from pool.monero.hashvault.pro:5555 diff 12900
+[2017-12-24 07:00:15] accepted (103/0) diff 12900 (96 ms)
+[2017-12-24 07:00:37] new job from pool.monero.hashvault.pro:5555 diff 3390
+[2017-12-24 07:00:53] accepted (21/0) diff 3390 (111 ms)
+[2017-12-24 07:00:54] new job from pool.monero.hashvault.pro:5555 diff 3390
+[2017-12-24 07:00:54] new job from pool.monero.hashvault.pro:5555 diff 12900
+[2017-12-24 07:00:56] accepted (22/0) diff 3390 (118 ms)
+[2017-12-24 07:00:56] accepted (23/0) diff 3390 (389 ms)
+[2017-12-24 07:01:03] speed 10s/60s/15m 562.4 562.2 555.3 H/s max: 564.5 H/s
+[2017-12-24 07:01:06] speed 10s/60s/15m 350.2 350.2 n/a H/s max: 350.3 H/s
+[2017-12-24 07:01:06]  * GPU #0: 82C FAN 59%
+[2017-12-24 07:01:09] accepted (24/0) diff 3390 (166 ms)
+[2017-12-24 07:01:10] new job from pool.monero.hashvault.pro:5555 diff 11970
+[2017-12-24 07:01:17] accepted (25/0) diff 3390 (106 ms)
+[2017-12-24 07:01:19] accepted (26/0) diff 3390 (116 ms)
+[2017-12-24 07:01:36] accepted (104/0) diff 11970 (110 ms)
+[2017-12-24 07:01:37] new job from pool.monero.hashvault.pro:5555 diff 6570
+[2017-12-24 07:01:51] accepted (105/0) diff 11970 (123 ms)
+[2017-12-24 07:01:57] accepted (106/0) diff 11970 (139 ms)
+[2017-12-24 07:01:59] accepted (27/0) diff 6570 (126 ms)
+[2017-12-24 07:02:03] speed 10s/60s/15m 560.9 559.4 555.0 H/s max: 564.5 H/s
+[2017-12-24 07:02:06] speed 10s/60s/15m 349.5 349.8 n/a H/s max: 350.3 H/s
+[2017-12-24 07:02:06]  * GPU #0: 81C FAN 57%
+[2017-12-24 07:02:07] accepted (28/0) diff 6570 (123 ms)
+[2017-12-24 07:02:09] accepted (107/0) diff 11970 (92 ms)
+[2017-12-24 07:02:10] new job from pool.monero.hashvault.pro:5555 diff 13470
+[2017-12-24 07:02:14] accepted (108/0) diff 13470 (120 ms)
+[2017-12-24 07:02:17] accepted (29/0) diff 6570 (111 ms)
+[2017-12-24 07:02:33] accepted (109/0) diff 13470 (122 ms)
+[2017-12-24 07:02:37] new job from pool.monero.hashvault.pro:5555 diff 7590
+[2017-12-24 07:02:37] new job from pool.monero.hashvault.pro:5555 diff 13470
+[2017-12-24 07:02:37] new job from pool.monero.hashvault.pro:5555 diff 7590
+[2017-12-24 07:02:37] [pool.monero.hashvault.pro:5555] duplicate job received, reconnect
+[2017-12-24 07:02:37] no active pools, stop mining
+[2017-12-24 07:02:43] use pool pool.monero.hashvault.pro:5555 45.63.56.168
+[2017-12-24 07:02:43] new job from pool.monero.hashvault.pro:5555 diff 5000
+[2017-12-24 07:02:45] accepted (110/0) diff 13470 (112 ms)
+[2017-12-24 07:02:46] accepted (30/0) diff 5000 (113 ms)
+[2017-12-24 07:02:51] accepted (31/0) diff 5000 (125 ms)
+[2017-12-24 07:02:53] accepted (111/0) diff 13470 (124 ms)
+[2017-12-24 07:02:54] accepted (112/0) diff 13470 (118 ms)
+[2017-12-24 07:02:54] new job from pool.monero.hashvault.pro:5555 diff 27270
+[2017-12-24 07:03:03] speed 10s/60s/15m 561.8 560.8 554.8 H/s max: 564.5 H/s
+[2017-12-24 07:03:06] speed 10s/60s/15m 350.1 322.4 n/a H/s max: 350.3 H/s
+[2017-12-24 07:03:06]  * GPU #0: 80C FAN 57%
+[2017-12-24 07:03:09] accepted (113/0) diff 13470 (118 ms)
+[2017-12-24 07:03:10] new job from pool.monero.hashvault.pro:5555 diff 16470
+[2017-12-24 07:03:12] accepted (114/0) diff 16470 (128 ms)
+[2017-12-24 07:03:54] new job from pool.monero.hashvault.pro:5555 diff 4200
+[2017-12-24 07:03:54] accepted (32/0) diff 27270 (120 ms)
+[2017-12-24 07:04:03] speed 10s/60s/15m 564.1 563.1 554.7 H/s max: 564.5 H/s
+[2017-12-24 07:04:06] speed 10s/60s/15m 350.2 350.2 n/a H/s max: 350.3 H/s
+[2017-12-24 07:04:06]  * GPU #0: 81C FAN 58%
+[2017-12-24 07:04:10] new job from pool.monero.hashvault.pro:5555 diff 15660
+[2017-12-24 07:04:13] accepted (33/0) diff 4200 (119 ms)
+[2017-12-24 07:04:17] accepted (115/0) diff 15660 (100 ms)
+[2017-12-24 07:04:21] accepted (116/0) diff 15660 (127 ms)
+[2017-12-24 07:04:21] accepted (117/0) diff 15660 (402 ms)
+[2017-12-24 07:04:31] accepted (34/0) diff 4200 (119 ms)
+[2017-12-24 07:04:31] accepted (35/0) diff 4200 (373 ms)
+[2017-12-24 07:04:34] accepted (36/0) diff 4200 (112 ms)
+[2017-12-24 07:04:42] accepted (37/0) diff 4200 (98 ms)
+[2017-12-24 07:04:50] accepted (118/0) diff 15660 (126 ms)
+[2017-12-24 07:04:54] new job from pool.monero.hashvault.pro:5555 diff 13320
+[2017-12-24 07:05:03] speed 10s/60s/15m 564.2 564.2 554.7 H/s max: 564.5 H/s
+[2017-12-24 07:05:06] speed 10s/60s/15m 350.2 350.2 n/a H/s max: 350.3 H/s
+[2017-12-24 07:05:06]  * GPU #0: 81C FAN 60%
+[2017-12-24 07:05:08] accepted (38/0) diff 13320 (88 ms)
+[2017-12-24 07:05:10] new job from pool.monero.hashvault.pro:5555 diff 17070
+[2017-12-24 07:05:19] accepted (39/0) diff 13320 (95 ms)
+[2017-12-24 07:05:40] accepted (40/0) diff 13320 (115 ms)
+[2017-12-24 07:05:45] accepted (41/0) diff 13320 (114 ms)
+[2017-12-24 07:05:47] accepted (119/0) diff 17070 (123 ms)
+[2017-12-24 07:05:54] new job from pool.monero.hashvault.pro:5555 diff 17520
+[2017-12-24 07:05:54] new job from pool.monero.hashvault.pro:5555 diff 17070
+[2017-12-24 07:05:54] new job from pool.monero.hashvault.pro:5555 diff 17520
+[2017-12-24 07:05:54] [pool.monero.hashvault.pro:5555] duplicate job received, reconnect
+[2017-12-24 07:05:54] no active pools, stop mining
+[2017-12-24 07:06:00] use pool pool.monero.hashvault.pro:5555 45.63.56.168
+[2017-12-24 07:06:00] new job from pool.monero.hashvault.pro:5555 diff 5000
+[2017-12-24 07:06:03] speed 10s/60s/15m 564.2 564.2 557.3 H/s max: 564.5 H/s
+[2017-12-24 07:06:06] accepted (42/0) diff 5000 (112 ms)
+[2017-12-24 07:06:06] speed 10s/60s/15m 350.3 319.4 342.5 H/s max: 350.3 H/s
+[2017-12-24 07:06:06]  * GPU #0: 80C FAN 58%
+[2017-12-24 07:06:10] new job from pool.monero.hashvault.pro:5555 diff 16350
+[2017-12-24 07:06:19] accepted (43/0) diff 5000 (167 ms)
+[2017-12-24 07:06:27] accepted (44/0) diff 5000 (120 ms)
+[2017-12-24 07:06:40] accepted (120/0) diff 16350 (127 ms)
+[2017-12-24 07:06:54] new job from pool.monero.hashvault.pro:5555 diff 8490
+[2017-12-24 07:07:00] accepted (121/0) diff 16350 (130 ms)
+[2017-12-24 07:07:03] speed 10s/60s/15m 564.4 564.2 559.5 H/s max: 564.5 H/s
+[2017-12-24 07:07:06] speed 10s/60s/15m 350.2 350.2 344.2 H/s max: 350.3 H/s
+[2017-12-24 07:07:06]  * GPU #0: 81C FAN 58%
+[2017-12-24 07:07:10] new job from pool.monero.hashvault.pro:5555 diff 16350
+[2017-12-24 07:07:10] new job from pool.monero.hashvault.pro:5555 diff 8490
+[2017-12-24 07:07:10] [pool.monero.hashvault.pro:5555] duplicate job received, reconnect
+[2017-12-24 07:07:10] no active pools, stop mining
+[2017-12-24 07:07:15] use pool pool.monero.hashvault.pro:5555 45.63.56.168
+[2017-12-24 07:07:15] new job from pool.monero.hashvault.pro:5555 diff 5000
+[2017-12-24 07:07:30] accepted (45/0) diff 8490 (109 ms)
+[2017-12-24 07:07:34] accepted (122/0) diff 5000 (123 ms)
+[2017-12-24 07:07:37] new job from pool.monero.hashvault.pro:5555 diff 7140
+[2017-12-24 07:07:37] new job from pool.monero.hashvault.pro:5555 diff 8490
+[2017-12-24 07:07:37] new job from pool.monero.hashvault.pro:5555 diff 7140
+[2017-12-24 07:07:37] [pool.monero.hashvault.pro:5555] duplicate job received, reconnect
+[2017-12-24 07:07:37] no active pools, stop mining
+[2017-12-24 07:07:43] use pool pool.monero.hashvault.pro:5555 45.63.56.168
+[2017-12-24 07:07:43] new job from pool.monero.hashvault.pro:5555 diff 5000
+[2017-12-24 07:07:45] accepted (123/0) diff 5000 (99 ms)
+[2017-12-24 07:07:49] accepted (46/0) diff 8490 (108 ms)
+[2017-12-24 07:07:50] accepted (124/0) diff 5000 (114 ms)
+[2017-12-24 07:08:03] speed 10s/60s/15m 564.2 471.0 553.6 H/s max: 564.5 H/s
+[2017-12-24 07:08:06] speed 10s/60s/15m 349.5 349.8 344.2 H/s max: 350.3 H/s
+[2017-12-24 07:08:06]  * GPU #0: 81C FAN 57%
+[2017-12-24 07:08:10] new job from pool.monero.hashvault.pro:5555 diff 11100
+[2017-12-24 07:08:13] accepted (125/0) diff 11100 (117 ms)
+[2017-12-24 07:08:31] accepted (126/0) diff 11100 (118 ms)
+[2017-12-24 07:08:31] accepted (47/0) diff 8490 (127 ms)
+[2017-12-24 07:08:38] accepted (127/0) diff 11100 (97 ms)
+[2017-12-24 07:08:44] accepted (128/0) diff 11100 (135 ms)
+[2017-12-24 07:08:54] new job from pool.monero.hashvault.pro:5555 diff 6990
+[2017-12-24 07:09:03] speed 10s/60s/15m 564.2 564.2 554.0 H/s max: 564.5 H/s
+[2017-12-24 07:09:06] speed 10s/60s/15m 349.5 349.5 344.2 H/s max: 350.3 H/s
+[2017-12-24 07:09:06]  * GPU #0: 81C FAN 58%
+[2017-12-24 07:09:10] new job from pool.monero.hashvault.pro:5555 diff 18750
+[2017-12-24 07:09:43] accepted (48/0) diff 6990 (118 ms)
+[2017-12-24 07:09:51] accepted (49/0) diff 6990 (105 ms)
+[2017-12-24 07:09:53] accepted (50/0) diff 6990 (94 ms)
+[2017-12-24 07:09:54] new job from pool.monero.hashvault.pro:5555 diff 7890
+[2017-12-24 07:09:56] accepted (51/0) diff 6990 (96 ms)
+[2017-12-24 07:10:03] speed 10s/60s/15m 560.7 562.0 556.7 H/s max: 564.5 H/s
+[2017-12-24 07:10:06] speed 10s/60s/15m 349.5 349.5 344.1 H/s max: 350.3 H/s
+[2017-12-24 07:10:06]  * GPU #0: 80C FAN 57%
+[2017-12-24 07:10:10] new job from pool.monero.hashvault.pro:5555 diff 11100
+[2017-12-24 07:10:25] accepted (52/0) diff 7890 (162 ms)
+[2017-12-24 07:10:38] accepted (129/0) diff 11100 (118 ms)
+[2017-12-24 07:10:45] accepted (130/0) diff 11100 (124 ms)
+[2017-12-24 07:10:46] accepted (53/0) diff 7890 (111 ms)
+[2017-12-24 07:10:51] accepted (54/0) diff 7890 (129 ms)
+[2017-12-24 07:10:54] new job from pool.monero.hashvault.pro:5555 diff 9420
+[2017-12-24 07:11:01] accepted (131/0) diff 11100 (118 ms)
+[2017-12-24 07:11:03] speed 10s/60s/15m 562.1 562.8 556.8 H/s max: 564.5 H/s
+[2017-12-24 07:11:06] speed 10s/60s/15m 349.5 349.5 344.1 H/s max: 350.3 H/s
+[2017-12-24 07:11:06]  * GPU #0: 81C FAN 59%
+[2017-12-24 07:11:10] new job from pool.monero.hashvault.pro:5555 diff 12690
+[2017-12-24 07:11:33] accepted (132/0) diff 12690 (133 ms)
+[2017-12-24 07:11:51] accepted (133/0) diff 12690 (101 ms)
+[2017-12-24 07:11:54] new job from pool.monero.hashvault.pro:5555 diff 7800
+[2017-12-24 07:11:55] new job from pool.monero.hashvault.pro:5555 diff 12690
+[2017-12-24 07:11:55] new job from pool.monero.hashvault.pro:5555 diff 7800
+[2017-12-24 07:11:55] [pool.monero.hashvault.pro:5555] duplicate job received, reconnect
+[2017-12-24 07:11:55] no active pools, stop mining
+[2017-12-24 07:12:00] use pool pool.monero.hashvault.pro:5555 45.63.56.168
+[2017-12-24 07:12:00] new job from pool.monero.hashvault.pro:5555 diff 5000
+[2017-12-24 07:12:03] accepted (55/0) diff 5000 (123 ms)
+[2017-12-24 07:12:03] speed 10s/60s/15m 563.1 562.4 556.8 H/s max: 564.5 H/s
+[2017-12-24 07:12:06] speed 10s/60s/15m 216.7 330.2 342.8 H/s max: 350.3 H/s
+[2017-12-24 07:12:06]  * GPU #0: 80C FAN 58%
+[2017-12-24 07:12:10] new job from pool.monero.hashvault.pro:5555 diff 16650
+[2017-12-24 07:12:30] accepted (56/0) diff 16650 (124 ms)
+[2017-12-24 07:12:32] accepted (134/0) diff 12690 (125 ms)
+[2017-12-24 07:12:38] accepted (57/0) diff 16650 (108 ms)
+[2017-12-24 07:12:41] accepted (135/0) diff 12690 (123 ms)
+[2017-12-24 07:12:46] accepted (58/0) diff 16650 (103 ms)
+[2017-12-24 07:13:04] speed 10s/60s/15m 562.6 562.9 556.8 H/s max: 564.5 H/s
+[2017-12-24 07:13:06] speed 10s/60s/15m 350.3 350.2 342.8 H/s max: 350.3 H/s
+[2017-12-24 07:13:06]  * GPU #0: 81C FAN 58%
+[2017-12-24 07:13:10] new job from pool.monero.hashvault.pro:5555 diff 23880
+[2017-12-24 07:13:25] accepted (59/0) diff 23880 (114 ms)
+[2017-12-24 07:13:36] accepted (60/0) diff 23880 (133 ms)
+[2017-12-24 07:13:40] accepted (136/0) diff 12690 (117 ms)
+[2017-12-24 07:14:04] speed 10s/60s/15m 562.7 562.7 556.8 H/s max: 564.5 H/s
+[2017-12-24 07:14:06] speed 10s/60s/15m 349.5 349.9 342.8 H/s max: 350.3 H/s
+[2017-12-24 07:14:06]  * GPU #0: 80C FAN 57%
+[2017-12-24 07:14:10] new job from pool.monero.hashvault.pro:5555 diff 11700
+[2017-12-24 07:14:23] new job from pool.monero.hashvault.pro:5555 diff 11700
+[2017-12-24 07:14:23] new job from pool.monero.hashvault.pro:5555 diff 23880
+[2017-12-24 07:14:48] accepted (137/0) diff 11700 (101 ms)
+[2017-12-24 07:14:56] accepted (138/0) diff 11700 (99 ms)
+[2017-12-24 07:15:04] speed 10s/60s/15m 562.7 562.7 556.9 H/s max: 564.5 H/s
+[2017-12-24 07:15:06] accepted (61/0) diff 23880 (114 ms)
+[2017-12-24 07:15:06] speed 10s/60s/15m 349.5 349.5 344.9 H/s max: 350.3 H/s
+[2017-12-24 07:15:06]  * GPU #0: 81C FAN 59%
+[2017-12-24 07:15:10] new job from pool.monero.hashvault.pro:5555 diff 20070
+[2017-12-24 07:15:24] accepted (62/0) diff 20070 (123 ms)
+[2017-12-24 07:15:24] accepted (139/0) diff 11700 (112 ms)
+[2017-12-24 07:15:50] accepted (140/0) diff 11700 (117 ms)
+[2017-12-24 07:15:55] new job from pool.monero.hashvault.pro:5555 diff 11700
+[2017-12-24 07:15:55] new job from pool.monero.hashvault.pro:5555 diff 20070
+[2017-12-24 07:16:04] speed 10s/60s/15m 562.5 562.3 556.9 H/s max: 564.5 H/s
+[2017-12-24 07:16:06] speed 10s/60s/15m 349.5 349.5 344.8 H/s max: 350.3 H/s
+[2017-12-24 07:16:06]  * GPU #0: 81C FAN 57%
+[2017-12-24 07:16:10] new job from pool.monero.hashvault.pro:5555 diff 17640
+[2017-12-24 07:16:10] new job from pool.monero.hashvault.pro:5555 diff 11700
+[2017-12-24 07:16:11] new job from pool.monero.hashvault.pro:5555 diff 17640
+[2017-12-24 07:16:11] [pool.monero.hashvault.pro:5555] duplicate job received, reconnect
+[2017-12-24 07:16:11] no active pools, stop mining
+[2017-12-24 07:16:11] [pool.monero.hashvault.pro:5555] duplicate job received, reconnect
+[2017-12-24 07:16:11] no active pools, stop mining
+[2017-12-24 07:16:14]  * VERSIONS:     XMRig/2.4.3-beta2 libuv/1.14.1 OpenCL/2.0 MSVC/2017
+[2017-12-24 07:16:14]  * CPU:                 Intel(R) Core(TM) i7-4820K CPU @ 3.70GHz (1) x64 AES-NI
+[2017-12-24 07:16:14]  * POOL #3:      pool.monero.hashvault.pro:5555
+[2017-12-24 07:16:14]  * ALGO:         cryptonight, donate=1%
+[2017-12-24 07:16:14]  * POOL #4:      pool.monero.hashvault.pro:5555
+[2017-12-24 07:16:14]  * POOL #2:      pool.monero.hashvault.pro:5555
+[2017-12-24 07:16:14]  * POOL #1:      pool.monero.hashvault.pro:5555
+[2017-12-24 07:16:14] compiling code and initializing GPUs. This will take a while...
+[2017-12-24 07:16:14]  * COMMANDS:     'h' hashrate, 'p' pause, 'r' resume
+[2017-12-24 07:16:14]  * POOL #5:      pool.monero.hashvault.pro:5555
+[2017-12-24 07:16:15] #0, GPU #0 (Radeon RX 550 Series), intensity: 640 (8/256), cu: 8
+[2017-12-24 07:16:16] use pool pool.monero.hashvault.pro:5555 45.63.56.168
+[2017-12-24 07:16:16] new job from pool.monero.hashvault.pro:5555 diff 5000
+[2017-12-24 07:16:22] #1, GPU #1 (Radeon RX 550 Series), intensity: 640 (8/256), cu: 8
+[2017-12-24 07:16:31] use pool pool.monero.hashvault.pro:5555 45.63.56.168
+[2017-12-24 07:16:31] new job from pool.monero.hashvault.pro:5555 diff 5000
+[2017-12-24 07:16:45] accepted (1/0) diff 5000 (118 ms)
+[2017-12-24 07:16:48] accepted (63/0) diff 5000 (125 ms)
+[2017-12-24 07:16:49] accepted (2/0) diff 5000 (108 ms)
+[2017-12-24 07:16:53] accepted (64/0) diff 5000 (118 ms)
+[2017-12-24 07:16:55] new job from pool.monero.hashvault.pro:5555 diff 13020
+[2017-12-24 07:16:55] new job from pool.monero.hashvault.pro:5555 diff 5000
+[2017-12-24 07:16:55] new job from pool.monero.hashvault.pro:5555 diff 13020
+[2017-12-24 07:16:55] [pool.monero.hashvault.pro:5555] duplicate job received, reconnect
+[2017-12-24 07:16:55] no active pools, stop mining
+[2017-12-24 07:16:59] accepted (65/0) diff 5000 (134 ms)
+[2017-12-24 07:17:00] use pool pool.monero.hashvault.pro:5555 45.63.56.168
+[2017-12-24 07:17:00] new job from pool.monero.hashvault.pro:5555 diff 5000
+[2017-12-24 07:17:01] accepted (66/0) diff 5000 (138 ms)
+[2017-12-24 07:17:02] accepted (67/0) diff 5000 (418 ms)
+[2017-12-24 07:17:06] speed 10s/60s/15m 350.2 320.2 343.0 H/s max: 350.3 H/s
+[2017-12-24 07:17:06]  * GPU #0: 80C FAN 57%
+[2017-12-24 07:17:14] accepted (3/0) diff 5000 (122 ms)
+[2017-12-24 07:17:14] accepted (4/0) diff 5000 (451 ms)
+[2017-12-24 07:17:18] speed 10s/60s/15m 557.9 n/a n/a H/s max: 557.9 H/s
+[2017-12-24 07:17:21] accepted (5/0) diff 5000 (118 ms)
+[2017-12-24 07:17:25] accepted (68/0) diff 5000 (108 ms)
+[2017-12-24 07:17:26] accepted (6/0) diff 5000 (124 ms)
+[2017-12-24 07:17:32] accepted (7/0) diff 5000 (122 ms)
+[2017-12-24 07:17:33] accepted (69/0) diff 5000 (129 ms)
+[2017-12-24 07:17:38] new job from pool.monero.hashvault.pro:5555 diff 20250
+[2017-12-24 07:17:38] new job from pool.monero.hashvault.pro:5555 diff 12960
+[2017-12-24 07:17:39] accepted (8/0) diff 5000 (122 ms)
+[2017-12-24 07:17:40] accepted (9/0) diff 5000 (392 ms)
+[2017-12-24 07:17:42] accepted (10/0) diff 20250 (138 ms)
+[2017-12-24 07:17:51] accepted (70/0) diff 12960 (125 ms)
+[2017-12-24 07:18:06] speed 10s/60s/15m 349.5 349.8 344.8 H/s max: 350.3 H/s
+[2017-12-24 07:18:06]  * GPU #0: 80C FAN 59%
+[2017-12-24 07:18:18] speed 10s/60s/15m 557.2 557.2 n/a H/s max: 557.9 H/s
+[2017-12-24 07:18:23] accepted (11/0) diff 20250 (131 ms)
+[2017-12-24 07:18:34] accepted (12/0) diff 20250 (114 ms)
+[2017-12-24 07:18:38] new job from pool.monero.hashvault.pro:5555 diff 29610
+[2017-12-24 07:18:38] new job from pool.monero.hashvault.pro:5555 diff 10200
+[2017-12-24 07:19:00] accepted (13/0) diff 29610 (116 ms)
+[2017-12-24 07:19:06] speed 10s/60s/15m 349.5 349.5 344.7 H/s max: 350.3 H/s
+[2017-12-24 07:19:06]  * GPU #0: 81C FAN 57%
+[2017-12-24 07:19:18] speed 10s/60s/15m 557.0 557.3 n/a H/s max: 557.9 H/s
+[2017-12-24 07:19:38] new job from pool.monero.hashvault.pro:5555 diff 23940
+[2017-12-24 07:19:38] new job from pool.monero.hashvault.pro:5555 diff 7140
+[2017-12-24 07:20:04] accepted (14/0) diff 23940 (114 ms)
+[2017-12-24 07:20:06] speed 10s/60s/15m 349.5 349.5 344.7 H/s max: 350.3 H/s
+[2017-12-24 07:20:06]  * GPU #0: 81C FAN 58%
+[2017-12-24 07:20:14] accepted (71/0) diff 7140 (129 ms)
+[2017-12-24 07:20:18] speed 10s/60s/15m 558.0 557.7 n/a H/s max: 558.0 H/s
+[2017-12-24 07:20:27] accepted (15/0) diff 23940 (118 ms)
+[2017-12-24 07:20:33] accepted (72/0) diff 7140 (121 ms)
+[2017-12-24 07:20:38] accepted (16/0) diff 23940 (124 ms)
+[2017-12-24 07:20:46] accepted (73/0) diff 7140 (126 ms)
+[2017-12-24 07:20:49] accepted (74/0) diff 7140 (125 ms)
+[2017-12-24 07:21:06] speed 10s/60s/15m 349.5 349.5 346.6 H/s max: 350.3 H/s
+[2017-12-24 07:21:06]  * GPU #0: 80C FAN 57%
+[2017-12-24 07:21:08] accepted (17/0) diff 23940 (96 ms)
+[2017-12-24 07:21:08] accepted (18/0) diff 23940 (115 ms)
+[2017-12-24 07:21:13] accepted (19/0) diff 23940 (111 ms)
+[2017-12-24 07:21:17] accepted (20/0) diff 23940 (148 ms)
+[2017-12-24 07:21:18] speed 10s/60s/15m 560.3 558.4 n/a H/s max: 558.6 H/s
+[2017-12-24 07:21:33] accepted (75/0) diff 7140 (93 ms)
+[2017-12-24 07:21:36] accepted (76/0) diff 7140 (126 ms)
+[2017-12-24 07:21:38] new job from pool.monero.hashvault.pro:5555 diff 31710
+[2017-12-24 07:21:38] new job from pool.monero.hashvault.pro:5555 diff 8460
+[2017-12-24 07:21:47] accepted (21/0) diff 31710 (125 ms)
+[2017-12-24 07:22:06] speed 10s/60s/15m 349.5 349.5 346.6 H/s max: 350.3 H/s
+[2017-12-24 07:22:06]  * GPU #0: 81C FAN 58%
+[2017-12-24 07:22:08] accepted (77/0) diff 8460 (113 ms)
+[2017-12-24 07:22:18] speed 10s/60s/15m 561.2 561.2 n/a H/s max: 561.4 H/s
+[2017-12-24 07:22:21] accepted (78/0) diff 8460 (127 ms)
+[2017-12-24 07:22:23] new job from pool.monero.hashvault.pro:5555 diff 31710
+[2017-12-24 07:22:23] new job from pool.monero.hashvault.pro:5555 diff 8460
+[2017-12-24 07:22:26] accepted (79/0) diff 8460 (112 ms)
+[2017-12-24 07:22:33] accepted (22/0) diff 31710 (126 ms)
+[2017-12-24 07:22:38] new job from pool.monero.hashvault.pro:5555 diff 9120
+[2017-12-24 07:22:38] new job from pool.monero.hashvault.pro:5555 diff 31710
+[2017-12-24 07:22:38] new job from pool.monero.hashvault.pro:5555 diff 9120
+[2017-12-24 07:22:38] [pool.monero.hashvault.pro:5555] duplicate job received, reconnect
+[2017-12-24 07:22:38] no active pools, stop mining
+[2017-12-24 07:22:38] [pool.monero.hashvault.pro:5555] duplicate job received, reconnect
+[2017-12-24 07:22:38] no active pools, stop mining
+[2017-12-24 07:22:43] use pool pool.monero.hashvault.pro:5555 45.63.56.168
+[2017-12-24 07:22:43] new job from pool.monero.hashvault.pro:5555 diff 5000
+[2017-12-24 07:22:44] use pool pool.monero.hashvault.pro:5555 45.63.56.168
+[2017-12-24 07:22:44] new job from pool.monero.hashvault.pro:5555 diff 5000
+[2017-12-24 07:22:46] accepted (80/0) diff 5000 (109 ms)
+[2017-12-24 07:22:55] new job from pool.monero.hashvault.pro:5555 diff 13620
+[2017-12-24 07:22:55] new job from pool.monero.hashvault.pro:5555 diff 5000
+[2017-12-24 07:22:55] new job from pool.monero.hashvault.pro:5555 diff 13620
+[2017-12-24 07:22:55] [pool.monero.hashvault.pro:5555] duplicate job received, reconnect
+[2017-12-24 07:22:55] no active pools, stop mining
+[2017-12-24 07:22:55] accepted (23/0) diff 5000 (113 ms)
+[2017-12-24 07:23:05]  * VERSIONS:     XMRig/2.4.2 libuv/1.14.1 CUDA/9.0 MSVC/2015
+[2017-12-24 07:23:05]  * CPU:                 Intel(R) Core(TM) i7-4820K CPU @ 3.70GHz (1) x64 AES-NI
+[2017-12-24 07:23:05]  * ALGO:         cryptonight, donate=1%
+[2017-12-24 07:23:05]  * GPU #0:       GeForce GTX 670 @ 1084/3104 MHz 44x21 6x25 arch:30 SMX:7
+[2017-12-24 07:23:05]  * POOL #2:      pool.monero.hashvault.pro:5555
+[2017-12-24 07:23:05]  * POOL #3:      pool.monero.hashvault.pro:5555
+[2017-12-24 07:23:05]  * POOL #4:      pool.monero.hashvault.pro:5555
+[2017-12-24 07:23:05]  * POOL #5:      pool.monero.hashvault.pro:5555
+[2017-12-24 07:23:05]  * COMMANDS:     'h' hashrate, 'e' health, 'p' pause, 'r' resume
+[2017-12-24 07:23:05]  * POOL #1:      pool.monero.hashvault.pro:5555
+[2017-12-24 07:23:05] use pool pool.monero.hashvault.pro:5555 45.63.56.168
+[2017-12-24 07:23:05] new job from pool.monero.hashvault.pro:5555 diff 5000
+[2017-12-24 07:23:09] accepted (24/0) diff 5000 (126 ms)
+[2017-12-24 07:23:11] new job from pool.monero.hashvault.pro:5555 diff 11520
+[2017-12-24 07:23:14] accepted (25/0) diff 11520 (127 ms)
+[2017-12-24 07:23:18] speed 10s/60s/15m 561.2 516.5 n/a H/s max: 561.6 H/s
+[2017-12-24 07:23:19] accepted (1/0) diff 5000 (128 ms)
+[2017-12-24 07:23:19] accepted (2/0) diff 5000 (395 ms)
+[2017-12-24 07:23:24] accepted (3/0) diff 5000 (115 ms)
+[2017-12-24 07:23:24] accepted (4/0) diff 5000 (371 ms)
+[2017-12-24 07:23:34] accepted (5/0) diff 5000 (135 ms)
+[2017-12-24 07:23:38] new job from pool.monero.hashvault.pro:5555 diff 23430
+[2017-12-24 07:23:40] accepted (6/0) diff 5000 (121 ms)
+[2017-12-24 07:23:43] accepted (26/0) diff 11520 (128 ms)
+[2017-12-24 07:23:46] accepted (27/0) diff 11520 (130 ms)
+[2017-12-24 07:24:04] accepted (28/0) diff 11520 (153 ms)
+[2017-12-24 07:24:09] speed 10s/60s/15m 350.2 350.2 n/a H/s max: 350.2 H/s
+[2017-12-24 07:24:09]  * GPU #0: 81C FAN 58%
+[2017-12-24 07:24:11] accepted (29/0) diff 11520 (122 ms)
+[2017-12-24 07:24:11] new job from pool.monero.hashvault.pro:5555 diff 23310
+[2017-12-24 07:24:18] speed 10s/60s/15m 561.2 561.3 n/a H/s max: 561.8 H/s
+[2017-12-24 07:24:38] new job from pool.monero.hashvault.pro:5555 diff 9780
+[2017-12-24 07:24:45] accepted (30/0) diff 23310 (128 ms)
+[2017-12-24 07:25:09] speed 10s/60s/15m 350.2 350.2 n/a H/s max: 350.2 H/s
+[2017-12-24 07:25:09]  * GPU #0: 81C FAN 59%
+[2017-12-24 07:25:11] new job from pool.monero.hashvault.pro:5555 diff 18540
+[2017-12-24 07:25:18] speed 10s/60s/15m 561.2 561.3 n/a H/s max: 561.8 H/s
+[2017-12-24 07:25:37] accepted (31/0) diff 18540 (92 ms)
+[2017-12-24 07:25:38] new job from pool.monero.hashvault.pro:5555 diff 5910
+[2017-12-24 07:25:38] accepted (7/0) diff 9780 (117 ms)
+[2017-12-24 07:25:54] accepted (8/0) diff 5910 (131 ms)
+[2017-12-24 07:26:05] accepted (9/0) diff 5910 (111 ms)
+[2017-12-24 07:26:09] speed 10s/60s/15m 350.2 350.2 n/a H/s max: 350.2 H/s
+[2017-12-24 07:26:09]  * GPU #0: 81C FAN 58%
+[2017-12-24 07:26:10] accepted (10/0) diff 5910 (122 ms)
+[2017-12-24 07:26:11] new job from pool.monero.hashvault.pro:5555 diff 15840
+[2017-12-24 07:26:18] speed 10s/60s/15m 561.8 561.4 n/a H/s max: 561.8 H/s
+[2017-12-24 07:26:26] accepted (11/0) diff 5910 (125 ms)
+[2017-12-24 07:26:34] accepted (32/0) diff 15840 (126 ms)
+[2017-12-24 07:26:36] accepted (12/0) diff 5910 (125 ms)
+[2017-12-24 07:26:38] new job from pool.monero.hashvault.pro:5555 diff 9810
+[2017-12-24 07:26:46] accepted (33/0) diff 15840 (135 ms)
+[2017-12-24 07:26:55] accepted (34/0) diff 15840 (126 ms)
+[2017-12-24 07:27:00] accepted (13/0) diff 9810 (127 ms)
+[2017-12-24 07:27:09] speed 10s/60s/15m 350.2 350.2 n/a H/s max: 350.2 H/s
+[2017-12-24 07:27:09]  * GPU #0: 81C FAN 58%
+[2017-12-24 07:27:11] new job from pool.monero.hashvault.pro:5555 diff 17610
+[2017-12-24 07:27:18] speed 10s/60s/15m 561.2 561.3 n/a H/s max: 561.9 H/s
+[2017-12-24 07:27:31] accepted (35/0) diff 17610 (180 ms)
+[2017-12-24 07:27:35] accepted (14/0) diff 9810 (135 ms)
+[2017-12-24 07:27:37] accepted (15/0) diff 9810 (121 ms)
+[2017-12-24 07:27:38] new job from pool.monero.hashvault.pro:5555 diff 10890
+[2017-12-24 07:28:09] accepted (16/0) diff 10890 (129 ms)
+[2017-12-24 07:28:09] speed 10s/60s/15m 350.2 350.2 n/a H/s max: 350.2 H/s
+[2017-12-24 07:28:09]  * GPU #0: 81C FAN 59%
+[2017-12-24 07:28:11] new job from pool.monero.hashvault.pro:5555 diff 15990
+[2017-12-24 07:28:17] accepted (36/0) diff 15990 (128 ms)
+[2017-12-24 07:28:18] speed 10s/60s/15m 561.2 561.0 n/a H/s max: 561.9 H/s
+[2017-12-24 07:28:27] accepted (17/0) diff 10890 (123 ms)
+[2017-12-24 07:28:40] accepted (37/0) diff 15990 (121 ms)
+[2017-12-24 07:28:47] accepted (38/0) diff 15990 (126 ms)
+[2017-12-24 07:29:09] speed 10s/60s/15m 350.3 350.2 n/a H/s max: 350.3 H/s
+[2017-12-24 07:29:09]  * GPU #0: 81C FAN 59%
+[2017-12-24 07:29:11] new job from pool.monero.hashvault.pro:5555 diff 17250
+[2017-12-24 07:29:12] accepted (18/0) diff 10890 (124 ms)
+[2017-12-24 07:29:18] speed 10s/60s/15m 557.4 558.9 n/a H/s max: 562.4 H/s
+[2017-12-24 07:29:19] accepted (39/0) diff 17250 (125 ms)
+[2017-12-24 07:29:23] new job from pool.monero.hashvault.pro:5555 diff 10890
+[2017-12-24 07:29:23] new job from pool.monero.hashvault.pro:5555 diff 17250
+[2017-12-24 07:29:30] accepted (40/0) diff 17250 (125 ms)
+[2017-12-24 07:29:35] accepted (41/0) diff 17250 (120 ms)
+[2017-12-24 07:29:38] new job from pool.monero.hashvault.pro:5555 diff 10050
+[2017-12-24 07:29:44] accepted (42/0) diff 17250 (125 ms)
+[2017-12-24 07:29:53] accepted (43/0) diff 17250 (122 ms)
+[2017-12-24 07:29:55] accepted (44/0) diff 17250 (119 ms)
+[2017-12-24 07:30:09] speed 10s/60s/15m 350.2 350.2 n/a H/s max: 350.3 H/s
+[2017-12-24 07:30:09]  * GPU #0: 81C FAN 59%
+[2017-12-24 07:30:11] new job from pool.monero.hashvault.pro:5555 diff 21870
+[2017-12-24 07:30:18] speed 10s/60s/15m 562.8 562.3 n/a H/s max: 563.3 H/s
+[2017-12-24 07:30:20] accepted (45/0) diff 21870 (133 ms)
+[2017-12-24 07:30:23] new job from pool.monero.hashvault.pro:5555 diff 10050
+[2017-12-24 07:30:23] new job from pool.monero.hashvault.pro:5555 diff 21870
+[2017-12-24 07:30:38] new job from pool.monero.hashvault.pro:5555 diff 8700
+[2017-12-24 07:30:52] accepted (19/0) diff 8700 (130 ms)
+[2017-12-24 07:31:09] speed 10s/60s/15m 350.2 350.2 n/a H/s max: 350.3 H/s
+[2017-12-24 07:31:09]  * GPU #0: 81C FAN 58%
+[2017-12-24 07:31:11] new job from pool.monero.hashvault.pro:5555 diff 20580
+[2017-12-24 07:31:14] accepted (20/0) diff 8700 (130 ms)
+[2017-12-24 07:31:18] speed 10s/60s/15m 562.7 562.8 n/a H/s max: 563.5 H/s
+[2017-12-24 07:31:23] new job from pool.monero.hashvault.pro:5555 diff 8700
+[2017-12-24 07:31:23] new job from pool.monero.hashvault.pro:5555 diff 20580
+[2017-12-24 07:31:31] accepted (46/0) diff 20580 (129 ms)
+[2017-12-24 07:31:37] accepted (21/0) diff 8700 (126 ms)
+[2017-12-24 07:31:38] new job from pool.monero.hashvault.pro:5555 diff 9210
+[2017-12-24 07:32:04] accepted (22/0) diff 9210 (127 ms)
+[2017-12-24 07:32:09] speed 10s/60s/15m 350.2 350.2 n/a H/s max: 350.3 H/s
+[2017-12-24 07:32:09]  * GPU #0: 82C FAN 60%
+[2017-12-24 07:32:11] new job from pool.monero.hashvault.pro:5555 diff 19470
+[2017-12-24 07:32:18] speed 10s/60s/15m 562.7 562.7 557.6 H/s max: 563.5 H/s
+[2017-12-24 07:32:25] accepted (23/0) diff 9210 (146 ms)
+[2017-12-24 07:32:30] accepted (24/0) diff 9210 (123 ms)
+[2017-12-24 07:32:38] new job from pool.monero.hashvault.pro:5555 diff 9690
+[2017-12-24 07:32:46] accepted (25/0) diff 9690 (132 ms)
+[2017-12-24 07:33:09] speed 10s/60s/15m 350.1 350.1 n/a H/s max: 350.3 H/s
+[2017-12-24 07:33:09]  * GPU #0: 81C FAN 59%
+[2017-12-24 07:33:10] accepted (26/0) diff 9690 (123 ms)
+[2017-12-24 07:33:11] new job from pool.monero.hashvault.pro:5555 diff 17610
+[2017-12-24 07:33:18] speed 10s/60s/15m 562.6 562.7 557.9 H/s max: 563.5 H/s
+[2017-12-24 07:33:24] accepted (47/0) diff 17610 (128 ms)
+[2017-12-24 07:34:09] speed 10s/60s/15m 350.2 350.2 n/a H/s max: 350.3 H/s
+[2017-12-24 07:34:09]  * GPU #0: 81C FAN 58%
+[2017-12-24 07:34:11] new job from pool.monero.hashvault.pro:5555 diff 16860
+[2017-12-24 07:34:19] speed 10s/60s/15m 562.8 562.8 558.3 H/s max: 563.5 H/s
+[2017-12-24 07:34:26] accepted (27/0) diff 9690 (122 ms)
+[2017-12-24 07:34:27] accepted (48/0) diff 16860 (128 ms)
+[2017-12-24 07:34:31] accepted (28/0) diff 9690 (136 ms)
+[2017-12-24 07:34:47] accepted (29/0) diff 9690 (133 ms)
+[2017-12-24 07:34:53] accepted (30/0) diff 9690 (121 ms)
+[2017-12-24 07:35:09] speed 10s/60s/15m 350.2 350.2 n/a H/s max: 350.3 H/s
+[2017-12-24 07:35:09]  * GPU #0: 81C FAN 59%
+[2017-12-24 07:35:11] new job from pool.monero.hashvault.pro:5555 diff 16170
+[2017-12-24 07:35:19] speed 10s/60s/15m 562.8 562.7 558.6 H/s max: 563.5 H/s
+[2017-12-24 07:35:19] accepted (31/0) diff 9690 (110 ms)
+[2017-12-24 07:35:37] accepted (32/0) diff 9690 (125 ms)
+[2017-12-24 07:35:38] new job from pool.monero.hashvault.pro:5555 diff 10440
+[2017-12-24 07:35:43] accepted (33/0) diff 10440 (126 ms)
+[2017-12-24 07:35:46] accepted (49/0) diff 16170 (120 ms)
+[2017-12-24 07:35:58] accepted (50/0) diff 16170 (116 ms)
+[2017-12-24 07:35:58] accepted (51/0) diff 16170 (382 ms)
+[2017-12-24 07:36:09] speed 10s/60s/15m 350.1 350.2 n/a H/s max: 350.3 H/s
+[2017-12-24 07:36:09]  * GPU #0: 83C FAN 60%
+[2017-12-24 07:36:11] new job from pool.monero.hashvault.pro:5555 diff 16770
+[2017-12-24 07:36:19] speed 10s/60s/15m 562.6 562.6 558.9 H/s max: 563.5 H/s
+[2017-12-24 07:36:38] new job from pool.monero.hashvault.pro:5555 diff 10050
+[2017-12-24 07:36:41] accepted (34/0) diff 10440 (115 ms)
+[2017-12-24 07:36:59] accepted (35/0) diff 10050 (112 ms)
+[2017-12-24 07:37:09] speed 10s/60s/15m 350.1 350.2 n/a H/s max: 350.3 H/s
+[2017-12-24 07:37:09]  * GPU #0: 81C FAN 59%
+[2017-12-24 07:37:11] new job from pool.monero.hashvault.pro:5555 diff 15600
+[2017-12-24 07:37:15] SIGINT received, exiting
+[2017-12-24 07:37:15] no active pools, stop mining
+[2017-12-24 07:37:15] SIGINT received, exiting
+[2017-12-24 07:37:15] no active pools, stop mining
+[2017-12-24 08:25:06]  * CPU:                 Intel(R) Core(TM) i7-4820K CPU @ 3.70GHz (1) x64 AES-NI
+[2017-12-24 08:25:06]  * VERSIONS:     XMRig/2.4.3-beta2 libuv/1.14.1 OpenCL/2.0 MSVC/2017
+[2017-12-24 08:25:06]  * ALGO:         cryptonight, donate=1%
+[2017-12-24 08:25:06]  * POOL #1:      pool.monero.hashvault.pro:5555
+[2017-12-24 08:25:06]  * POOL #4:      pool.monero.hashvault.pro:5555
+[2017-12-24 08:25:06]  * POOL #2:      pool.monero.hashvault.pro:5555
+[2017-12-24 08:25:06]  * POOL #5:      pool.monero.hashvault.pro:5555
+[2017-12-24 08:25:06]  * POOL #3:      pool.monero.hashvault.pro:5555
+[2017-12-24 08:25:06] compiling code and initializing GPUs. This will take a while...
+[2017-12-24 08:25:06]  * COMMANDS:     'h' hashrate, 'p' pause, 'r' resume
+[2017-12-24 08:25:07] #0, GPU #0 (Radeon RX 550 Series), intensity: 640 (8/256), cu: 8
+[2017-12-24 08:25:17] #1, GPU #1 (Radeon RX 550 Series), intensity: 640 (8/256), cu: 8
+[2017-12-24 08:25:27] new job from pool.monero.hashvault.pro:5555 diff 5000
+[2017-12-24 08:25:27] use pool pool.monero.hashvault.pro:5555 45.63.56.168
+[2017-12-24 08:25:32] accepted (1/0) diff 5000 (125 ms)
+[2017-12-24 08:25:36] accepted (2/0) diff 5000 (135 ms)
+[2017-12-24 08:25:50] accepted (3/0) diff 5000 (127 ms)
+[2017-12-24 08:25:57] new job from pool.monero.hashvault.pro:5555 diff 15000
+[2017-12-24 08:26:08] accepted (4/0) diff 15000 (132 ms)
+[2017-12-24 08:26:10] speed 10s/60s/15m 557.2 n/a n/a H/s max: 557.6 H/s
+[2017-12-24 08:26:25] new job from pool.monero.hashvault.pro:5555 diff 15000
+[2017-12-24 08:26:57] new job from pool.monero.hashvault.pro:5555 diff 9990
+[2017-12-24 08:27:01] accepted (5/0) diff 9990 (128 ms)
+[2017-12-24 08:27:10] speed 10s/60s/15m 557.9 556.9 n/a H/s max: 557.8 H/s
+[2017-12-24 08:27:22] accepted (6/0) diff 9990 (131 ms)
+[2017-12-24 08:27:54] accepted (7/0) diff 9990 (128 ms)
+[2017-12-24 08:27:57] new job from pool.monero.hashvault.pro:5555 diff 11970
+[2017-12-24 08:28:10] speed 10s/60s/15m 556.7 557.1 n/a H/s max: 557.8 H/s
+[2017-12-24 08:28:15] accepted (8/0) diff 11970 (133 ms)
+[2017-12-24 08:28:22] accepted (9/0) diff 11970 (115 ms)
+[2017-12-24 08:28:22] accepted (10/0) diff 11970 (389 ms)
+[2017-12-24 08:28:28] accepted (11/0) diff 11970 (126 ms)
+[2017-12-24 08:28:40] new job from pool.monero.hashvault.pro:5555 diff 11970
+[2017-12-24 08:28:49] accepted (12/0) diff 11970 (123 ms)
+[2017-12-24 08:28:49] accepted (13/0) diff 11970 (392 ms)
+[2017-12-24 08:28:58] new job from pool.monero.hashvault.pro:5555 diff 18810
+[2017-12-24 08:28:58] accepted (14/0) diff 11970 (96 ms)
+[2017-12-24 08:29:10] speed 10s/60s/15m 557.0 556.8 n/a H/s max: 557.8 H/s
+[2017-12-24 08:29:42] accepted (15/0) diff 18810 (128 ms)
+[2017-12-24 08:29:58] new job from pool.monero.hashvault.pro:5555 diff 18060
+[2017-12-24 08:29:58] new job from pool.monero.hashvault.pro:5555 diff 18060
+[2017-12-24 08:29:58] [pool.monero.hashvault.pro:5555] duplicate job received, reconnect
+[2017-12-24 08:29:58] no active pools, stop mining
+[2017-12-24 08:30:03] use pool pool.monero.hashvault.pro:5555 45.63.56.168
+[2017-12-24 08:30:03] new job from pool.monero.hashvault.pro:5555 diff 5000
+[2017-12-24 08:30:06] accepted (16/0) diff 5000 (134 ms)
+[2017-12-24 08:30:06] accepted (17/0) diff 5000 (395 ms)
+[2017-12-24 08:30:10] speed 10s/60s/15m 563.1 504.6 n/a H/s max: 557.8 H/s
+[2017-12-24 08:30:12] accepted (18/0) diff 5000 (122 ms)
+[2017-12-24 08:30:15] accepted (19/0) diff 5000 (127 ms)
+[2017-12-24 08:30:19] accepted (20/0) diff 5000 (132 ms)
+[2017-12-24 08:30:31] accepted (21/0) diff 5000 (145 ms)
+[2017-12-24 08:30:40] new job from pool.monero.hashvault.pro:5555 diff 24300
+[2017-12-24 08:31:10] speed 10s/60s/15m 563.1 562.7 n/a H/s max: 562.8 H/s
+[2017-12-24 08:31:14] accepted (22/0) diff 24300 (122 ms)
+[2017-12-24 08:31:40] new job from pool.monero.hashvault.pro:5555 diff 16770
+[2017-12-24 08:31:46] accepted (23/0) diff 16770 (129 ms)
+[2017-12-24 08:31:57] accepted (24/0) diff 16770 (126 ms)
+[2017-12-24 08:32:10] speed 10s/60s/15m 564.0 564.2 n/a H/s max: 564.4 H/s
+[2017-12-24 08:32:20] accepted (25/0) diff 16770 (124 ms)
+[2017-12-24 08:32:38] accepted (26/0) diff 16770 (101 ms)
+[2017-12-24 08:32:40] new job from pool.monero.hashvault.pro:5555 diff 23190
+[2017-12-24 08:32:56] accepted (27/0) diff 23190 (124 ms)
+[2017-12-24 08:33:10] speed 10s/60s/15m 564.1 564.1 n/a H/s max: 564.4 H/s
+[2017-12-24 08:33:21] accepted (28/0) diff 23190 (96 ms)
+[2017-12-24 08:33:26] new job from pool.monero.hashvault.pro:5555 diff 23190
+[2017-12-24 08:33:30] accepted (29/0) diff 23190 (137 ms)
+[2017-12-24 08:33:40] new job from pool.monero.hashvault.pro:5555 diff 26370
+[2017-12-24 08:33:41] new job from pool.monero.hashvault.pro:5555 diff 26370
+[2017-12-24 08:33:41] [pool.monero.hashvault.pro:5555] duplicate job received, reconnect
+[2017-12-24 08:33:41] no active pools, stop mining
+[2017-12-24 08:33:46] new job from pool.monero.hashvault.pro:5555 diff 5000
+[2017-12-24 08:33:46] use pool pool.monero.hashvault.pro:5555 45.63.56.168
+[2017-12-24 08:33:51] accepted (30/0) diff 5000 (125 ms)
+[2017-12-24 08:33:53] accepted (31/0) diff 5000 (131 ms)
+[2017-12-24 08:34:00] accepted (32/0) diff 5000 (124 ms)
+[2017-12-24 08:34:05] accepted (33/0) diff 5000 (123 ms)
+[2017-12-24 08:34:10] speed 10s/60s/15m 563.5 514.9 n/a H/s max: 564.4 H/s
+[2017-12-24 08:34:14] accepted (34/0) diff 5000 (127 ms)
+[2017-12-24 08:34:20] accepted (35/0) diff 5000 (117 ms)
+[2017-12-24 08:34:25] accepted (36/0) diff 5000 (125 ms)
+[2017-12-24 08:34:36] accepted (37/0) diff 5000 (125 ms)
+[2017-12-24 08:34:41] new job from pool.monero.hashvault.pro:5555 diff 22200
+[2017-12-24 08:34:58] new job from pool.monero.hashvault.pro:5555 diff 22200
+[2017-12-24 08:35:10] speed 10s/60s/15m 563.5 563.5 n/a H/s max: 564.4 H/s
+[2017-12-24 08:35:41] new job from pool.monero.hashvault.pro:5555 diff 10500
+[2017-12-24 08:35:45] accepted (38/0) diff 10500 (127 ms)
+[2017-12-24 08:36:10] speed 10s/60s/15m 561.2 562.9 n/a H/s max: 564.4 H/s
+[2017-12-24 08:36:37] accepted (39/0) diff 10500 (127 ms)
+[2017-12-24 08:36:41] new job from pool.monero.hashvault.pro:5555 diff 10500
+[2017-12-24 08:36:41] [pool.monero.hashvault.pro:5555] duplicate job received, reconnect
+[2017-12-24 08:36:41] no active pools, stop mining
+[2017-12-24 08:36:47] use pool pool.monero.hashvault.pro:5555 45.63.56.168
+[2017-12-24 08:36:47] new job from pool.monero.hashvault.pro:5555 diff 5000
+[2017-12-24 08:36:49] accepted (40/0) diff 5000 (156 ms)
+[2017-12-24 08:36:58] accepted (41/0) diff 5000 (121 ms)
+[2017-12-24 08:37:01] accepted (42/0) diff 5000 (111 ms)
+[2017-12-24 08:37:10] speed 10s/60s/15m 563.6 508.2 n/a H/s max: 564.4 H/s
+[2017-12-24 08:37:19] accepted (43/0) diff 5000 (100 ms)
+[2017-12-24 08:37:26] new job from pool.monero.hashvault.pro:5555 diff 15360
+[2017-12-24 08:38:10] speed 10s/60s/15m 558.5 561.0 n/a H/s max: 564.4 H/s
+[2017-12-24 08:38:20] accepted (44/0) diff 15360 (117 ms)
+[2017-12-24 08:38:26] new job from pool.monero.hashvault.pro:5555 diff 10710
+[2017-12-24 08:38:34] accepted (45/0) diff 10710 (105 ms)
+[2017-12-24 08:38:36] accepted (46/0) diff 10710 (122 ms)
+[2017-12-24 08:38:45] accepted (47/0) diff 10710 (122 ms)
+[2017-12-24 08:38:50] accepted (48/0) diff 10710 (128 ms)
+[2017-12-24 08:39:10] speed 10s/60s/15m 562.6 562.3 n/a H/s max: 564.4 H/s
+[2017-12-24 08:39:26] new job from pool.monero.hashvault.pro:5555 diff 14730
+[2017-12-24 08:39:45] accepted (49/0) diff 14730 (115 ms)
+[2017-12-24 08:40:10] speed 10s/60s/15m 562.8 562.5 n/a H/s max: 564.4 H/s
+[2017-12-24 08:40:14] new job from pool.monero.hashvault.pro:5555 diff 14730
+[2017-12-24 08:40:17] accepted (50/0) diff 14730 (98 ms)
+[2017-12-24 08:40:35] accepted (51/0) diff 14730 (119 ms)
+[2017-12-24 08:40:49]  * VERSIONS:     XMRig/2.4.3-beta2 libuv/1.14.1 OpenCL/2.0 MSVC/2017
+[2017-12-24 08:40:49]  * CPU:                 Intel(R) Core(TM) i7-4820K CPU @ 3.70GHz (1) x64 AES-NI
+[2017-12-24 08:40:49]  * ALGO:         cryptonight, donate=1%
+[2017-12-24 08:40:49]  * POOL #3:      pool.monero.hashvault.pro:5555
+[2017-12-24 08:40:49]  * POOL #2:      pool.monero.hashvault.pro:5555
+[2017-12-24 08:40:49]  * POOL #4:      pool.monero.hashvault.pro:5555
+[2017-12-24 08:40:49]  * POOL #5:      pool.monero.hashvault.pro:5555
+[2017-12-24 08:40:49]  * COMMANDS:     'h' hashrate, 'p' pause, 'r' resume
+[2017-12-24 08:40:49] compiling code and initializing GPUs. This will take a while...
+[2017-12-24 08:40:49]  * POOL #1:      pool.monero.hashvault.pro:5555
+[2017-12-24 08:40:49] #0, GPU #0 (Radeon RX 550 Series), intensity: 640 (8/256), cu: 8
+[2017-12-24 08:40:59] #1, GPU #1 (Radeon RX 550 Series), intensity: 640 (8/256), cu: 8
+[2017-12-24 08:41:08] use pool pool.monero.hashvault.pro:5555 45.63.56.168
+[2017-12-24 08:41:08] new job from pool.monero.hashvault.pro:5555 diff 5000
+[2017-12-24 08:41:13] accepted (1/0) diff 5000 (121 ms)
+[2017-12-24 08:41:39] accepted (2/0) diff 5000 (125 ms)
+[2017-12-24 08:41:45] accepted (3/0) diff 5000 (130 ms)
+[2017-12-24 08:41:49]  * VERSIONS:     XMRig/2.4.3-beta2 libuv/1.14.1 OpenCL/2.0 MSVC/2017
+[2017-12-24 08:41:49]  * CPU:                 Intel(R) Core(TM) i7-4820K CPU @ 3.70GHz (1) x64 AES-NI
+[2017-12-24 08:41:49]  * ALGO:         cryptonight, donate=1%
+[2017-12-24 08:41:49]  * POOL #1:      pool.monero.hashvault.pro:5555
+[2017-12-24 08:41:49]  * POOL #3:      pool.monero.hashvault.pro:5555
+[2017-12-24 08:41:49]  * POOL #4:      pool.monero.hashvault.pro:5555
+[2017-12-24 08:41:49]  * POOL #2:      pool.monero.hashvault.pro:5555
+[2017-12-24 08:41:49]  * COMMANDS:     'h' hashrate, 'p' pause, 'r' resume
+[2017-12-24 08:41:49]  * POOL #5:      pool.monero.hashvault.pro:5555
+[2017-12-24 08:41:49] compiling code and initializing GPUs. This will take a while...
+[2017-12-24 08:41:49] #0, GPU #0 (Radeon RX 550 Series), intensity: 640 (8/256), cu: 8
+[2017-12-24 08:41:59] #1, GPU #1 (Radeon RX 550 Series), intensity: 640 (8/256), cu: 8
+[2017-12-24 08:42:08] new job from pool.monero.hashvault.pro:5555 diff 5000
+[2017-12-24 08:42:08] use pool pool.monero.hashvault.pro:5555 45.63.56.168
+[2017-12-24 08:42:11] accepted (1/0) diff 5000 (115 ms)
+[2017-12-24 08:42:14] new job from pool.monero.hashvault.pro:5555 diff 24990
+[2017-12-24 08:42:26] new job from pool.monero.hashvault.pro:5555 diff 24990
+[2017-12-24 08:42:38] accepted (2/0) diff 24990 (113 ms)
+[2017-12-24 08:42:53] speed 10s/60s/15m 556.9 n/a n/a H/s max: 557.1 H/s
+[2017-12-24 08:42:57] accepted (3/0) diff 24990 (122 ms)
+[2017-12-24 08:43:08] accepted (4/0) diff 24990 (130 ms)
+[2017-12-24 08:43:14] new job from pool.monero.hashvault.pro:5555 diff 36330
+[2017-12-24 08:43:53] speed 10s/60s/15m 557.8 557.0 n/a H/s max: 558.0 H/s
+[2017-12-24 08:44:14] new job from pool.monero.hashvault.pro:5555 diff 19020
+[2017-12-24 08:44:17] accepted (5/0) diff 19020 (90 ms)
+[2017-12-24 08:44:53] speed 10s/60s/15m 557.7 557.0 n/a H/s max: 558.0 H/s
+[2017-12-24 08:45:14] new job from pool.monero.hashvault.pro:5555 diff 15960
+[2017-12-24 08:45:19] accepted (6/0) diff 15960 (127 ms)
+[2017-12-24 08:45:21] accepted (7/0) diff 15960 (117 ms)
+[2017-12-24 08:45:49] accepted (8/0) diff 15960 (126 ms)
+[2017-12-24 08:45:53] speed 10s/60s/15m 557.1 557.1 n/a H/s max: 558.5 H/s
+[2017-12-24 08:45:58] new job from pool.monero.hashvault.pro:5555 diff 15960
+[2017-12-24 08:46:05] accepted (9/0) diff 15960 (117 ms)
+[2017-12-24 08:46:15] new job from pool.monero.hashvault.pro:5555 diff 19830
+[2017-12-24 08:46:53] speed 10s/60s/15m 559.4 557.4 n/a H/s max: 558.5 H/s
+[2017-12-24 08:47:15] new job from pool.monero.hashvault.pro:5555 diff 15960
+[2017-12-24 08:47:26] new job from pool.monero.hashvault.pro:5555 diff 15960
+[2017-12-24 08:47:33] SIGINT received, exiting
+[2017-12-24 08:47:33] no active pools, stop mining
+[2017-12-24 08:54:44]  * VERSIONS:     XMRig/2.4.3-beta2 libuv/1.14.1 OpenCL/2.0 MSVC/2017
+[2017-12-24 08:54:44]  * CPU:                 Intel(R) Core(TM) i7-4820K CPU @ 3.70GHz (1) x64 AES-NI
+[2017-12-24 08:54:44]  * ALGO:         cryptonight, donate=1%
+[2017-12-24 08:54:44]  * POOL #2:      pool.monero.hashvault.pro:5555
+[2017-12-24 08:54:44]  * POOL #3:      pool.monero.hashvault.pro:5555
+[2017-12-24 08:54:44]  * POOL #4:      pool.monero.hashvault.pro:5555
+[2017-12-24 08:54:44]  * POOL #1:      pool.monero.hashvault.pro:5555
+[2017-12-24 08:54:44]  * POOL #5:      pool.monero.hashvault.pro:5555
+[2017-12-24 08:54:44]  * COMMANDS:     'h' hashrate, 'p' pause, 'r' resume
+[2017-12-24 08:54:44] compiling code and initializing GPUs. This will take a while...
+[2017-12-24 08:54:44] #0, GPU #0 (Radeon RX 550 Series), intensity: 640 (8/256), cu: 8
+[2017-12-24 08:54:53] #1, GPU #1 (Radeon RX 550 Series), intensity: 640 (8/256), cu: 8
+[2017-12-24 08:55:03] use pool pool.monero.hashvault.pro:5555 45.63.56.168
+[2017-12-24 08:55:03] new job from pool.monero.hashvault.pro:5555 diff 5000
+[2017-12-24 08:55:22] accepted (1/0) diff 5000 (134 ms)
+[2017-12-24 08:55:38] accepted (2/0) diff 5000 (129 ms)
+[2017-12-24 08:55:40] accepted (3/0) diff 5000 (126 ms)
+[2017-12-24 08:55:41] new job from pool.monero.hashvault.pro:5555 diff 11820
+[2017-12-24 08:55:47] speed 10s/60s/15m 557.3 n/a n/a H/s max: 557.6 H/s
+[2017-12-24 08:56:41] new job from pool.monero.hashvault.pro:5555 diff 4590
+[2017-12-24 08:56:47] speed 10s/60s/15m 557.1 557.3 n/a H/s max: 558.0 H/s
+[2017-12-24 08:57:21] accepted (4/0) diff 4590 (129 ms)
+[2017-12-24 08:57:24] accepted (5/0) diff 4590 (122 ms)
+[2017-12-24 08:57:40] accepted (6/0) diff 4590 (130 ms)
+[2017-12-24 08:57:41] new job from pool.monero.hashvault.pro:5555 diff 5460
+[2017-12-24 08:57:44] accepted (7/0) diff 5460 (124 ms)
+[2017-12-24 08:57:48] speed 10s/60s/15m 557.3 557.2 n/a H/s max: 558.0 H/s
+[2017-12-24 08:57:58] accepted (8/0) diff 5460 (125 ms)
+[2017-12-24 08:58:23] accepted (9/0) diff 5460 (121 ms)
+[2017-12-24 08:58:27] new job from pool.monero.hashvault.pro:5555 diff 5460
+[2017-12-24 08:58:32] SIGINT received, exiting
+[2017-12-24 08:58:32] no active pools, stop mining
