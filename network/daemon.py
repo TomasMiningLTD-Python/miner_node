@@ -55,6 +55,7 @@ class NetworkDaemon(multiprocessing.Process):
         hdr = {'csrftoken':self.csrf}
         #print(hdr)
         params["csrfmiddlewaretoken"] = self.csrf
+        params["miner_id"]= self.macaddr
         #print(params)
         try:
             r = requests.post(self.config["GLOBAL"]["endpoint"]+url,data=params,cookies=hdr)

@@ -1,4 +1,7 @@
+bin/linux/*.json
+bin/win/*.json
 *.pyc
 *.log
 #*
 __pycache__
+log/*.log

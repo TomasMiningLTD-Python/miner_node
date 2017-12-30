@@ -11,6 +11,7 @@ from configparser import ConfigParser
 from daemon import MinerDaemon
 from network.daemon import NetworkDaemon
 from multiprocessing import Pipe
+import platform
 if __name__ == '__main__':
     configp = False
     parser = argparse.ArgumentParser(description="Manage Mining Node")
@@ -31,11 +32,20 @@ if __name__ == '__main__':
 
 
 dpi,npi = Pipe()
-daemon = MinerDaemon()
-daemon.setup(config,dpi)
-daemon.start()
-network = NetworkDaemon()
-network.setup(config,npi)
-network.start()
-network.join()
-
+psys = platform.system()
+if psys == "Linux":
+    daemon = MinerDaemon()
+    daemon.setup(config,dpi)
+    daemon.start()
+    network = NetworkDaemon()
+    network.setup(config,npi)
+    network.start()
+    network.join()
+if psys == "Windows":
+    daemon = MinerDaemon()
+    daemon.setup(config,dpi)
+    daemon.run()
+    network = NetworkDaemon()
+    network.setup(config,npi)
+    network.run()
+    network.join()

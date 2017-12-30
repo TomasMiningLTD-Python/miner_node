@@ -170,7 +170,7 @@ class MinerDaemon(multiprocessing.Process):
                         print({"method":"WARNING","type":rev["warn"],"value":rev["value"]})
                     if ("type" in rev):
                         if (rev["type"] == "cpu"):
-                            self.network.send({"method":"TYPE","payload":{"typeof":"cpu","data":rev["value"]}})
+                            self.network.send({"method":"TYPE","payload":{"typeof":"cpu","cputype":rev["value"],"cpucount":1}})
                 line = self.log_cpu.readline()
         ''' Process output from NVidia : '''
         if (self.nv != False):
@@ -188,6 +188,8 @@ class MinerDaemon(multiprocessing.Process):
         
         if (total['t'] != 0):
             self.network.send({"method":"TOTALS","payload":total})
+        speeds = self.parser.getSpeed()
+        self.network.send({"method":"SPEED","payload":speeds})
         
                 
     def setup(self,config,netpipe):

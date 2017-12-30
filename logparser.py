@@ -4,6 +4,9 @@ class MinerParser():
     log = logging.getLogger('miner_stats')
     total = [0,0,0]
     highest = [0,0,0]
+    cpu = [0,0,0,0,0,0,0,0,0,0]
+    nv = [0,0,0,0,0,0,0,0,0,0,0,0]
+    amd = [0,0,0,0,0,0,0,0,0,0,0,0]
     ''' Strip the date of any incoming string: '''
     def _stripString(self,string):
         try:
@@ -77,11 +80,11 @@ class MinerParser():
                 self.log.info("[CPU] Speed: {0} H/s, Highest: {1} H/s".format(rate[0],rate[1]))
                 self.total[0] = float(rate[0])
                 self.highest[0] = float(rate[1])
-                return False
             else:
                 self.total[0] = 0
                 self.highest[0] = 0
-                return False
+            self.cpu[0] = self.total[0]
+            return False
         if (string[0:8] == 'accepted'):
                 acc = self._accepted(string)
                 self.log.info("[CPU] Accepted: {0} Shares at difficulty: {1}".format(acc[0],acc[1]))
@@ -106,11 +109,12 @@ class MinerParser():
                 self.log.info("[NV] Speed: {0} H/s Highest {1} H/s".format(rate[0],rate[1]))
                 self.total[1] = float(rate[0])
                 self.highest[1] = float(rate[1])
-                return True
+                #return True
             else:
                 self.total[1] = 0
                 self.highest[1] = 0
-                return False
+            self.nv[0] = self.total[1]
+            return False
         if (string[0:8] == 'accepted'):
                 acc = self._accepted(string)
                 self.log.info("[NV] Accepted: {0} Shares at difficulty: {1}".format(acc[0],acc[1]))
@@ -134,11 +138,12 @@ class MinerParser():
                 self.log.info("[AMD] Speed: {0} H/s Highest {1} H/s".format(rate[0],rate[1]))
                 self.total[2] = float(rate[0])
                 self.highest[2] = float(rate[1])
-                return True
+                #return True
             else:
                 self.total[2] = 0
                 self.highest[2] = 0
-                return False
+            self.amd[0] = self.total[2]
+            return False
         if (string[0:8] == 'accepted'):
                 acc = self._accepted(string)
                 self.log.info("[AMD] Accepted: {0} Shares at difficulty: {1}".format(acc[0],acc[1]))
@@ -147,7 +152,13 @@ class MinerParser():
                 pool = self._pool(string)
                 self.log.info("[AMD] New Job from Pool: {0}".format(pool))
                 return True
-            
+
+    def getSpeed(self):
+        cpu = str(self.cpu[0])+","+str(self.cpu[1])+","+str(self.cpu[3])+","+str(self.cpu[4])+","+str(self.cpu[5])+","+str(self.cpu[6])+","+str(self.cpu[7])+","+str(self.cpu[8])+","+str(self.cpu[9])
+        nv = str(self.nv[0])+","+str(self.nv[1])+","+str(self.nv[3])+","+str(self.nv[4])+","+str(self.nv[5])+","+str(self.nv[6])+","+str(self.nv[7])+","+str(self.nv[8])+","+str(self.nv[9])+","+str(self.nv[10])+","+str(self.nv[11])
+        amd = str(self.amd[0])+","+str(self.amd[1])+","+str(self.amd[3])+","+str(self.amd[4])+","+str(self.amd[5])+","+str(self.amd[6])+","+str(self.amd[7])+","+str(self.amd[8])+","+str(self.amd[9])+","+str(self.amd[10])+","+str(self.amd[11])
+        return {'cpu':cpu,'nv':nv,'amd':amd}
+    
     def getTotal(self):
         gt = self.total[0]+self.total[1]+self.total[2]
         ht = self.highest[0]+self.highest[1]+self.highest[2]
