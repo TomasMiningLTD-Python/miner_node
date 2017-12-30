@@ -3,6 +3,7 @@ logging.basicConfig(level=logging.INFO)
 class MinerParser():
     log = logging.getLogger('miner_stats')
     total = [0,0,0]
+    highest = [0,0,0]
     ''' Strip the date of any incoming string: '''
     def _stripString(self,string):
         try:
@@ -13,15 +14,24 @@ class MinerParser():
     def _hashRate(self,string):
         try:
             rate    = string[18:].split(' ')
+            
         except:
             return False
+        rr = False
         if (rate[2] != 'n/a'):
-            return rate[2]
+            rr= rate[2]
         if (rate[1] != 'n/a'):
-            return rate[1]
+            rr= rate[1]
         if (rate[0] != 'n/a'):
-            return rate[0]        
-        return 'n/a'
+            rr= rate[0]        
+        if (rate[5] != 'n/a'):
+            mr = rate[5]
+        else:
+            mr = 0
+        if rr is not False:
+            return [rr,mr]
+        else:
+            return False
     ''' Parse Accepted: '''
     def _accepted(self,string):
         try:
@@ -42,29 +52,44 @@ class MinerParser():
             return True
         string = self._stripString(istr)
         if (string is False): return False
-        if (string[3:7] == "CPU:"):
+        
+        if (string[3:15] == "HUGE PAGES: "):
+            stt = string.split(":   ")
+            
+            if (stt[1][-8:-1] != "enabled"):
+                self.log.info("Huge Page Support enabled!")
+                return False
+            else:
+                self.log.warn("Huge Page Support is not enabled!")
+                return {"warn":"cpu","value":"huge-page"}
+                
+
+        if (string[3:17] == "CPU:          "):
             stt = string.split(":          ")
-            self.log.info("CPU Type: {0}".format(stt[1]))
+            self.log.info("CPU Type: {0}".format(stt[1][:-1]))
+            return {"type":"cpu","value":stt[1][:-1]}
         if (string == "no active pools, stop mining"):
             self.log.warn("[CPU] No active pools detected.")
-            return True
+            return False
         if (string[0:5] == 'speed'):
             rate = self._hashRate(string[1:])
             if (rate is not False):
-                self.log.info("[CPU] Speed: {0} H/s".format(rate))
-                self.total[0] = float(rate)
-                return True
+                self.log.info("[CPU] Speed: {0} H/s, Highest: {1} H/s".format(rate[0],rate[1]))
+                self.total[0] = float(rate[0])
+                self.highest[0] = float(rate[1])
+                return False
             else:
                 self.total[0] = 0
+                self.highest[0] = 0
                 return False
         if (string[0:8] == 'accepted'):
                 acc = self._accepted(string)
                 self.log.info("[CPU] Accepted: {0} Shares at difficulty: {1}".format(acc[0],acc[1]))
-                return True
+                return False
         if (string[0:3] == 'new'):
                 pool = self._pool(string)
                 self.log.info("[CPU] New Job from Pool: {0}".format(pool))
-                return True
+                return False
             
     def parseNV(self,istr):
         if (istr == ''):
@@ -78,11 +103,13 @@ class MinerParser():
         if (string[0:5] == 'speed'):
             rate = self._hashRate(string)
             if (rate is not False):
-                self.log.info("[NV] Speed: {0} H/s".format(rate))
-                self.total[1] = float(rate)
+                self.log.info("[NV] Speed: {0} H/s Highest {1} H/s".format(rate[0],rate[1]))
+                self.total[1] = float(rate[0])
+                self.highest[1] = float(rate[1])
                 return True
             else:
-                self.total[0] = 0
+                self.total[1] = 0
+                self.highest[1] = 0
                 return False
         if (string[0:8] == 'accepted'):
                 acc = self._accepted(string)
@@ -103,12 +130,14 @@ class MinerParser():
             return True
         if (string[0:5] == 'speed'):
             rate = self._hashRate(string)
-            if (rate is not False):
-                self.log.info("[AMD] Speed: {0} H/s".format(rate))
-                self.total[2] = float(rate)
+            if (rate[0] is not False):
+                self.log.info("[AMD] Speed: {0} H/s Highest {1} H/s".format(rate[0],rate[1]))
+                self.total[2] = float(rate[0])
+                self.highest[2] = float(rate[1])
                 return True
             else:
-                self.total[0] = 0
+                self.total[2] = 0
+                self.highest[2] = 0
                 return False
         if (string[0:8] == 'accepted'):
                 acc = self._accepted(string)
@@ -120,4 +149,8 @@ class MinerParser():
                 return True
             
     def getTotal(self):
-        self.log.info("Current Total speed: {0} H/s".format(self.total[0]+self.total[1]+self.total[2]))
+        gt = self.total[0]+self.total[1]+self.total[2]
+        ht = self.highest[0]+self.highest[1]+self.highest[2]
+        self.log.info("Current Total speed: {0} H/s. Highest: {1} H/s".format(gt,ht))
+        return {'t':gt,'h':ht}
+

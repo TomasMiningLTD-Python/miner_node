@@ -5,10 +5,11 @@ import os,sys
 from time import sleep
 from minercfg import MinerCFG
 import platform
+import multiprocessing
 import subprocess
 import logging
 logging.basicConfig(level=logging.INFO)
-class MinerDaemon(Process):
+class MinerDaemon(multiprocessing.Process):
     ''' Variables: '''
     exec = True
     config = False
@@ -25,6 +26,9 @@ class MinerDaemon(Process):
     nv = False
     amd = False
     
+    
+    ''' Network IO: '''
+    network = False
     parser = MinerParser()
     ''' functions: '''
     
@@ -158,7 +162,15 @@ class MinerDaemon(Process):
         if (self.cpu != False):
             line = None
             while (line != ''):
-                self.parser.parseCPU(line)
+                rev = self.parser.parseCPU(line)
+                if (type(rev) == dict):
+                    ''' Depending on what the parser replied, send information to the endpoint: '''
+                    if ("warn" in rev):
+                        self.log.warn("Warning: {0}".format(rev["value"]))
+                        print({"method":"WARNING","type":rev["warn"],"value":rev["value"]})
+                    if ("type" in rev):
+                        if (rev["type"] == "cpu"):
+                            self.network.send({"method":"TYPE","payload":{"typeof":"cpu","data":rev["value"]}})
                 line = self.log_cpu.readline()
         ''' Process output from NVidia : '''
         if (self.nv != False):
@@ -172,11 +184,15 @@ class MinerDaemon(Process):
             while (line != ''):
                 self.parser.parseAMD(line)
                 line = self.log_amd.readline()
+        total = self.parser.getTotal()
         
-        self.parser.getTotal()
+        if (total['t'] != 0):
+            self.network.send({"method":"TOTALS","payload":total})
+        
                 
-    def setup(self,config):
+    def setup(self,config,netpipe):
         self.config = config
+        self.network = netpipe
         self.log.info("Miner_node: Miner ID {0}, Wallet: {1}, MinerName: {2}".format(self.config["GLOBAL"]["minerid"],self.config["POOLS"]["payment"],self.config["POOLS"]["minerName"]))
         self.cwd = os.getcwd()
         self.miner_cfg = MinerCFG(self.config)
@@ -192,7 +208,7 @@ class MinerDaemon(Process):
         #    self.miner_cfg.mkNV()        
         #if (self.config["AMD"]["enable"] is "1"):
         #    self.miner_cfg.mkAMD()
-        self.log.info("Config Files generated.")
+
     def run(self):
         self.log.info("Starting Execution")
         while (self.exec is True):

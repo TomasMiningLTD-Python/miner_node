@@ -9,7 +9,8 @@ import sys,getopt,argparse
 from configparser import ConfigParser
 
 from daemon import MinerDaemon
-
+from network.daemon import NetworkDaemon
+from multiprocessing import Pipe
 if __name__ == '__main__':
     configp = False
     parser = argparse.ArgumentParser(description="Manage Mining Node")
@@ -29,6 +30,12 @@ if __name__ == '__main__':
         sys.exit()
 
 
+dpi,npi = Pipe()
 daemon = MinerDaemon()
-daemon.setup(config)
+daemon.setup(config,dpi)
 daemon.start()
+network = NetworkDaemon()
+network.setup(config,npi)
+network.start()
+network.join()
+
