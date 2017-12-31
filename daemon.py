@@ -1,15 +1,14 @@
 
-from multiprocessing import Process
 from logparser import MinerParser
 import os,sys
 from time import sleep
 from minercfg import MinerCFG
 import platform
-import multiprocessing
+import threading
 import subprocess
 import logging
 logging.basicConfig(level=logging.INFO)
-class MinerDaemon(multiprocessing.Process):
+class MinerDaemon(threading.Thread):
     ''' Variables: '''
     exec = True
     config = False

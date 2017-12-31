@@ -163,5 +163,5 @@ class MinerParser():
         gt = self.total[0]+self.total[1]+self.total[2]
         ht = self.highest[0]+self.highest[1]+self.highest[2]
         self.log.info("Current Total speed: {0} H/s. Highest: {1} H/s".format(gt,ht))
-        return {'t':gt,'h':ht}
+        return {'t':gt,'h':ht,'c':self.total[0],'n':self.total[1],'a':self.total[2]}
 

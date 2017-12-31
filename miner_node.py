@@ -32,20 +32,11 @@ if __name__ == '__main__':
 
 
 dpi,npi = Pipe()
-psys = platform.system()
-if psys == "Linux":
-    daemon = MinerDaemon()
-    daemon.setup(config,dpi)
-    daemon.start()
-    network = NetworkDaemon()
-    network.setup(config,npi)
-    network.start()
-    network.join()
-if psys == "Windows":
-    daemon = MinerDaemon()
-    daemon.setup(config,dpi)
-    daemon.run()
-    network = NetworkDaemon()
-    network.setup(config,npi)
-    network.run()
-    network.join()
+daemon = MinerDaemon()
+daemon.setup(config,dpi)
+daemon.start()
+network = NetworkDaemon()
+network.setup(config,npi)
+network.start()
+network.join()
+

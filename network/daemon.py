@@ -4,12 +4,13 @@ import time
 import datetime
 import sys,getopt
 import datetime
-import multiprocessing
+import threading
+import platform
 import logging
 import netifaces
 from . import methods
 logging.basicConfig(level=logging.INFO)
-class NetworkDaemon(multiprocessing.Process):
+class NetworkDaemon(threading.Thread):
     macaddr = False
     config = False
     auth = False
@@ -20,7 +21,10 @@ class NetworkDaemon(multiprocessing.Process):
         
         self.config = config
         self.kernel = pipe
-        self.macaddr = netifaces.ifaddresses(netifaces.interfaces()[1])[netifaces.AF_LINK][0]['addr']
+        if (platform.system() == "Linux"):
+            self.macaddr = netifaces.ifaddresses(netifaces.interfaces()[1])[netifaces.AF_LINK][0]['addr']
+        elif (platform.system() == "Windows"):
+            self.macaddr = netifaces.ifaddresses(netifaces.interfaces()[0])[netifaces.AF_LINK][0]['addr']
         self.log.info("Network IO Startup, endpoint: {1}, node: {0}".format(self.macaddr,self.config["GLOBAL"]["endpoint"]))
         
     def _geturl(self,url,params):
