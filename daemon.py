@@ -170,7 +170,7 @@ class MinerDaemon(multiprocessing.Process):
                         print({"method":"WARNING","type":rev["warn"],"value":rev["value"]})
                     if ("type" in rev):
                         if (rev["type"] == "cpu"):
-                            self.network.send({"method":"TYPE","payload":{"typeof":"cpu","cputype":rev["value"],"cpucount":1}})
+                            self.network.send({"method":"TYPE","payload":{"typeof":"cpu","cputype":rev["value"],"cpucount":1,"os":self.pt}})
                 line = self.log_cpu.readline()
         ''' Process output from NVidia : '''
         if (self.nv != False):
