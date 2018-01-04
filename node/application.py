@@ -6,21 +6,22 @@ import sys,argparse,platform,os
 import threading,multiprocessing
 " our modules:"
 from gui import mainWindow
-from node import strings,minerid,config
-
+from node import strings,minerid,config,miner
 
 
 class minerApp():
+    threadTimer = False
     cpuRun = None
     amdRun = None
     nvRun = None
-    threadTimer = False
     miner_id = minerid.minerID()
     pipe_nin,pipe_nou = multiprocessing.Pipe()
+    pipe_min,pipe_mou = multiprocessing.Pipe()
 
     
     def __init__(self):
         self.network = NetworkDaemon()
+        self.miner = miner.MinerDaemon()
         self.app = QApplication(sys.argv)
         self.window = QMainWindow()
         self.mainWindow = mainWindow.Ui_MainWindow()
@@ -57,7 +58,8 @@ class minerApp():
         " Populate combo boxes:"
         i = 0
         for d in self.miner_id.ifaces:
-            self.mainWindow.miner_id.addItem("Interface: "+d+" MACADDR: "+self.miner_id.ifaceids[d],i)
+            if (d in self.miner_id.ifaceids):
+                self.mainWindow.miner_id.addItem("Interface: "+d+" MACADDR: "+self.miner_id.ifaceids[d],i)
             i = i + 1
                 
         self.config = config.MinerConfig()
@@ -98,6 +100,7 @@ class minerApp():
         self.mainWindow.XMR_URL7.textChanged.connect(self.syncConfigFromUI)
         self.mainWindow.XMR_URL8.textChanged.connect(self.syncConfigFromUI)
         self.mainWindow.XMR_URL9.textChanged.connect(self.syncConfigFromUI)
+        self.app.aboutToQuit.connect(self.network.quit)
         self.stopCPU()
         self.stopNV()
         self.stopAMD()
@@ -133,6 +136,7 @@ class minerApp():
         self.network.enabled = self.mainWindow.enable_api.isChecked()
         self.network.cmd_enabled = self.mainWindow.enable_remote_cmd.isChecked()
         self.network.cfg_enabled = self.mainWindow.enable_remote_config.isChecked()
+        
     """ Sync Values TO Config Struct FROM UI: """
     def syncConfigFromUI(self):
         if (self.config.locked == False):
@@ -214,6 +218,7 @@ class minerApp():
         self.fileDialog.setModal(True)
         self.fileDialog.fileSelected.connect(self._openCfgFile)
         self.fileDialog.show()
+        
     """ Save Config file:"""
     def saveCfgFile(self):
         self.fileDialog = QFileDialog(self.window,'Save Config File as',os.getcwd(),"*.json")
@@ -240,14 +245,6 @@ class minerApp():
             err.show()
         self.config.locked = False
         self.autoExec()
-
-
-    """ Auto Execute processes if the configuration specifies them: """
-    def autoExec(self):
-        """ Support Network Autostart: """
-        if (self.config.config["remote"]["enable_api"] == True):
-            self.startNetwork()
-            
     """ Save a config file (Actual logic):"""
     def _saveCfgFile(self,file):
         try:
@@ -263,6 +260,14 @@ class minerApp():
             err.setModal(True)
             err.show()
             
+
+    """ Auto Execute processes if the configuration specifies them: """
+    def autoExec(self):
+        """ Support Network Autostart: """
+        if (self.config.config["remote"]["enable_api"] == True):
+            self.startNetwork()
+            
+
     """ Start network: """
     def startNetwork(self):
         self.network.setup(self.config.config,self.pipe_nin,self.pipe_nou)
@@ -353,6 +358,8 @@ class minerApp():
                 self.mainWindow.statusbar.showMessage(strings.APP_STRINGS["net"]["err"][msg["err"]])
             elif (msg["type"] == "status"):
                 self.mainWindow.statusbar.showMessage(strings.APP_STRINGS["net"]["status"][msg["msg"]])
+                if (msg['msg'] == 'AUTH-OK'):
+                    self.mainWindow.api_status_2.setText(strings.APP_STRINGS["net"]["connected"])
     
     
     """ Main Exec Thread: """

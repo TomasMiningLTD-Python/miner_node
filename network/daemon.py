@@ -104,25 +104,31 @@ class NetworkDaemon(threading.Thread):
     def stop(self):
         self.enabled = False
         self.auth = False
-
+        self.log.info("Stop Network Activity.")
+        
+    def quit(self):
+        self.exit = True
+        
     def run(self):
             self.started = True
-            while (self.enabled is True):
-                """If we're not authorised, go to that routine only."""
-                if self.auth is False:
-                    self.auth_request()
-                else:
-                    " We are authorised, lets do some damage: "
-                    while (self.pipe_in.poll() > 0):
-                        """ We have something to send to the server, lets do it."""
-                        msg = self.pipe_in.recv()
-                        if ('method' not in msg):
-                            self.log.warn("MSG in queue, does not have METHOD. Not sending. {0}".format(msg))
-                        else:
-                            self._posturl(getattr(methods,msg["method"]),msg["payload"])
+            self.exit = False
+            while(self.exit is not True):
+                if (self.enabled is True):
+                    """If we're not authorised, go to that routine only."""
+                    if self.auth is False:
+                        self.auth_request()
+                    else:
+                        " We are authorised, lets do some damage: "
+                        while (self.pipe_in.poll() > 0):
+                            """ We have something to send to the server, lets do it."""
+                            msg = self.pipe_in.recv()
+                            if ('method' not in msg):
+                                self.log.warn("MSG in queue, does not have METHOD. Not sending. {0}".format(msg))
+                            else:
+                                self._posturl(getattr(methods,msg["method"]),msg["payload"])
                 time.sleep(10)
-            else:
-                time.sleep(10)
+
+                
         
         
         

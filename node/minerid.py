@@ -6,5 +6,7 @@ class minerID():
         self.ifaces = netifaces.interfaces()
         self.ifaceids = {}
         for i in self.ifaces:
-            self.ifaceids[i] = netifaces.ifaddresses(i)[netifaces.AF_LINK][0]['addr']
+            try:
+                self.ifaceids[i] = netifaces.ifaddresses(i)[netifaces.AF_LINK][0]['addr']
+            except: pass
 

@@ -12,6 +12,7 @@ APP_STRINGS = {
         "start":"Network Starting...",
         "stop":"Network stopped.",
         "disabled":"Remote API Disabled.",
+        "connected":"Connected to Remote!",
         "err":{
             "CONN-REFUSED":"NETWORK ERROR: Connection Refused.",
             "AUTH-ERR":"Miner Node is not Authenticated; Please check API Account and Grant access to Miner ID."
