@@ -1,0 +1,46 @@
+ {
+ "miner_name":"",
+    "miner_id":0,
+    "remote":{
+        "enable_api":false,
+        "enable_remote_cmd":false,
+        "enable_remote_config":false,
+        "api_endpoint":"",
+        "api_use_iam":false
+    },
+    "miners":{
+        "XMR":{
+            "XMRIG":{
+                "CPU":{
+                    "ENABLE":true,
+                    "AS":true,
+                    "THREADS":4
+                },
+                "NV": {
+                    "ENABLE":true,
+                    "AS":true,
+                    "THREADS":22,
+                    "BLOCKS":20
+                },
+                "AMD": {
+                    "ENABLE":true,
+                    "AS":true,
+                    "INTENSITY":600,
+                    "BLOCKSIZE":8
+                },
+                "PAYMENT_ADDR":"",
+                "PASSWORD":"",
+                "URL0":"",
+                "URL1":"",
+                "URL2":"",
+                "URL3":"",
+                "URL4":"",
+                "URL5":"",
+                "URL6":"",
+                "URL7":"",
+                "URL8":"",
+                "URL9":""
+                }
+            }
+        }
+}

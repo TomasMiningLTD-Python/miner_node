@@ -14,23 +14,26 @@ class NetworkDaemon(threading.Thread):
     macaddr = False
     config = False
     auth = False
-    kernel = False
+    pipe_in = False
+    pipe_out = False
     csrf = False
     log = logging.getLogger("Network")
-    def setup(self,config,pipe):
+    enabled = False
+    cmd_enabled = False
+    cfg_enabled = False
+    started = False
+    def setup(self,config,pipe_out,pipe_in):
         
         self.config = config
-        self.kernel = pipe
-        if (platform.system() == "Linux"):
-            self.macaddr = netifaces.ifaddresses(netifaces.interfaces()[1])[netifaces.AF_LINK][0]['addr']
-        elif (platform.system() == "Windows"):
-            self.macaddr = netifaces.ifaddresses(netifaces.interfaces()[0])[netifaces.AF_LINK][0]['addr']
-        self.log.info("Network IO Startup, endpoint: {1}, node: {0}".format(self.macaddr,self.config["GLOBAL"]["endpoint"]))
+        self.pipe_in = pipe_in
+        self.pipe_out = pipe_out
+        self.macaddr = netifaces.ifaddresses(netifaces.interfaces()[self.config["miner_id"]])[netifaces.AF_LINK][0]['addr']
+        self.log.info("Network IO Configuration: endpoint: {1}, node: {0}".format(self.macaddr,self.config["remote"]["api_endpoint"]))
         
     def _geturl(self,url,params):
-        self.log.info("GET url: {0}".format(self.config["GLOBAL"]["endpoint"]+url))
+        self.log.info("GET url: {0}".format(self.config["remote"]["api_endpoint"]+url))
         try:
-            r = requests.get(self.config["GLOBAL"]["endpoint"]+url,params)
+            r = requests.get(self.config["remote"]["api_endpoint"]+url,params)
             if (r.status_code == 500):
                 self.log.error("PROTOCOL ERROR [500]: {0}".format(r.url))
                 return False
@@ -49,20 +52,20 @@ class NetworkDaemon(threading.Thread):
                     self.log.error("PROTOCOL ERROR: DATA IS NOT JSON: {0}".format(r.url))
                     return False
         except Exception as e:
-            self.log.error("Request Error for url {0}: {1}".format(self.config["GLOBAL"]["endpoint"]+url,e))
-            
+            self.log.error("Request Error for url {0}: {1}".format(self.config["remote"]["api_endpoint"]+url,e))
+            self.pipe_out.send({'type':'err','err':'CONN-REFUSED'})
             return False    
 
     
     def _posturl(self,url,params):
-        self.log.info("POST to url: {0}".format(self.config["GLOBAL"]["endpoint"]+url))
+        self.log.info("POST to url: {0}".format(self.config["remote"]["api_endpoint"]+url))
         hdr = {'csrftoken':self.csrf}
         #print(hdr)
         params["csrfmiddlewaretoken"] = self.csrf
         params["miner_id"]= self.macaddr
         #print(params)
         try:
-            r = requests.post(self.config["GLOBAL"]["endpoint"]+url,data=params,cookies=hdr)
+            r = requests.post(self.config["remote"]["api_endpoint"]+url,data=params,cookies=hdr)
             if (r.status_code == 500):
                 self.log.error("PROTOCOL ERROR [500]: {0}".format(r.url))
                 return False
@@ -77,7 +80,7 @@ class NetworkDaemon(threading.Thread):
                     self.log.error("PROTOCOL ERROR: DATA IS NOT JSON: {0}".format(r.url))
                     return False
         except Exception as e:
-            self.log.error("Request Error for url {0}: {1}".format(self.config["GLOBAL"]["endpoint"]+url,e))
+            self.log.error("Request Error for url {0}: {1}".format(self.config["remote"]["api_endpoint"]+url,e))
             return False    
         return True
 
@@ -85,32 +88,41 @@ class NetworkDaemon(threading.Thread):
     def auth_request(self):
         self.log.info("Authenticating to Endpoint, node: {0}".format(self.macaddr))
         localtime = datetime.datetime.now()
+        self.pipe_out.send({"type":"status","msg":"NET-STOP"})
         r = self._geturl(methods.AUTH,{'id':self.macaddr,'time':localtime})
         if (r is not False):
             if (r["result"] == "noauth"):
                 self.log.warn("Node is not authenticated. Waiting for account ownership. Sleeping for 30 seconds.")
+                self.pipe_out.send({"type":"err","msg":"AUTH-ERR"})
                 time.sleep(20)
             elif (r["result"] == "auth-ok"):
                 self.log.info("Authentication Success!")
                 self.auth = True
+                self.pipe_out.send({'type':'status','msg':'AUTH-OK'})
                 
                 
-    
+    def stop(self):
+        self.enabled = False
+        self.auth = False
+
     def run(self):
-        while (True):
-            "If we're not authorised, go to that routine only."
-            if self.auth is False:
-                self.auth_request()
+            self.started = True
+            while (self.enabled is True):
+                """If we're not authorised, go to that routine only."""
+                if self.auth is False:
+                    self.auth_request()
+                else:
+                    " We are authorised, lets do some damage: "
+                    while (self.pipe_in.poll() > 0):
+                        """ We have something to send to the server, lets do it."""
+                        msg = self.pipe_in.recv()
+                        if ('method' not in msg):
+                            self.log.warn("MSG in queue, does not have METHOD. Not sending. {0}".format(msg))
+                        else:
+                            self._posturl(getattr(methods,msg["method"]),msg["payload"])
+                time.sleep(10)
             else:
-                " We are authorised, lets do some damage: "
-                while (self.kernel.poll() > 0):
-                    """ We have something to send to the server, lets do it."""
-                    msg = self.kernel.recv()
-                    if ('method' not in msg):
-                        self.log.warn("MSG in queue, does not have METHOD. Not sending. {0}".format(msg))
-                    else:
-                        self._posturl(getattr(methods,msg["method"]),msg["payload"])
-            time.sleep(10)
+                time.sleep(10)
         
         
         

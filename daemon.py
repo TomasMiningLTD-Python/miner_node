@@ -112,8 +112,8 @@ class MinerDaemon(threading.Thread):
         self.miner_cfg.mkNV()
         self.log.info("Attempting to start NVidia Miner")
         if (self.pt == "linux"):
-            self.log.info("NVidia Miner command: ./xmrig-nvidia -c {0}".format(self.config["NVIDIA"]["config"],self.cwd))
-            self.nv = subprocess.Popen(["./xmrig-nvidia","-c",self.config["NVIDIA"]["config"]],bufsize=1024,cwd=self.cwd+"/bin/linux/",universal_newlines=True)
+            self.log.info("NVidia Miner command: ./xmrig-nvidia -c {0} --cuda-launch={1}x{2}".format(self.config["NVIDIA"]["config"],self.config["NVIDIA"]["threads"],self.config["NVIDIA"]["blocks"]))
+            self.nv = subprocess.Popen(["./xmrig-nvidia","-c",self.config["NVIDIA"]["config"],"--cuda-launch={0}x{1}".format(self.config["NVIDIA"]["threads"],self.config["NVIDIA"]["blocks"])],bufsize=1024,cwd=self.cwd+"/bin/linux/",universal_newlines=True)
             self.log.info("Nvidia Miner Started.")
         if (self.pt =="win"):
             self.log.info("CWD: {0}".format(self.cwd+"\\bin\win\\"))

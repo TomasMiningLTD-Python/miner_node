@@ -21,19 +21,22 @@ class MinerParser():
         except:
             return False
         rr = False
-        if (rate[2] != 'n/a'):
-            rr= rate[2]
-        if (rate[1] != 'n/a'):
-            rr= rate[1]
-        if (rate[0] != 'n/a'):
-            rr= rate[0]        
-        if (rate[5] != 'n/a'):
-            mr = rate[5]
-        else:
-            mr = 0
-        if rr is not False:
-            return [rr,mr]
-        else:
+        try:
+            if (rate[2] != 'n/a'):
+                rr= rate[2]
+            if (rate[1] != 'n/a'):
+                rr= rate[1]
+            if (rate[0] != 'n/a'):
+                rr= rate[0]        
+            if (rate[5] != 'n/a'):
+                mr = rate[5]
+            else:
+                mr = 0
+            if rr is not False:
+                return [rr,mr]
+            else:
+                return False
+        except:
             return False
     ''' Parse Accepted: '''
     def _accepted(self,string):
