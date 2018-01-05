@@ -86,8 +86,8 @@ class MinerDaemon(threading.Thread):
         self.miner_cfg.mkCPU()
         self.log.info("Attempting to start CPU Miner")
         if (self.pt == "linux"):
-            self.log.info("CPU Miner Command: ./xmrig-cpu -c {0} (CWD: {1})".format(self.config["CPU"]["config"],self.cwd))
-            self.cpu = subprocess.Popen(["./xmrig-cpu","-c",self.config["CPU"]["config"]],bufsize=1024,cwd=self.cwd+"/bin/linux/",universal_newlines=True)
+            self.log.info("CPU Miner Command: ./miners/XMR/XMRIG/linux/xmrig-cpu -c ./tmp/cpu.json (CWD: {1})".format(self.cwd))
+            self.cpu = subprocess.Popen(["./miners/XMR/XMRIG/linux/xmrig-cpu","-c ./tmp/cpu.json"],bufsize=1024,cwd=self.cwd,universal_newlines=True)
             self.log.info("CPU Miner Started.")
         if (self.pt =="win"):
             self.log.info("CWD: {0}".format(self.cwd+"\\bin\win\\"))

@@ -156,6 +156,10 @@ class MinerParser():
                 self.log.info("[AMD] New Job from Pool: {0}".format(pool))
                 return True
 
+    def reset(self):
+        self.total = [0,0,0]
+        self.highest = [0,0,0]
+        
     def getSpeed(self):
         cpu = str(self.cpu[0])+","+str(self.cpu[1])+","+str(self.cpu[3])+","+str(self.cpu[4])+","+str(self.cpu[5])+","+str(self.cpu[6])+","+str(self.cpu[7])+","+str(self.cpu[8])+","+str(self.cpu[9])
         nv = str(self.nv[0])+","+str(self.nv[1])+","+str(self.nv[3])+","+str(self.nv[4])+","+str(self.nv[5])+","+str(self.nv[6])+","+str(self.nv[7])+","+str(self.nv[8])+","+str(self.nv[9])+","+str(self.nv[10])+","+str(self.nv[11])
@@ -165,6 +169,7 @@ class MinerParser():
     def getTotal(self):
         gt = self.total[0]+self.total[1]+self.total[2]
         ht = self.highest[0]+self.highest[1]+self.highest[2]
-        self.log.info("Current Total speed: {0} H/s. Highest: {1} H/s".format(gt,ht))
+        if (gt > 0.1):
+            self.log.info("Current Total speed: {0} H/s. Highest: {1} H/s".format(gt,ht))
         return {'t':gt,'h':ht,'c':self.total[0],'n':self.total[1],'a':self.total[2]}
 

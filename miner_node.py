@@ -36,7 +36,8 @@ daemon = MinerDaemon()
 daemon.setup(config,dpi)
 daemon.start()
 network = NetworkDaemon()
-network.setup(config,npi)
+network.setup({"miner_id":1,"remote":{"api_endpoint":config["GLOBAL"]["endpoint"]}},npi,dpi)
+network.enabled = True
 network.start()
 network.join()
 

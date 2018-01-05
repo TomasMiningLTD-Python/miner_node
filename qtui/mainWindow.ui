@@ -892,7 +892,7 @@
            <x>0</x>
            <y>0</y>
            <width>841</width>
-           <height>504</height>
+           <height>506</height>
           </rect>
          </property>
          <layout class="QHBoxLayout" name="horizontalLayout_6">
@@ -2414,11 +2414,8 @@
              </widget>
             </item>
             <item>
-             <widget class="QPlainTextEdit" name="MINER_LOG">
+             <widget class="QTextEdit" name="MINER_LOG">
               <property name="readOnly">
-               <bool>true</bool>
-              </property>
-              <property name="centerOnScroll">
                <bool>true</bool>
               </property>
              </widget>
@@ -2464,27 +2461,27 @@
   </widget>
   <action name="actionAbout_MinerNode">
    <property name="text">
-    <string>About MinerNode</string>
+    <string>&amp;About MinerNode</string>
    </property>
   </action>
   <action name="action_Visit_MinerCloud">
    <property name="text">
-    <string> Visit MinerCloud</string>
+    <string> &amp;Visit MinerCloud</string>
    </property>
   </action>
   <action name="actionImport_Config">
    <property name="text">
-    <string>Open Config</string>
+    <string>&amp;Open Config</string>
    </property>
   </action>
   <action name="actionExport_Config">
    <property name="text">
-    <string>Save Config as</string>
+    <string>&amp;Save Config as</string>
    </property>
   </action>
   <action name="actionExit">
    <property name="text">
-    <string>Exit</string>
+    <string>&amp;Exit</string>
    </property>
   </action>
  </widget>

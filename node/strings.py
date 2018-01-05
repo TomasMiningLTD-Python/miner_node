@@ -2,10 +2,22 @@ APP_STRINGS = {
     "miner":{
         "stop":"Stop Miner",
         "start":"Start Miner",
-        "idle":"1DLE"
+        "idle":"1DLE",
+        "app_name":"MinerNODE"
     },
     "config":{
         "changed":"Configuration changed! Remember to SAVE your file AND SYNC your workers for changes to be applied to miners!"
+    },
+    "warn":{
+        "huge-page":"Huge Page Support is not Enabled!"
+    },
+    "status":{
+        "START-CPU":"Started CPU Miner.",
+        "STOP-CPU":"Stopped CPU Miner.",
+        "START-NV":"Started NV Miner.",
+        "STOP-NV":"Stopped NV Miner.",
+        "START-AMD":"Started AMD Miner.",
+        "STOP-AMD":"Stopped AMD Miner."
     },
     "net":{
         "connecting":"Connecting to endpoint: {0} ....",

@@ -8,25 +8,33 @@
         "api_endpoint":"",
         "api_use_iam":false
     },
+    "miner":"XMRIG",
+    "currency":"XMR",
     "miners":{
         "XMR":{
             "XMRIG":{
                 "CPU":{
                     "ENABLE":true,
                     "AS":true,
-                    "THREADS":4
+                    "THREADS":4,
+                    "LOG":"cpu.log",
+                    "MAX":95
                 },
                 "NV": {
                     "ENABLE":true,
                     "AS":true,
                     "THREADS":22,
-                    "BLOCKS":20
+                    "BLOCKS":20,
+                    "BFACTOR":0,
+                    "BSLEEP":0,
+                    "LOG":"nv.log"
                 },
                 "AMD": {
                     "ENABLE":true,
                     "AS":true,
                     "INTENSITY":600,
-                    "BLOCKSIZE":8
+                    "BLOCKSIZE":8,
+                    "LOG":"amd.log"
                 },
                 "PAYMENT_ADDR":"",
                 "PASSWORD":"",

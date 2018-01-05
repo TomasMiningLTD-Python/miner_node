@@ -4,9 +4,11 @@ from configparser import ConfigParser
 from network.daemon import NetworkDaemon
 import sys,argparse,platform,os
 import threading,multiprocessing
+import importlib,datetime
 " our modules:"
 from gui import mainWindow
-from node import strings,minerid,config,miner
+from node import strings,minerid,config
+import miners
 
 
 class minerApp():
@@ -14,14 +16,15 @@ class minerApp():
     cpuRun = None
     amdRun = None
     nvRun = None
+    minerRunning = False
     miner_id = minerid.minerID()
     pipe_nin,pipe_nou = multiprocessing.Pipe()
     pipe_min,pipe_mou = multiprocessing.Pipe()
-
+    miner_mod = False
+    miner = False
     
     def __init__(self):
         self.network = NetworkDaemon()
-        self.miner = miner.MinerDaemon()
         self.app = QApplication(sys.argv)
         self.window = QMainWindow()
         self.mainWindow = mainWindow.Ui_MainWindow()
@@ -37,9 +40,8 @@ class minerApp():
         self.mainWindow.RUN_ALL.clicked.connect(self.startCPU)
         self.mainWindow.RUN_ALL.clicked.connect(self.startNV)
         self.mainWindow.RUN_ALL.clicked.connect(self.startAMD)
-        self.mainWindow.STOP_ALL.clicked.connect(self.stopCPU)
-        self.mainWindow.STOP_ALL.clicked.connect(self.stopNV)
-        self.mainWindow.STOP_ALL.clicked.connect(self.stopAMD)
+        self.mainWindow.STOP_ALL.clicked.connect(self.stopMiner)
+        self.mainWindow.SYNC_CONFIG.clicked.connect(self.syncConfig)
         self.mainWindow.api_connect.clicked.connect(self.startNetwork)
         self.mainWindow.api_disconnect.clicked.connect(self.stopNetwork)
         self.mainWindow.actionExport_Config.triggered.connect(self.saveCfgFile)
@@ -99,11 +101,13 @@ class minerApp():
         self.mainWindow.XMR_URL6.textChanged.connect(self.syncConfigFromUI)
         self.mainWindow.XMR_URL7.textChanged.connect(self.syncConfigFromUI)
         self.mainWindow.XMR_URL8.textChanged.connect(self.syncConfigFromUI)
-        self.mainWindow.XMR_URL9.textChanged.connect(self.syncConfigFromUI)
+        self.mainWindow.XMR_URL9.textChanged.connect
+        self.mainWindow.CPU_HS.display(strings.APP_STRINGS['miner']['idle'])
+        self.mainWindow.AMD_HS.display(strings.APP_STRINGS['miner']['idle'])
+        self.mainWindow.NV_HS.display(strings.APP_STRINGS['miner']['idle'])
+        self.window.setWindowTitle(strings.APP_STRINGS["miner"]["app_name"])
         self.app.aboutToQuit.connect(self.network.quit)
-        self.stopCPU()
-        self.stopNV()
-        self.stopAMD()
+        
         self.mainWindow.T_HS.display(strings.APP_STRINGS['miner']['idle'])
         self.mainWindow.H_HS.display(strings.APP_STRINGS['miner']['idle'])
         """Load config:"""
@@ -140,6 +144,7 @@ class minerApp():
     """ Sync Values TO Config Struct FROM UI: """
     def syncConfigFromUI(self):
         if (self.config.locked == False):
+            print(self.config.config["miners"]["XMR"]["XMRIG"]["CPU"])
             self.config.config["miner_id"] = self.mainWindow.miner_id.currentIndex()
             self.config.config["miner_name"] = self.mainWindow.miner_name.text()
             self.config.config["remote"]["enable_api"] = self.mainWindow.enable_api.isChecked()
@@ -234,7 +239,7 @@ class minerApp():
         except: pass
         try:
             self.config.load(file)
-            self.mainWindow.statusbar.showMessage("Loaded Configufration File: {0}.".format(file))
+            self.mainWindow.statusbar.showMessage("Loaded Configufration File: {0}.".format(file),5000)
             self.syncConfigToUI()
             self.toggleNetParams()
             
@@ -252,7 +257,7 @@ class minerApp():
         except: pass
         try:
             self.config.save(file)
-            self.mainWindow.statusbar.showMessage("Saved Configufration File: {0}.".format(file))
+            self.mainWindow.statusbar.showMessage("Saved Configufration File: {0}.".format(file),5000)
             
         except:
             err = QErrorMessage(self.window)
@@ -274,29 +279,75 @@ class minerApp():
         if (self.network.started == False):
              self.network.start()
         self.network.enabled = True
-        self.mainWindow.statusbar.showMessage(strings.APP_STRINGS["net"]["start"])
+        self.mainWindow.statusbar.showMessage(strings.APP_STRINGS["net"]["start"],5000)
         self.mainWindow.api_status_2.setText(strings.APP_STRINGS["net"]["connecting"].format(self.config.config["remote"]["api_endpoint"]))
+        self.guiLog(strings.APP_STRINGS["net"]["connecting"].format(self.config.config["remote"]["api_endpoint"]))
         
     """ Start network: """
     def stopNetwork(self):
         self.network.stop()
-        self.mainWindow.statusbar.showMessage(strings.APP_STRINGS["net"]["stop"])
+        self.mainWindow.statusbar.showMessage(strings.APP_STRINGS["net"]["stop"],5000)
         self.mainWindow.api_status_2.setText(strings.APP_STRINGS["net"]["disabled"])
-        
+        self.guiLog(strings.APP_STRINGS["net"]["disabled"])
+    
+    """ Start Miner Daemon: """
+    def startMiner(self):
+        if (self.minerRunning == False):
+            self.miner_mod = importlib.import_module('.{0}.{1}.miner'.format(self.config.config["currency"],self.config.config["miner"]),'miners')
+            self.miner = self.miner_mod.MinerDaemon()
+            self.miner.setup(self.config.config["miners"][self.config.config["currency"]][self.config.config["miner"]],self.pipe_mou,self.pipe_min)
+            self.app.aboutToQuit.connect(self.miner.quit)
+            self.miner.start()
+            self.minerRunning = True
+            self.mainWindow.T_HS.display(0)
+            self.mainWindow.H_HS.display(0)
+
+    """ Logging Facility: """
+    def guiLog(self,msg,type=0):
+        ts = datetime.datetime.now()
+        if (type == 0):
+            cmsg = "<b>[{0}]</b> {1}<br/>\n".format(ts.strftime("%Y-%m-%d %H:%M:%S"),msg);
+        elif (type == 1):
+             cmsg = "<b><font color=\"#bca371\"> [{0}] WARN:</b> {1}</font><br/>\n".format(ts.strftime("%Y-%m-%d %H:%M:%S"),msg);
+        elif (type == 2):
+            cmsg = "<b><font color=\"#c97064\"> [{0}] ERROR:</b> {1}</font><br/>\n".format(ts.strftime("%Y-%m-%d %H:%M:%S"),msg);
+        elif (type == 3):
+            cmsg = "<b>[{0}]<font color=\"#3f8482\"> Hashrates:</b> {1}</font><br/>\n".format(ts.strftime("%Y-%m-%d %H:%M:%S"),msg);
+        else:
+            cmsg = msg
+        self.mainWindow.MINER_LOG.append(cmsg)
+    """ Stop Miner Daemon: """
+    def stopMiner(self):
+        if (self.minerRunning == True):
+            if (self.cpuRun == True): self.stopCPU()
+            if (self.nvRun == True): self.stopNV()
+            if (self.amdRun == True): self.stopAMD()
+            self.miner.exec = False
+            self.minerRunning = False
+            
+
     """ Stop CPU Miner: """
     def stopCPU(self):
         if (self.cpuRun != False):
             self.mainWindow.CPU_HS.display(strings.APP_STRINGS['miner']['idle'])
             self.mainWindow.CPU_RUN.setText(strings.APP_STRINGS["miner"]["start"])
             self.cpuRun = False
+            self.miner.exec_cpu = False
+            self.totalDispReset()
+            self.mainWindow.statusbar.showMessage(strings.APP_STRINGS["status"]["STOP-CPU"],5000)
+            self.guiLog(strings.APP_STRINGS["status"]["STOP-CPU"])
         
     """ Start CPU Miner: """
     def startCPU(self):
         if (self.mainWindow.XMR_CPU_ENABLE.isChecked() == False): return True
         if (self.cpuRun != True):
+            self.startMiner()
             self.mainWindow.CPU_HS.display(0)
             self.mainWindow.CPU_RUN.setText(strings.APP_STRINGS["miner"]["stop"])
             self.cpuRun = True
+            self.miner.exec_cpu = True
+            self.mainWindow.statusbar.showMessage(strings.APP_STRINGS["status"]["START-CPU"],5000)
+            self.guiLog(strings.APP_STRINGS["status"]["START-CPU"])
             
     """ Glue for CPU  """    
     def toggleCPU(self):
@@ -311,15 +362,23 @@ class minerApp():
             self.mainWindow.NV_HS.display(strings.APP_STRINGS['miner']['idle'])
             self.mainWindow.NV_RUN.setText(strings.APP_STRINGS["miner"]["start"])
             self.nvRun = False
+            self.miner.exec_nv = False
+            self.totalDispReset()
+            self.mainWindow.statusbar.showMessage(strings.APP_STRINGS["status"]["STOP-NV"],5000)
+            self.guiLog(strings.APP_STRINGS["status"]["STOP-NV"])
         
     """ Start NV Miner: """
     def startNV(self):
         if (self.mainWindow.XMR_NV_ENABLE.isChecked() == False): return True
         if (self.nvRun != True):
+            self.startMiner()
             self.mainWindow.NV_HS.display(0)
             self.mainWindow.NV_RUN.setText(strings.APP_STRINGS["miner"]["stop"])
             self.nvRun = True
-            
+            self.miner.exec_nv = True
+            self.mainWindow.statusbar.showMessage(strings.APP_STRINGS["status"]["START-NV"],5000)
+            self.guiLog(strings.APP_STRINGS["status"]["START-NV"])
+                       
     """ Glue for NV  """    
     def toggleNV(self):
         if (self.nvRun is  True):
@@ -332,15 +391,23 @@ class minerApp():
         if (self.amdRun != False):
             self.mainWindow.AMD_HS.display(strings.APP_STRINGS['miner']['idle'])
             self.mainWindow.AMD_RUN.setText(strings.APP_STRINGS["miner"]["start"])
-            self.amdRun = False
+            self.miner.exec_amd = False
+            self.totalDispReset()
+            self.mainWindow.statusbar.showMessage(strings.APP_STRINGS["status"]["STOP-AMD"],5000)
+            self.guiLog(strings.APP_STRINGS["status"]["STOP-AMD"])
         
     """ Start AMD Miner: """
     def startAMD(self):
         if (self.mainWindow.XMR_AMD_ENABLE.isChecked() == False): return True
         if (self.amdRun != True):
+            self.startMiner()
             self.mainWindow.AMD_HS.display(0)
             self.mainWindow.AMD_RUN.setText(strings.APP_STRINGS["miner"]["stop"])
             self.amdRun = True
+            self.miner.exec_amd = True
+            self.mainWindow.statusbar.showMessage(strings.APP_STRINGS["status"]["START-AMD"],5000)
+            self.guiLog(strings.APP_STRINGS["status"]["START-AMD"])
+            
             
     """ Glue for AMD  """    
     def toggleAMD(self):
@@ -348,19 +415,75 @@ class minerApp():
             self.stopAMD()
         else:
             self.startAMD()
+            
+    """ Glue for Sync Config: """
+    def syncConfig(self):
+        self.stopMiner()
+        self.startMiner()
+        
+    def totalDispReset(self):
+        if ((self.amdRun is False) and (self.cpuRun is False) and (self.nvRun is False)):
+            self.mainWindow.T_HS.display(strings.APP_STRINGS['miner']['idle'])
+            self.mainWindow.H_HS.display(strings.APP_STRINGS['miner']['idle'])
+
+
+    """ Update UI:"""
+    def updateUI(self,event):
+        self.miner.logParser.reset()
+        if (self.cpuRun is False): self.mainWindow.CPU_HS.display(strings.APP_STRINGS["miner"]["idle"])
+        if (self.nvRun is False): self.mainWindow.NV_HS.display(strings.APP_STRINGS["miner"]["idle"])
+        if (self.amdRun is False): self.mainWindow.AMD_HS.display(strings.APP_STRINGS["miner"]["idle"])
+        if 'payload' in event:
+            if 'method' in event:
+                """ Depending on event, update UI: """
+                if event["method"] == "TOTALS":
+                    self.mainWindow.CPU_HS.display(event["payload"]["c"])
+                    self.mainWindow.NV_HS.display(event["payload"]["n"])
+                    self.mainWindow.AMD_HS.display(event["payload"]["a"])
+                    if (event["payload"]["t"] > 0.1):
+                        self.mainWindow.T_HS.display(event["payload"]["t"])
+                    if (event["payload"]["h"] > 0.1):
+                        self.mainWindow.H_HS.display(event["payload"]["h"])
+                    log_msg = "<br/>CPU: {0} H/s, NV: {1} H/s AMD: {2} H/s<br/> Total: {3} H/s, Highest: {4} H/s".format(event["payload"]["c"],event["payload"]["n"],event["payload"]["a"],event["payload"]["t"],event["payload"]["h"])
+                    self.window.setWindowTitle(strings.APP_STRINGS["miner"]["app_name"]+" : Total {0} H/s (CPU: {1} H/s NV: {2} H/s AMD: {3} H/s) Highest: {4} H/s".format(event["payload"]["t"],event["payload"]["c"],event["payload"]["n"],event["payload"]["a"],event["payload"]["h"]))
+                    self.guiLog(log_msg,3)
+                elif event["method"] == "TYPE":
+                    if "payload" in event:
+                        if event["payload"]["typeof"] == "cpu":
+                            platNode = self.mainWindow.miner_config.findItems('CPU(s)',Qt.MatchExactly,0)
+                            platNode[0].addChild(QTreeWidgetItem(["CPU: {1}: {0}".format(event["payload"]["cputype"],event["payload"]["cpucount"])],0))
+                            self.guiLog("CPU {1}: {0}".format(event["payload"]["cputype"],event["payload"]["cpucount"]))
+                        
+                elif event["method"] == "WARNING":
+                    print(event)
+                    if event["value"] in self.strings.APP_STRINGS["warn"]:
+                        self.mainWindow.statusbar.showMessage("WARNING: {0}".format(self.strings.APP_STRINGS["warn"][event["value"]]),5000)
+    
+    
+    
+    
     
     """"Process events incoming and outgoing, Miner and network:"""
     def processEvents(self):
+
+
         """ Incoming Network events: """
         while (self.pipe_nou.poll()>0):
             msg = self.pipe_nou.recv()
-            if (msg["type"] == "err"):
-                self.mainWindow.statusbar.showMessage(strings.APP_STRINGS["net"]["err"][msg["err"]])
-            elif (msg["type"] == "status"):
-                self.mainWindow.statusbar.showMessage(strings.APP_STRINGS["net"]["status"][msg["msg"]])
-                if (msg['msg'] == 'AUTH-OK'):
-                    self.mainWindow.api_status_2.setText(strings.APP_STRINGS["net"]["connected"])
-    
+            if "type" in msg:
+                if (msg["type"] == "err"):
+                    self.mainWindow.statusbar.showMessage(strings.APP_STRINGS["net"]["err"][msg["err"]],5000)
+                elif (msg["type"] == "status"):
+                    self.mainWindow.statusbar.showMessage(strings.APP_STRINGS["net"]["status"][msg["msg"]],5000)
+                    if (msg['msg'] == 'AUTH-OK'):
+                        self.mainWindow.api_status_2.setText(strings.APP_STRINGS["net"]["connected"])
+                        self.guiLog(strings.APP_STRINGS["net"]["connected"])
+        while (self.pipe_mou.poll()>0):
+            msg = self.pipe_mou.recv()
+            """ Send incoming network events to the Network daemon if enabled, and the UI updater thread"""
+            self.updateUI(msg)
+            if (self.config.config["remote"]["enable_api"] is True):
+                self.pipe_nin.send(msg)
     
     """ Main Exec Thread: """
     def run(self):
