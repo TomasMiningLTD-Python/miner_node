@@ -125,7 +125,11 @@ class NetworkDaemon(threading.Thread):
                             if ('method' not in msg):
                                 self.log.warn("MSG in queue, does not have METHOD. Not sending. {0}".format(msg))
                             else:
-                                self._posturl(getattr(methods,msg["method"]),msg["payload"])
+                                try:
+                                    self._posturl(getattr(methods,msg["method"]),msg["payload"])
+                                except Exception as e:
+                                    self.log.error("ERROR DURING POST: {e}".format(e))
+                                    print(e)
                 time.sleep(10)
 
                 

@@ -275,7 +275,7 @@ class minerApp():
 
     """ Start network: """
     def startNetwork(self):
-        self.network.setup(self.config.config,self.pipe_nin,self.pipe_nou)
+        self.network.setup(self.config.config,self.pipe_nou,self.pipe_nin)
         if (self.network.started == False):
              self.network.start()
         self.network.enabled = True
@@ -482,8 +482,10 @@ class minerApp():
             msg = self.pipe_mou.recv()
             """ Send incoming network events to the Network daemon if enabled, and the UI updater thread"""
             self.updateUI(msg)
-            if (self.config.config["remote"]["enable_api"] is True):
-                self.pipe_nin.send(msg)
+            if (self.network.auth is True):
+                print("Sent message.")
+                print(msg)
+                self.pipe_nou.send(msg)
     
     """ Main Exec Thread: """
     def run(self):
