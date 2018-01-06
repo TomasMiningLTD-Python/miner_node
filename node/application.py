@@ -483,8 +483,6 @@ class minerApp():
             """ Send incoming network events to the Network daemon if enabled, and the UI updater thread"""
             self.updateUI(msg)
             if (self.network.auth is True):
-                print("Sent message.")
-                print(msg)
                 self.pipe_nou.send(msg)
     
     """ Main Exec Thread: """
