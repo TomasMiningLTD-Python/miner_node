@@ -17,7 +17,8 @@ APP_STRINGS = {
         "START-NV":"Started NV Miner.",
         "STOP-NV":"Stopped NV Miner.",
         "START-AMD":"Started AMD Miner.",
-        "STOP-AMD":"Stopped AMD Miner."
+        "STOP-AMD":"Stopped AMD Miner.",
+        "CFG-UPD":"Config updated from cloud"
     },
     "net":{
         "connecting":"Connecting to endpoint: {0} ....",

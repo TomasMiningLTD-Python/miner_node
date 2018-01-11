@@ -36,9 +36,11 @@ class NetworkDaemon(threading.Thread):
             r = requests.get(self.config["remote"]["api_endpoint"]+url,params)
             if (r.status_code == 500):
                 self.log.error("PROTOCOL ERROR [500]: {0}".format(r.url))
+                self.pipe_out.send({'type':'NETERR','code':'500','url':r.url})
                 return False
             if (r.status_code == 404):
                 self.log.error("PROTOCOL ERROR [404]: {0}".format(r.url))
+                self.pipe_out.send({'type':'NETERR','code':'404','url':r.url})
                 return False
             if (r.status_code == 200):
                 #print(r.cookies)
@@ -57,10 +59,11 @@ class NetworkDaemon(threading.Thread):
             return False    
 
     
-    def _posturl(self,url,params):
+    def _posturl(self,url,params=False):
         self.log.info("POST to url: {0}".format(self.config["remote"]["api_endpoint"]+url))
         hdr = {'csrftoken':self.csrf}
         #print(hdr)
+        if (params is False): params = {}
         params["csrfmiddlewaretoken"] = self.csrf
         params["miner_id"]= self.macaddr
         #print(params)
@@ -68,9 +71,11 @@ class NetworkDaemon(threading.Thread):
             r = requests.post(self.config["remote"]["api_endpoint"]+url,data=params,cookies=hdr)
             if (r.status_code == 500):
                 self.log.error("PROTOCOL ERROR [500]: {0}".format(r.url))
+                self.pipe_out.send({'type':'NETERR','code':'500','url':r.url})
                 return False
             if (r.status_code == 404):
                 self.log.error("PROTOCOL ERROR [404]: {0}".format(r.url))
+                self.pipe_out.send({'type':'NETERR','code':'404','url':r.url})
                 return False
             if (r.status_code == 200):
                 try:
@@ -112,6 +117,7 @@ class NetworkDaemon(threading.Thread):
     def run(self):
             self.started = True
             self.exit = False
+            cco = 1
             while(self.exit is not True):
                 if (self.enabled is True):
                     """If we're not authorised, go to that routine only."""
@@ -119,6 +125,7 @@ class NetworkDaemon(threading.Thread):
                         self.auth_request()
                     else:
                         " We are authorised, lets do some damage: "
+                        "RECIEVE From Network server first:"
                         while (self.pipe_in.poll() > 0):
                             """ We have something to send to the server, lets do it."""
                             msg = self.pipe_in.recv()
@@ -126,10 +133,28 @@ class NetworkDaemon(threading.Thread):
                                 self.log.warn("MSG in queue, does not have METHOD. Not sending. {0}".format(msg))
                             else:
                                 try:
-                                    self._posturl(getattr(methods,msg["method"]),msg["payload"])
+                                    if (self.cmd_enabled == True):
+                                        ret = self._posturl(getattr(methods,msg["method"]),msg["payload"])
+                                        if ('type' in ret):
+                                            self.pipe_out.send({'type':ret['type'],'payload':ret['data']})
+                                    else:
+                                        self._posturl(getattr(methods,msg["method"]),msg["payload"])
                                 except Exception as e:
                                     self.log.error("ERROR DURING POST: {e}".format(e))
                                     print(e)
+                        " Then, if cfg_enabled is enabled or cmd_enabled are true, LISTEN for incoming DATA from server TO Application as a reply channel"
+                        if (self.cmd_enabled == True):
+                            if (cco == 3):
+                                if (self.cfg_enabled == True):
+                                    sd = {'p_acp_cfg':True}
+                                else:
+                                    sd = {}
+                                data = self._posturl(methods.REM_STATQUERY,sd)
+                                if (data is not False):
+                                    self.pipe_out.send(data)
+                                cco = 1
+                            else:
+                                cco = cco + 1
                 time.sleep(10)
 
                 

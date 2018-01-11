@@ -2416,7 +2416,7 @@
             <item>
              <widget class="QTextEdit" name="MINER_LOG">
               <property name="readOnly">
-               <bool>true</bool>
+               <bool>false</bool>
               </property>
              </widget>
             </item>

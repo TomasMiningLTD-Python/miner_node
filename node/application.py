@@ -2,6 +2,7 @@ from PyQt5.QtWidgets import QApplication, QDialog,QMainWindow,QFileDialog,QTreeW
 from PyQt5.QtCore import Qt,QTimer
 from configparser import ConfigParser
 from network.daemon import NetworkDaemon
+from network import remote_methods
 import sys,argparse,platform,os
 import threading,multiprocessing
 import importlib,datetime
@@ -18,11 +19,12 @@ class minerApp():
     nvRun = None
     minerRunning = False
     miner_id = minerid.minerID()
-    pipe_nin,pipe_nou = multiprocessing.Pipe()
+    pipe_nin,pipe_nin_2 = multiprocessing.Pipe()
+    pipe_nou,pipe_nou_2 = multiprocessing.Pipe()
     pipe_min,pipe_mou = multiprocessing.Pipe()
     miner_mod = False
     miner = False
-    
+
     def __init__(self):
         self.network = NetworkDaemon()
         self.app = QApplication(sys.argv)
@@ -213,6 +215,7 @@ class minerApp():
             self.mainWindow.XMR_URL8.setText(self.config.config["miners"]["XMR"]["XMRIG"]["URL8"])
             self.mainWindow.XMR_URL9.setText(self.config.config["miners"]["XMR"]["XMRIG"]["URL9"])
             self.toggleBtnState()
+            
         except Exception  as e:
             print("Exception during SYNC TO UI:")
             print(e)
@@ -256,8 +259,11 @@ class minerApp():
             self.fileDialog.close()
         except: pass
         try:
+            self.config.config["version"] = self.config.config["version"] + 1
             self.config.save(file)
+            
             self.mainWindow.statusbar.showMessage("Saved Configufration File: {0}.".format(file),5000)
+            
             
         except:
             err = QErrorMessage(self.window)
@@ -275,7 +281,7 @@ class minerApp():
 
     """ Start network: """
     def startNetwork(self):
-        self.network.setup(self.config.config,self.pipe_nou,self.pipe_nin)
+        self.network.setup(self.config.config,self.pipe_nou_2,self.pipe_nin_2)
         if (self.network.started == False):
              self.network.start()
         self.network.enabled = True
@@ -318,6 +324,7 @@ class minerApp():
         self.mainWindow.MINER_LOG.append(cmsg)
     """ Stop Miner Daemon: """
     def stopMiner(self):
+        if (self.miner is False): return False
         if (self.minerRunning == True):
             if (self.cpuRun == True): self.stopCPU()
             if (self.nvRun == True): self.stopNV()
@@ -358,6 +365,7 @@ class minerApp():
 
     """ Stop NV Miner: """
     def stopNV(self):
+        if (self.miner is False): return False
         if (self.nvRun != False):
             self.mainWindow.NV_HS.display(strings.APP_STRINGS['miner']['idle'])
             self.mainWindow.NV_RUN.setText(strings.APP_STRINGS["miner"]["start"])
@@ -369,6 +377,7 @@ class minerApp():
         
     """ Start NV Miner: """
     def startNV(self):
+        if (self.miner is False): return False
         if (self.mainWindow.XMR_NV_ENABLE.isChecked() == False): return True
         if (self.nvRun != True):
             self.startMiner()
@@ -388,8 +397,9 @@ class minerApp():
             
         """ Stop AMD Miner: """
     def stopAMD(self):
+        if (self.miner is False): return False
         if (self.amdRun != False):
-            self.mainWindow.AMD_HS.display(strings.APP_STRINGS['miner']['idle'])
+            self.mainWindow.AMD_HS.display(0)
             self.mainWindow.AMD_RUN.setText(strings.APP_STRINGS["miner"]["start"])
             self.miner.exec_amd = False
             self.totalDispReset()
@@ -398,6 +408,7 @@ class minerApp():
         
     """ Start AMD Miner: """
     def startAMD(self):
+        if (self.miner is False): return False
         if (self.mainWindow.XMR_AMD_ENABLE.isChecked() == False): return True
         if (self.amdRun != True):
             self.startMiner()
@@ -473,17 +484,42 @@ class minerApp():
             if "type" in msg:
                 if (msg["type"] == "err"):
                     self.mainWindow.statusbar.showMessage(strings.APP_STRINGS["net"]["err"][msg["err"]],5000)
+                elif (msg["type"] == "NETERR"):
+                    self.mainWindow.statusbar.showMessage("API PROTOCOL ERROR: HTTP 1.1/{0} for URL: {1}".format(msg["code"],msg["url"]))
                 elif (msg["type"] == "status"):
                     self.mainWindow.statusbar.showMessage(strings.APP_STRINGS["net"]["status"][msg["msg"]],5000)
                     if (msg['msg'] == 'AUTH-OK'):
                         self.mainWindow.api_status_2.setText(strings.APP_STRINGS["net"]["connected"])
                         self.guiLog(strings.APP_STRINGS["net"]["connected"])
+                elif (msg["type"] == "cfg-data"):
+                        self.config.loadstr(msg["payload"])
+                        self.syncConfigToUI()
+                        self.mainWindow.statusbar.showMessage(strings.APP_STRINGS["status"]["CFG-UPD"])
+                        self.guiLog("<b>"+strings.APP_STRINGS["status"]["CFG-UPD"]+"</b><br/>",3)
+                        
+            else:
+                """ Handle incoming Network commands / configs only if enabled to; """
+                if (self.config.config["remote"]["enable_remote_cmd"] is True):
+                    if (msg['result'] == remote_methods.NOCMD):
+                        ''' Handle Configuration trigger: '''
+                        if (self.config.config["remote"]["enable_remote_config"] is True): 
+                            ''' In the NOCMD (or, in sync) message, the server will report its latest available config  version: '''
+                            if ('cfgver' in msg):
+                                ''' so if remote config is NEWER than local version, we'll request to download it: '''
+                                rcfg = int(msg['cfgver'])
+                                #print("RCFG {0}, LCFG {1}".format(msg['cfgver'],self.config.config["version"]))
+                                if (rcfg > self.config.config['version']):
+                                     self.pipe_nin.send({"method":"GET_CFG","payload":{"type":"cfg-get","data":""}})
+                                ''' Alternatively, if local version is higher than server, we'll submit it. '''
+                                if (rcfg < self.config.config['version']):
+                                     self.pipe_nin.send({"method":"UPDATE_CFG","payload":{"type":"cfg-upd","data":str(self.config)}})
+                                     
         while (self.pipe_mou.poll()>0):
-            msg = self.pipe_mou.recv()
             """ Send incoming network events to the Network daemon if enabled, and the UI updater thread"""
+            msg = self.pipe_mou.recv()
             self.updateUI(msg)
             if (self.network.auth is True):
-                self.pipe_nou.send(msg)
+                self.pipe_nin.send(msg)
     
     """ Main Exec Thread: """
     def run(self):
