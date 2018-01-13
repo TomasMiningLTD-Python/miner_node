@@ -127,7 +127,7 @@ class MinerDaemon(threading.Thread):
             self.log.info("CPU Miner Started.")
         if (self.pt =="win"):
             self.log.info('CPU Miner command: xmrig-cpu.exe -c {0}\\tmp\\cpu.json'.format(self.cwd+'\\miners\\XMR\\XMRIG\\win\\'))
-            self.cpu = subprocess.Popen(["xmrig-cpu.exe","-c","{0}\\tmp\\cpu.json".format(self.cwd)],bufsize=1024,cwd=self.cwd+'\\miners\\XMR\\XMRIG\\win\\',universal_newlines=True,shell=True,stdin=subprocess.DEVNULL,stdout=subprocess.DEVNULL)
+            self.cpu = subprocess.Popen([self.cwd+'\\miners\\XMR\\XMRIG\\win\\'+"xmrig-cpu.exe","-c","{0}\\tmp\\cpu.json".format(self.cwd)],bufsize=1024,cwd=self.cwd+'\\miners\\XMR\\XMRIG\\win\\',universal_newlines=True,stdin=subprocess.DEVNULL,stdout=subprocess.DEVNULL)
             self.log.info("CPU Miner Started.")
     
     def stopCPU(self):
@@ -151,7 +151,7 @@ class MinerDaemon(threading.Thread):
             self.log.info("NV Miner Started.")
         if (self.pt =="win"):
             self.log.info("NV Miner command: xmrig-nv.exe -c {0}\\tmp\\nv.json --cuda-launch={1}x{2}".format(self.cwd+"\\miners\\XMR\\XMRIG\\linux\\",self.config["NV"]["THREADS"],self.config["NV"]["BLOCKS"]))
-            self.nv = subprocess.Popen(["xmrig-nv.exe","-c","{0}\\tmp\\nv.json".format(self.cwd),"--cuda-launch={0}x{1}".format(self.config["NV"]["THREADS"],self.config["NV"]["BLOCKS"])],bufsize=1024,cwd=self.cwd+'\\miners\\XMR\\XMRIG\\win\\',universal_newlines=True,shell=True,stdin=subprocess.DEVNULL,stdout=subprocess.DEVNULL)
+            self.nv = subprocess.Popen([self.cwd+'\\miners\\XMR\\XMRIG\\win\\'+"xmrig-nv.exe","-c","{0}\\tmp\\nv.json".format(self.cwd),"--cuda-launch={0}x{1}".format(self.config["NV"]["THREADS"],self.config["NV"]["BLOCKS"])],bufsize=1024,cwd=self.cwd+'\\miners\\XMR\\XMRIG\\win\\',universal_newlines=True,stdin=subprocess.DEVNULL,stdout=subprocess.DEVNULL)
             self.log.info("NV Miner Started.")
     
     def stopNV(self):
@@ -175,7 +175,7 @@ class MinerDaemon(threading.Thread):
             self.log.info("AMD Miner Started.")
         if (self.pt =="win"):
             self.log.info("AMD Miner command: xmrig-amd.exe -c {0}\\tmp\\amd.json".format(self.cwd+"\\miners\\XMR\\XMRIG\\linux\\"))
-            self.amd = subprocess.Popen(["xmrig-amd.exe","-c","{0}\\tmp\\amd.json".format(self.cwd)],bufsize=1024,cwd=self.cwd+'\\miners\\XMR\\XMRIG\\win\\',universal_newlines=True,shell=True,stdin=subprocess.DEVNULL,stdout=subprocess.DEVNULL)
+            self.amd = subprocess.Popen([self.cwd+'\\miners\\XMR\\XMRIG\\win\\'+"xmrig-amd.exe","-c","{0}\\tmp\\amd.json".format(self.cwd)],bufsize=1024,cwd=self.cwd+'\\miners\\XMR\\XMRIG\\win\\',universal_newlines=True,stdin=subprocess.DEVNULL,stdout=subprocess.DEVNULL)
             self.log.info("AMD Miner Started.")
     
     def stopAMD(self):

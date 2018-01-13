@@ -36,9 +36,9 @@ class minerApp():
         parser.add_argument('-v', dest='verbose', action='store_true')
         args = parser.parse_args()
         """ Connect signals and slots: """
-        self.mainWindow.CPU_RUN.clicked.connect(self.startCPU)
-        self.mainWindow.AMD_RUN.clicked.connect(self.startAMD)
-        self.mainWindow.NV_RUN.clicked.connect(self.startNV)
+        self.mainWindow.CPU_RUN.clicked.connect(self.toggleCPU)
+        self.mainWindow.AMD_RUN.clicked.connect(self.toggleAMD)
+        self.mainWindow.NV_RUN.clicked.connect(self.toggleNV)
         self.mainWindow.RUN_ALL.clicked.connect(self.startCPU)
         self.mainWindow.RUN_ALL.clicked.connect(self.startNV)
         self.mainWindow.RUN_ALL.clicked.connect(self.startAMD)
@@ -423,6 +423,7 @@ class minerApp():
             self.mainWindow.AMD_HS.display(0)
             self.mainWindow.AMD_RUN.setText(strings.APP_STRINGS["miner"]["start"])
             self.miner.exec_amd = False
+            self.amdRun = False
             self.totalDispReset()
             self.mainWindow.statusbar.showMessage(strings.APP_STRINGS["status"]["STOP-AMD"],5000)
             self.guiLog(strings.APP_STRINGS["status"]["STOP-AMD"])
