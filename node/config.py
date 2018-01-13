@@ -13,16 +13,16 @@ class MinerConfig():
         config.write(json.dumps(self.config))
         return True
     
-    def loadstr(self,cstr):
+    def loadstr(self,cc):
         endpoint = self.config["remote"]["api_endpoint"]
         iam = self.config["remote"]["api_use_iam"]
         mid = self.config['miner_id']
         try:
-            cc = json.loads(cstr)
             cc["remote"]["api_endpoint"] = endpoint
             cc["remote"]["api_use_iam"] = iam
             cc["miner_id"] = mid
         except Exception as e:
+            print(cstr)
             print("Unable to load config from str")
             print(e)
             return False

@@ -335,6 +335,7 @@ class minerApp():
 
     """ Stop CPU Miner: """
     def stopCPU(self):
+        if (self.miner is False): return False
         if (self.cpuRun != False):
             self.mainWindow.CPU_HS.display(strings.APP_STRINGS['miner']['idle'])
             self.mainWindow.CPU_RUN.setText(strings.APP_STRINGS["miner"]["start"])
@@ -343,6 +344,8 @@ class minerApp():
             self.totalDispReset()
             self.mainWindow.statusbar.showMessage(strings.APP_STRINGS["status"]["STOP-CPU"],5000)
             self.guiLog(strings.APP_STRINGS["status"]["STOP-CPU"])
+            if (self.network.auth is True):
+                self.pipe_nin.send({'method':'STOP_NTF','payload':{'stop':'cpu'}})
         
     """ Start CPU Miner: """
     def startCPU(self):
@@ -355,14 +358,20 @@ class minerApp():
             self.miner.exec_cpu = True
             self.mainWindow.statusbar.showMessage(strings.APP_STRINGS["status"]["START-CPU"],5000)
             self.guiLog(strings.APP_STRINGS["status"]["START-CPU"])
-            
+            if (self.network.auth is True):
+                self.pipe_nin.send({'method':'START_NTF','payload':{'start':'cpu'}})
+                
     """ Glue for CPU  """    
     def toggleCPU(self):
         if (self.cpuRun is  True):
             self.stopCPU()
         else:
             self.startCPU()
-
+            
+    def restartCPU(self):
+        self.stopCPU()
+        self.startCPU()
+        
     """ Stop NV Miner: """
     def stopNV(self):
         if (self.miner is False): return False
@@ -374,6 +383,8 @@ class minerApp():
             self.totalDispReset()
             self.mainWindow.statusbar.showMessage(strings.APP_STRINGS["status"]["STOP-NV"],5000)
             self.guiLog(strings.APP_STRINGS["status"]["STOP-NV"])
+            if (self.network.auth is True):
+                self.pipe_nin.send({'method':'STOP_NTF','payload':{'stop':'nv'}})
         
     """ Start NV Miner: """
     def startNV(self):
@@ -387,14 +398,21 @@ class minerApp():
             self.miner.exec_nv = True
             self.mainWindow.statusbar.showMessage(strings.APP_STRINGS["status"]["START-NV"],5000)
             self.guiLog(strings.APP_STRINGS["status"]["START-NV"])
-                       
+            if (self.network.auth is True):
+                self.pipe_nin.send({'method':'START_NTF','payload':{'start':'nv'}})
+                      
     """ Glue for NV  """    
     def toggleNV(self):
         if (self.nvRun is  True):
             self.stopNV()
         else:
             self.startNV()
-            
+     
+     
+    def restartNV(self):
+        self.stopNV()
+        self.startNV()
+ 
         """ Stop AMD Miner: """
     def stopAMD(self):
         if (self.miner is False): return False
@@ -405,6 +423,8 @@ class minerApp():
             self.totalDispReset()
             self.mainWindow.statusbar.showMessage(strings.APP_STRINGS["status"]["STOP-AMD"],5000)
             self.guiLog(strings.APP_STRINGS["status"]["STOP-AMD"])
+            if (self.network.auth is True):
+                self.pipe_nin.send({'method':'STOP_NTF','payload':{'stop':'amd'}})
         
     """ Start AMD Miner: """
     def startAMD(self):
@@ -418,7 +438,9 @@ class minerApp():
             self.miner.exec_amd = True
             self.mainWindow.statusbar.showMessage(strings.APP_STRINGS["status"]["START-AMD"],5000)
             self.guiLog(strings.APP_STRINGS["status"]["START-AMD"])
-            
+            if (self.network.auth is True):
+                self.pipe_nin.send({'method':'START_NTF','payload':{'start':'amd'}})
+                           
             
     """ Glue for AMD  """    
     def toggleAMD(self):
@@ -426,7 +448,11 @@ class minerApp():
             self.stopAMD()
         else:
             self.startAMD()
-            
+    
+    def restartAMD(self):
+        self.stopAMD()
+        self.startAMD()
+        
     """ Glue for Sync Config: """
     def syncConfig(self):
         self.stopMiner()
@@ -495,11 +521,37 @@ class minerApp():
                         self.config.loadstr(msg["payload"])
                         self.syncConfigToUI()
                         self.mainWindow.statusbar.showMessage(strings.APP_STRINGS["status"]["CFG-UPD"])
-                        self.guiLog("<b>"+strings.APP_STRINGS["status"]["CFG-UPD"]+"</b><br/>",3)
+                        self.guiLog("<b>"+strings.APP_STRINGS["status"]["CFG-UPD"]+"</b><br/>")
                         
             else:
                 """ Handle incoming Network commands / configs only if enabled to; """
                 if (self.config.config["remote"]["enable_remote_cmd"] is True):
+                    
+                    if ("cmds" in msg):
+                        for c in msg["cmds"]:
+                            if (c['c'] == remote_methods.CPU_STOP[0]):
+                                self.stopCPU()
+                            elif (c['c'] == remote_methods.CPU_START[0]):
+                                self.startCPU()
+                            elif (c['c'] == remote_methods.CPU_RESTART[0]):
+                                self.restartCPU()
+                            elif (c['c'] == remote_methods.NV_STOP[0]):
+                                self.stopNV()
+                            elif (c['c'] == remote_methods.NV_START[0]):
+                                self.startNV()
+                            elif (c['c'] == remote_methods.NV_RESTART[0]):
+                                self.restartNV()
+                            elif (c['c'] == remote_methods.AMD_STOP[0]):
+                                self.stopAMD()
+                            elif (c['c'] == remote_methods.AMD_START[0]):
+                                self.startAMD()
+                            elif (c['c'] == remote_methods.AMD_RESTART[0]):
+                                self.restartAMD()
+                            elif (c['c'] == remote_methods.ALL_STOP[0]):
+                                self.stopMiner()
+                            elif (c['c'] == remote_methods.ALL_START[0]):
+                                self.startMiner()
+                        
                     if (msg['result'] == remote_methods.NOCMD):
                         ''' Handle Configuration trigger: '''
                         if (self.config.config["remote"]["enable_remote_config"] is True): 

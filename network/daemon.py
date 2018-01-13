@@ -135,8 +135,9 @@ class NetworkDaemon(threading.Thread):
                                 try:
                                     if (self.cmd_enabled == True):
                                         ret = self._posturl(getattr(methods,msg["method"]),msg["payload"])
-                                        if ('type' in ret):
-                                            self.pipe_out.send({'type':ret['type'],'payload':ret['data']})
+                                        if (ret is not False):
+                                            if ('type' in ret):
+                                                self.pipe_out.send({'type':ret['type'],'payload':ret['data']})
                                     else:
                                         self._posturl(getattr(methods,msg["method"]),msg["payload"])
                                 except Exception as e:
@@ -152,6 +153,7 @@ class NetworkDaemon(threading.Thread):
                                 data = self._posturl(methods.REM_STATQUERY,sd)
                                 if (data is not False):
                                     self.pipe_out.send(data)
+                                    #print(data)
                                 cco = 1
                             else:
                                 cco = cco + 1

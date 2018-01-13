@@ -1,1 +1,13 @@
-NOCMD='nocmd'
+NOCMD='nocmd',
+CMDS='cpl',
+CPU_STOP='c_sp',
+CPU_START='c_st',
+CPU_RESTART='c_rs',
+NV_STOP='n_sp',
+NV_START='n_st',
+NV_RESTART='n_rs',
+AMD_STOP='a_sp',
+AMD_START='a_st',
+AMD_RESTART='a_rs',
+ALL_STOP='a_sp',
+ALL_START='a_st'
