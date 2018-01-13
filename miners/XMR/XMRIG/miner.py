@@ -162,6 +162,30 @@ class MinerDaemon(threading.Thread):
         except: 
             pass
         
+    def startAMD(self):
+        try:
+            self.log_amd.close()
+        except: pass
+        self.mkamdlog()
+        self.minercfg.mkAMD()
+        self.log.info("Attempting to start AMD Miner")
+        if (self.pt == "linux"):
+            self.log.info("AMD Miner Command: ./xmrig-amd -c {0}/tmp/amd.json".format(self.cwd+"/miners/XMR/XMRIG/linux/"))
+            self.amd = subprocess.Popen(["./xmrig-amd","-c","{0}/tmp/amd.json".format(self.cwd)],bufsize=1024,cwd=self.cwd+"/miners/XMR/XMRIG/linux/",universal_newlines=True)
+            self.log.info("AMD Miner Started.")
+        if (self.pt =="win"):
+            self.log.info("AMD Miner command: xmrig-amd.exe -c {0}\\tmp\\amd.json".format(self.cwd+"\\miners\\XMR\\XMRIG\\linux\\"))
+            self.amd = subprocess.Popen(["xmrig-amd.exe","-c","{0}\\tmp\\amd.json".format(self.cwd)],bufsize=1024,cwd=self.cwd+'\\miners\\XMR\\XMRIG\\win\\',universal_newlines=True,shell=True,stdin=subprocess.DEVNULL,stdout=subprocess.DEVNULL)
+            self.log.info("AMD Miner Started.")
+    
+    def stopAMD(self):
+        try:
+            self.amd.kill()
+            self.log_amd.close()
+            self.log.info("AMD Miner Stopped.")  
+        except: 
+            pass
+        
     def quit(self):
         try:
             self.stopCPU()

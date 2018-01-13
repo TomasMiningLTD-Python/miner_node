@@ -78,16 +78,18 @@ class MinerParser():
             self.log.warn("[CPU] No active pools detected.")
             return False
         if (string[0:5] == 'speed'):
-            rate = self._hashRate(string[1:])
-            if (rate is not False):
-                self.log.info("[CPU] Speed: {0} H/s, Highest: {1} H/s".format(rate[0],rate[1]))
-                self.total[0] = float(rate[0])
-                self.highest[0] = float(rate[1])
-            else:
-                self.total[0] = 0
-                self.highest[0] = 0
-            self.cpu[0] = self.total[0]
-            return False
+            try:
+                rate = self._hashRate(string[1:])
+                if (rate is not False):
+                    self.log.info("[CPU] Speed: {0} H/s, Highest: {1} H/s".format(rate[0],rate[1]))
+                    self.total[0] = float(rate[0])
+                    self.highest[0] = float(rate[1])
+                else:
+                    self.total[0] = 0
+                    self.highest[0] = 0
+                self.cpu[0] = self.total[0]
+                return False
+            except: return False
         if (string[0:8] == 'accepted'):
                 acc = self._accepted(string)
                 self.log.info("[CPU] Accepted: {0} Shares at difficulty: {1}".format(acc[0],acc[1]))
@@ -106,18 +108,20 @@ class MinerParser():
         if (string == "no active pools, stop mining"):
             self.log.warn("[NV] No active pools detected.")
             return True
-        if (string[0:5] == 'speed'):
-            rate = self._hashRate(string)
-            if (rate is not False):
-                self.log.info("[NV] Speed: {0} H/s Highest {1} H/s".format(rate[0],rate[1]))
-                self.total[1] = float(rate[0])
-                self.highest[1] = float(rate[1])
-                #return True
-            else:
-                self.total[1] = 0
-                self.highest[1] = 0
-            self.nv[0] = self.total[1]
-            return False
+        try:
+            if (string[0:5] == 'speed'):
+                rate = self._hashRate(string)
+                if (rate is not False):
+                    self.log.info("[NV] Speed: {0} H/s Highest {1} H/s".format(rate[0],rate[1]))
+                    self.total[1] = float(rate[0])
+                    self.highest[1] = float(rate[1])
+                    #return True
+                else:
+                    self.total[1] = 0
+                    self.highest[1] = 0
+                    self.nv[0] = self.total[1]
+                    return False
+        except: return False
         if (string[0:8] == 'accepted'):
                 acc = self._accepted(string)
                 self.log.info("[NV] Accepted: {0} Shares at difficulty: {1}".format(acc[0],acc[1]))
@@ -135,18 +139,20 @@ class MinerParser():
         if (string == "no active pools, stop mining"):
             self.log.warn("[AMD] No active pools detected.")
             return True
-        if (string[0:5] == 'speed'):
-            rate = self._hashRate(string)
-            if (rate[0] is not False):
-                self.log.info("[AMD] Speed: {0} H/s Highest {1} H/s".format(rate[0],rate[1]))
-                self.total[2] = float(rate[0])
-                self.highest[2] = float(rate[1])
-                #return True
-            else:
-                self.total[2] = 0
-                self.highest[2] = 0
-            self.amd[0] = self.total[2]
-            return False
+        try:
+            if (string[0:5] == 'speed'):
+                rate = self._hashRate(string)
+                if (rate[0] is not False):
+                    self.log.info("[AMD] Speed: {0} H/s Highest {1} H/s".format(rate[0],rate[1]))
+                    self.total[2] = float(rate[0])
+                    self.highest[2] = float(rate[1])
+                    #return True
+                else:
+                    self.total[2] = 0
+                    self.highest[2] = 0
+                self.amd[0] = self.total[2]
+                return False
+        except: return False
         if (string[0:8] == 'accepted'):
                 acc = self._accepted(string)
                 self.log.info("[AMD] Accepted: {0} Shares at difficulty: {1}".format(acc[0],acc[1]))

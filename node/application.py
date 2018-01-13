@@ -36,9 +36,9 @@ class minerApp():
         parser.add_argument('-v', dest='verbose', action='store_true')
         args = parser.parse_args()
         """ Connect signals and slots: """
-        self.mainWindow.CPU_RUN.clicked.connect(self.toggleCPU)
-        self.mainWindow.AMD_RUN.clicked.connect(self.toggleAMD)
-        self.mainWindow.NV_RUN.clicked.connect(self.toggleNV)
+        self.mainWindow.CPU_RUN.clicked.connect(self.startCPU)
+        self.mainWindow.AMD_RUN.clicked.connect(self.startAMD)
+        self.mainWindow.NV_RUN.clicked.connect(self.startNV)
         self.mainWindow.RUN_ALL.clicked.connect(self.startCPU)
         self.mainWindow.RUN_ALL.clicked.connect(self.startNV)
         self.mainWindow.RUN_ALL.clicked.connect(self.startAMD)
@@ -358,6 +358,7 @@ class minerApp():
             self.miner.exec_cpu = True
             self.mainWindow.statusbar.showMessage(strings.APP_STRINGS["status"]["START-CPU"],5000)
             self.guiLog(strings.APP_STRINGS["status"]["START-CPU"])
+            self.miner.logParser.reset()
             if (self.network.auth is True):
                 self.pipe_nin.send({'method':'START_NTF','payload':{'start':'cpu'}})
                 
@@ -383,6 +384,7 @@ class minerApp():
             self.totalDispReset()
             self.mainWindow.statusbar.showMessage(strings.APP_STRINGS["status"]["STOP-NV"],5000)
             self.guiLog(strings.APP_STRINGS["status"]["STOP-NV"])
+            self.miner.logParser.reset()
             if (self.network.auth is True):
                 self.pipe_nin.send({'method':'STOP_NTF','payload':{'stop':'nv'}})
         
@@ -398,6 +400,7 @@ class minerApp():
             self.miner.exec_nv = True
             self.mainWindow.statusbar.showMessage(strings.APP_STRINGS["status"]["START-NV"],5000)
             self.guiLog(strings.APP_STRINGS["status"]["START-NV"])
+            self.miner.logParser.reset()
             if (self.network.auth is True):
                 self.pipe_nin.send({'method':'START_NTF','payload':{'start':'nv'}})
                       
@@ -423,6 +426,7 @@ class minerApp():
             self.totalDispReset()
             self.mainWindow.statusbar.showMessage(strings.APP_STRINGS["status"]["STOP-AMD"],5000)
             self.guiLog(strings.APP_STRINGS["status"]["STOP-AMD"])
+            self.miner.logParser.reset()
             if (self.network.auth is True):
                 self.pipe_nin.send({'method':'STOP_NTF','payload':{'stop':'amd'}})
         
@@ -438,6 +442,7 @@ class minerApp():
             self.miner.exec_amd = True
             self.mainWindow.statusbar.showMessage(strings.APP_STRINGS["status"]["START-AMD"],5000)
             self.guiLog(strings.APP_STRINGS["status"]["START-AMD"])
+            self.miner.logParser.reset()
             if (self.network.auth is True):
                 self.pipe_nin.send({'method':'START_NTF','payload':{'start':'amd'}})
                            
@@ -466,7 +471,7 @@ class minerApp():
 
     """ Update UI:"""
     def updateUI(self,event):
-        self.miner.logParser.reset()
+        
         if (self.cpuRun is False): self.mainWindow.CPU_HS.display(strings.APP_STRINGS["miner"]["idle"])
         if (self.nvRun is False): self.mainWindow.NV_HS.display(strings.APP_STRINGS["miner"]["idle"])
         if (self.amdRun is False): self.mainWindow.AMD_HS.display(strings.APP_STRINGS["miner"]["idle"])
