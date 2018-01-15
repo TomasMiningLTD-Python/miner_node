@@ -37,8 +37,14 @@ class minerApp():
         args = parser.parse_args()
         """ Connect signals and slots: """
         self.mainWindow.CPU_RUN.clicked.connect(self.toggleCPU)
+        self.mainWindow.CPU_STOP.clicked.connect(self.stopCPU)
+        self.mainWindow.CPU_RESTART.clicked.connect(self.restartCPU)
         self.mainWindow.AMD_RUN.clicked.connect(self.toggleAMD)
+        self.mainWindow.AMD_STOP.clicked.connect(self.stopAMD)
+        self.mainWindow.AMD_RESTART.clicked.connect(self.restartAMD)
         self.mainWindow.NV_RUN.clicked.connect(self.toggleNV)
+        self.mainWindow.NV_STOP.clicked.connect(self.stopNV)
+        self.mainWindow.NV_RESTART.clicked.connect(self.restartNV)
         self.mainWindow.RUN_ALL.clicked.connect(self.startCPU)
         self.mainWindow.RUN_ALL.clicked.connect(self.startNV)
         self.mainWindow.RUN_ALL.clicked.connect(self.startAMD)
@@ -107,6 +113,12 @@ class minerApp():
         self.mainWindow.CPU_HS.display(strings.APP_STRINGS['miner']['idle'])
         self.mainWindow.AMD_HS.display(strings.APP_STRINGS['miner']['idle'])
         self.mainWindow.NV_HS.display(strings.APP_STRINGS['miner']['idle'])
+        self.mainWindow.CPU_STOP.setDisabled(True)
+        self.mainWindow.CPU_RESTART.setDisabled(True)
+        self.mainWindow.NV_STOP.setDisabled(True)
+        self.mainWindow.NV_RESTART.setDisabled(True)
+        self.mainWindow.AMD_STOP.setDisabled(True)
+        self.mainWindow.AMD_RESTART.setDisabled(True)
         self.window.setWindowTitle(strings.APP_STRINGS["miner"]["app_name"])
         self.app.aboutToQuit.connect(self.network.quit)
         
@@ -123,17 +135,17 @@ class minerApp():
             self.mainWindow.api_disconnect.setDisabled(False)
         if (self.config.config["miners"]["XMR"]["XMRIG"]["CPU"]["ENABLE"] == False):
             self.mainWindow.CPU_RUN.setDisabled(True)
-            self.stopCPU()
+            #self.stopCPU()
         else:
             self.mainWindow.CPU_RUN.setDisabled(False)
         if (self.config.config["miners"]["XMR"]["XMRIG"]["NV"]["ENABLE"] == False):
             self.mainWindow.NV_RUN.setDisabled(True)
-            self.stopNV()
+            #self.stopNV()
         else:
             self.mainWindow.NV_RUN.setDisabled(False)
         if (self.config.config["miners"]["XMR"]["XMRIG"]["AMD"]["ENABLE"] == False):
             self.mainWindow.AMD_RUN.setDisabled(True)
-            self.stopAMD()
+            #self.stopAMD()
         else:
             self.mainWindow.AMD_RUN.setDisabled(False)
     
@@ -146,7 +158,7 @@ class minerApp():
     """ Sync Values TO Config Struct FROM UI: """
     def syncConfigFromUI(self):
         if (self.config.locked == False):
-            print(self.config.config["miners"]["XMR"]["XMRIG"]["CPU"])
+
             self.config.config["miner_id"] = self.mainWindow.miner_id.currentIndex()
             self.config.config["miner_name"] = self.mainWindow.miner_name.text()
             self.config.config["remote"]["enable_api"] = self.mainWindow.enable_api.isChecked()
@@ -338,7 +350,9 @@ class minerApp():
         if (self.miner is False): return False
         if (self.cpuRun != False):
             self.mainWindow.CPU_HS.display(strings.APP_STRINGS['miner']['idle'])
-            self.mainWindow.CPU_RUN.setText(strings.APP_STRINGS["miner"]["start"])
+            self.mainWindow.CPU_RUN.setDisabled(False)
+            self.mainWindow.CPU_STOP.setDisabled(True)
+            self.mainWindow.CPU_RESTART.setDisabled(True)
             self.cpuRun = False
             self.miner.exec_cpu = False
             self.totalDispReset()
@@ -353,7 +367,9 @@ class minerApp():
         if (self.cpuRun != True):
             self.startMiner()
             self.mainWindow.CPU_HS.display(0)
-            self.mainWindow.CPU_RUN.setText(strings.APP_STRINGS["miner"]["stop"])
+            self.mainWindow.CPU_RUN.setDisabled(True)
+            self.mainWindow.CPU_STOP.setDisabled(False)
+            self.mainWindow.CPU_RESTART.setDisabled(False)
             self.cpuRun = True
             self.miner.exec_cpu = True
             self.mainWindow.statusbar.showMessage(strings.APP_STRINGS["status"]["START-CPU"],5000)
@@ -370,15 +386,17 @@ class minerApp():
             self.startCPU()
             
     def restartCPU(self):
-        self.stopCPU()
-        self.startCPU()
+        self.guiLog(strings.APP_STRINGS["status"]["RESTART-CPU"])
+        self.miner.restartCPU()
         
     """ Stop NV Miner: """
     def stopNV(self):
         if (self.miner is False): return False
         if (self.nvRun != False):
             self.mainWindow.NV_HS.display(strings.APP_STRINGS['miner']['idle'])
-            self.mainWindow.NV_RUN.setText(strings.APP_STRINGS["miner"]["start"])
+            self.mainWindow.NV_RUN.setDisabled(False)
+            self.mainWindow.NV_STOP.setDisabled(True)
+            self.mainWindow.NV_RESTART.setDisabled(True)
             self.nvRun = False
             self.miner.exec_nv = False
             self.totalDispReset()
@@ -395,7 +413,9 @@ class minerApp():
         if (self.nvRun != True):
             self.startMiner()
             self.mainWindow.NV_HS.display(0)
-            self.mainWindow.NV_RUN.setText(strings.APP_STRINGS["miner"]["stop"])
+            self.mainWindow.NV_RUN.setDisabled(True)
+            self.mainWindow.NV_STOP.setDisabled(False)
+            self.mainWindow.NV_RESTART.setDisabled(False)
             self.nvRun = True
             self.miner.exec_nv = True
             self.mainWindow.statusbar.showMessage(strings.APP_STRINGS["status"]["START-NV"],5000)
@@ -413,15 +433,17 @@ class minerApp():
      
      
     def restartNV(self):
-        self.stopNV()
-        self.startNV()
+        self.guiLog(strings.APP_STRINGS["status"]["RESTART-NV"])
+        self.miner.restartNV()
  
         """ Stop AMD Miner: """
     def stopAMD(self):
         if (self.miner is False): return False
         if (self.amdRun != False):
             self.mainWindow.AMD_HS.display(0)
-            self.mainWindow.AMD_RUN.setText(strings.APP_STRINGS["miner"]["start"])
+            self.mainWindow.AMD_RUN.setDisabled(False)
+            self.mainWindow.AMD_STOP.setDisabled(True)
+            self.mainWindow.AMD_RESTART.setDisabled(True)
             self.miner.exec_amd = False
             self.amdRun = False
             self.totalDispReset()
@@ -438,7 +460,9 @@ class minerApp():
         if (self.amdRun != True):
             self.startMiner()
             self.mainWindow.AMD_HS.display(0)
-            self.mainWindow.AMD_RUN.setText(strings.APP_STRINGS["miner"]["stop"])
+            self.mainWindow.AMD_RUN.setDisabled(True)
+            self.mainWindow.AMD_STOP.setDisabled(False)
+            self.mainWindow.AMD_RESTART.setDisabled(False)
             self.amdRun = True
             self.miner.exec_amd = True
             self.mainWindow.statusbar.showMessage(strings.APP_STRINGS["status"]["START-AMD"],5000)
@@ -456,8 +480,8 @@ class minerApp():
             self.startAMD()
     
     def restartAMD(self):
-        self.stopAMD()
-        self.startAMD()
+        self.guiLog(strings.APP_STRINGS["status"]["RESTART-AMD"])
+        self.miner.restartAMD()
         
     """ Glue for Sync Config: """
     def syncConfig(self):

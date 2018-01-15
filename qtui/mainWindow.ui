@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>859</width>
-    <height>628</height>
+    <width>951</width>
+    <height>699</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,8 +19,8 @@
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>851</width>
-      <height>571</height>
+      <width>941</width>
+      <height>641</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout">
@@ -890,9 +890,9 @@
          <property name="geometry">
           <rect>
            <x>0</x>
-           <y>0</y>
-           <width>841</width>
-           <height>506</height>
+           <y>5</y>
+           <width>931</width>
+           <height>621</height>
           </rect>
          </property>
          <layout class="QHBoxLayout" name="horizontalLayout_6">
@@ -922,8 +922,40 @@
              <layout class="QHBoxLayout" name="horizontalLayout_7">
               <item>
                <widget class="QPushButton" name="CPU_RUN">
+                <property name="maximumSize">
+                 <size>
+                  <width>60</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
                 <property name="text">
-                 <string>Start Miner</string>
+                 <string>Start</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="CPU_STOP">
+                <property name="maximumSize">
+                 <size>
+                  <width>60</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>Stop</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="CPU_RESTART">
+                <property name="maximumSize">
+                 <size>
+                  <width>60</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>Restart</string>
                 </property>
                </widget>
               </item>
@@ -1391,8 +1423,40 @@
              <layout class="QHBoxLayout" name="horizontalLayout_8">
               <item>
                <widget class="QPushButton" name="NV_RUN">
+                <property name="maximumSize">
+                 <size>
+                  <width>60</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
                 <property name="text">
-                 <string>Start Miner</string>
+                 <string>Start</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="NV_STOP">
+                <property name="maximumSize">
+                 <size>
+                  <width>60</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>Stop</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="NV_RESTART">
+                <property name="maximumSize">
+                 <size>
+                  <width>60</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>Restart</string>
                 </property>
                </widget>
               </item>
@@ -1860,8 +1924,40 @@
              <layout class="QHBoxLayout" name="horizontalLayout_9">
               <item>
                <widget class="QPushButton" name="AMD_RUN">
+                <property name="maximumSize">
+                 <size>
+                  <width>60</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
                 <property name="text">
-                 <string>Start Miner</string>
+                 <string>Start</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="AMD_STOP">
+                <property name="maximumSize">
+                 <size>
+                  <width>60</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>Stop</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="AMD_RESTART">
+                <property name="maximumSize">
+                 <size>
+                  <width>60</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>Restart</string>
                 </property>
                </widget>
               </item>
@@ -2329,12 +2425,12 @@
              <widget class="QLCDNumber" name="T_HS">
               <property name="minimumSize">
                <size>
-                <width>250</width>
+                <width>300</width>
                 <height>100</height>
                </size>
               </property>
               <property name="digitCount">
-               <number>6</number>
+               <number>7</number>
               </property>
               <property name="value" stdset="0">
                <double>100000.000000000000000</double>
@@ -2365,12 +2461,15 @@
              <widget class="QLCDNumber" name="H_HS">
               <property name="minimumSize">
                <size>
-                <width>250</width>
+                <width>300</width>
                 <height>100</height>
                </size>
               </property>
               <property name="digitCount">
-               <number>6</number>
+               <number>7</number>
+              </property>
+              <property name="segmentStyle">
+               <enum>QLCDNumber::Filled</enum>
               </property>
               <property name="value" stdset="0">
                <double>100000.000000000000000</double>
@@ -2415,6 +2514,12 @@
             </item>
             <item>
              <widget class="QTextEdit" name="MINER_LOG">
+              <property name="minimumSize">
+               <size>
+                <width>300</width>
+                <height>3</height>
+               </size>
+              </property>
               <property name="readOnly">
                <bool>false</bool>
               </property>
@@ -2436,7 +2541,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>859</width>
+     <width>951</width>
      <height>30</height>
     </rect>
    </property>

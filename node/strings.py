@@ -18,7 +18,10 @@ APP_STRINGS = {
         "STOP-NV":"Stopped NV Miner.",
         "START-AMD":"Started AMD Miner.",
         "STOP-AMD":"Stopped AMD Miner.",
-        "CFG-UPD":"Config updated from cloud"
+        "CFG-UPD":"Config updated from cloud",
+        "RESTART-CPU":"Restarted CPU Miner",
+        "RESTART-AMD":"Restarted AMD Miner",
+        "RESTART-NV":"Restarted NV Miner"
     },
     "net":{
         "connecting":"Connecting to endpoint: {0} ....",
@@ -37,3 +40,4 @@ APP_STRINGS = {
         }
     }
 }
+

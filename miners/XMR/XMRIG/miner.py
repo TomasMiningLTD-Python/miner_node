@@ -159,6 +159,7 @@ class MinerDaemon(threading.Thread):
             self.nv.kill()
             self.log_nv.close()
             self.log.info("NV Miner Stopped.")  
+            
         except: 
             pass
         
@@ -185,7 +186,38 @@ class MinerDaemon(threading.Thread):
             self.log.info("AMD Miner Stopped.")  
         except: 
             pass
-        
+    
+    """ Restart Functions: """
+    def restartCPU(self):
+        if (self.exec_cpu is not True): return False
+        try:
+            self.cpu.kill()
+            while (self.cpu.poll() != None): pass
+            self.startCPU()
+        except Exception as e:
+            self.log.error("Unable to RESTART CPU: {0}".format(e))
+            print(e)
+            
+    def restartNV(self):
+        if (self.exec_nv is not True): return False
+        try:
+            self.nv.kill()
+            while (self.nv.poll() != None): pass
+            self.startNV()
+        except Exception as e:
+            self.log.error("Unable to RESTART NV: {0}".format(e))
+            print(e)
+            
+    def restartAMD(self):
+        if (self.exec_amd is not True): return False
+        try:
+            self.amd.kill()
+            while (self.amd.poll() != None): pass
+            self.startAMD()
+        except Exception as e:
+            self.log.error("Unable to RESTART AMD: {0}".format(e))
+            print(e)
+            
     def quit(self):
         try:
             self.stopCPU()
